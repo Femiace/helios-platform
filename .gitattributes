@@ -1,0 +1,26 @@
+﻿* text=auto
+
+*.cs      text diff=csharp
+*.ts      text
+*.tsx     text
+*.json    text
+*.xml     text
+*.yml     text
+*.yaml    text
+*.md      text
+*.resx    text
+*.ps1     text eol=crlf
+*.cmd     text eol=crlf
+*.bat     text eol=crlf
+*.sh      text eol=lf
+
+*.msapp   binary
+*.zip     binary
+*.dll     binary
+*.pdb     binary
+*.snk     binary
+*.pfx     binary
+*.png     binary
+*.jpg     binary
+*.gif     binary
+*.ico     binary
