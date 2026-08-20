@@ -1,6 +1,6 @@
 ﻿# ADR-002. Solution segmentation, boundaries and dependency direction
 
-Status: Accepted.
+Status: Accepted. Amended in Module 1 Stage 5.
 Date: Module 1, Stage 3.
 
 ## Context
@@ -36,8 +36,8 @@ the target.
 | Solution | Owns |
 | --- | --- |
 | Core | Standard, elastic, virtual and activity tables, relationships, alternate keys, change tracking, global choices, security roles, column security profiles |
-| Logic | P1-P3 plug-ins, P4-P5 custom APIs, P6 Power Fx function, P7 event catalog, P8 service endpoint, P9 managed identity plug-in |
-| Automation | F1-F7 cloud flows, connection references, I1 custom connector |
+| Logic | P1-P3 plug-ins, P4-P5 custom APIs, P6 Power Fx function, P7 event catalog, P8 service endpoint, P9 managed identity plug-in, I1 custom connector |
+| Automation | F1-F7 cloud flows, connection references |
 | Agent | A1 agent, agent flows, Compliance Checker child agent |
 | Experience | C1-C2 code components, C3 library, C4 canvas app, C5 model-driven app, C6 web resource, C7 commands, C8 custom page, custom forms and views |
 | None | I2-I5 Azure Functions and console apps. Not Dataverse components |
@@ -89,6 +89,12 @@ five solutions on a layer axis.
 Adding shared components to more than one solution in DEV for convenience.
 Rejected on layering grounds.
 
+A sixth solution, HELIOS Connectors, holding I1 alone and imported first. This is
+the literal reading of Microsoft's custom connector guidance and is the safer
+option. Rejected for now because G1 fixes the solution count at five and Logic
+already imports ahead of Automation, which satisfies the ordering requirement.
+Retained as the fallback if Module 9 shows the constraint is stricter.
+
 ## Consequences
 
 Every future component creation begins with the question of which solution owns it,
@@ -99,8 +105,17 @@ Preferred solution is set to HELIOS Core and does not cover chatbots, custom
 connectors, or flows fully. Those component types are created from inside their
 owning solution explicitly.
 
+Amended in Module 1 Stage 5. I1 moved from Automation to Logic. Microsoft states
+that custom connectors must be imported in a separate solution from their
+connection references, before those connection references or the flows that use
+them. Logic imports before Automation, so the connector lands in the target ahead
+of its connection reference without adding a sixth solution. If Module 9 shows the
+constraint is stricter than an ordering constraint, the fallback is a sixth
+solution, HELIOS Connectors, imported first.
+
 ## References
 
 - https://learn.microsoft.com/en-us/power-apps/maker/data-platform/create-solution
 - https://learn.microsoft.com/en-us/power-apps/maker/data-platform/preferred-solution
 - https://learn.microsoft.com/en-us/power-platform/alm/solution-layers-alm
+- https://learn.microsoft.com/en-us/power-apps/maker/data-platform/create-connection-reference
