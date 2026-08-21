@@ -1,4 +1,4 @@
-﻿# ADR-007. Environment region assignment and cross-geo posture
+﻿# ADR-006. Environment region assignment and cross-geo posture
 
 Status: Accepted.
 Date: Module 1, Stage 6R.
