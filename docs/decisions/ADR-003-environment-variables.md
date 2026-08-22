@@ -102,3 +102,34 @@ non-sensitive value, plus a written explanation of what Key Vault would add.
 
 - https://learn.microsoft.com/en-us/power-apps/maker/data-platform/environmentvariables
 - https://learn.microsoft.com/en-us/power-apps/maker/data-platform/environmentvariables-azure-key-vault-secrets
+
+## Amendment. Module 1, Stage 8
+
+Current values cleared ahead of the first export, so that no environment variable
+value record is carried into HELIOS TEST as an unmanaged record.
+
+State at export:
+
+| Variable | Default Value | Current Value |
+| --- | --- | --- |
+| hel_ApprovalThresholdCustomers | 5000 | none |
+| hel_WeatherApiBaseUrl | none | none |
+| hel_AgentDisplaySuffix | none | none |
+
+The DEV override of 50 on the approval threshold is re-entered in Module 7, when F1
+exists and the approval branch needs to be reachable without seeding a large outage.
+It was premature in Module 1, since nothing consumes the variable yet.
+
+Correction to the mechanism described earlier in this record. The environment
+variable edit panel exposes Current Value as a single editable field. It has no
+per-value command to remove the value from the solution while leaving the record in
+the environment. Clearing the field and saving is the available action, and it
+appears to delete the value record rather than detach it, which would mean the
+variable now resolves to its default of 5000 in DEV.
+
+Not verified. Immaterial in Module 1 because no component consumes any of the three
+variables. Verify at Module 7, when the distinction between a value record that is
+absent from the solution and one that does not exist at all becomes observable.
+
+The principle is unchanged and is what matters: definitions travel in the solution,
+values are supplied per environment at import.
