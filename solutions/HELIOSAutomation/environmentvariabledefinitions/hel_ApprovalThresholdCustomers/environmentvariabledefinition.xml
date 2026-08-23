@@ -1,0 +1,14 @@
+<environmentvariabledefinition schemaname="hel_ApprovalThresholdCustomers">
+  <defaultvalue>5000</defaultvalue>
+  <description default="Customers-affected threshold above which F1 routes an outage for approval. Production value is 5000. Non-production values are lowered in Module 7 so the approval branch is reachable in test.">
+    <label description="Customers-affected threshold above which F1 routes an outage for approval. Production value is 5000. Non-production values are lowered in Module 7 so the approval branch is reachable in test." languagecode="1033" />
+  </description>
+  <displayname default="Approval Threshold Customers">
+    <label description="Approval Threshold Customers" languagecode="1033" />
+  </displayname>
+  <introducedversion>1.0.0.0</introducedversion>
+  <iscustomizable>1</iscustomizable>
+  <isrequired>0</isrequired>
+  <secretstore>0</secretstore>
+  <type>100000001</type>
+</environmentvariabledefinition>

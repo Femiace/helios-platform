@@ -133,3 +133,64 @@ absent from the solution and one that does not exist at all becomes observable.
 
 The principle is unchanged and is what matters: definitions travel in the solution,
 values are supplied per environment at import.
+
+## Amendment. Module 1, Stage 8
+
+### Finding: value records land in the preferred solution
+
+Setting a Current Value creates an environmentvariablevalue record, and that record
+is added to the maker's preferred solution, not to the solution holding the
+definition.
+
+HELIOS Core is the preferred solution. Setting current values on
+hel_ApprovalThresholdCustomers in Automation and hel_AgentDisplaySuffix in Agent
+therefore placed two value records in Core. hel_WeatherApiBaseUrl, which never had a
+current value, did not appear.
+
+Consequence: the first export produced a Core solution whose Solution.xml carried a
+MissingDependencies block pairing each value as Dependent with its definition as
+Required. Core depended on Automation and Agent, inverting the linear chain in
+ADR-002 and guaranteeing an import failure into a clean target.
+
+Not detectable in the portal. The Objects view of HELIOS Core showed zero objects,
+because Core held no environment variable definitions and so had no category under
+which to render orphaned value records. The records were only visible through
+solution export and through the Web API.
+
+### Finding: clearing the Current Value field does not remove the record
+
+The environment variable edit panel exposes Current Value as a single editable field
+with no per-value command to remove the value from the solution. Clearing it and
+saving sets the value to null and leaves the record, and its solution membership,
+intact. Confirmed via the Web API: two records persisted with "value": null after
+the fields were cleared.
+
+Microsoft documents a "Remove from this solution" command for values. It is not
+present on this panel.
+
+Resolution: the three definitions were deleted and recreated. Deleting a definition
+cascades to its value records, which removed them from Core.
+
+### Rule for the remainder of the build
+
+No Current Value is set on any environment variable until a component consumes it.
+
+Definitions carry default values where a sensible fallback exists. Current values are
+set in the module where the consuming component is built, and the owning solution is
+re-checked afterwards.
+
+DEV current values deferred to Module 7: 50 on hel_ApprovalThresholdCustomers so the
+F1 approval branch is reachable in test, and " (DEV)" on hel_AgentDisplaySuffix.
+
+### Verification query
+
+    /api/data/v9.2/environmentvariablevalues?$select=environmentvariablevalueid,value,_environmentvariabledefinitionid_value
+
+Expect exactly one record, msdyn_SLAWebClientDeprecationAcknowledge, which is a
+managed Microsoft platform component and is not part of HELIOS.
+
+### Correction to an earlier statement in this record
+
+An earlier draft said clearing the current value removes it from the solution while
+leaving the variable resolving to its previous value in DEV. That is wrong on both
+counts. Clearing sets the value to null and does not affect solution membership.

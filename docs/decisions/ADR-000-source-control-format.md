@@ -61,3 +61,41 @@ commit.
 - https://learn.microsoft.com/en-us/power-platform/alm/use-source-control-solution-files
 - https://learn.microsoft.com/en-us/power-platform/alm/solution-source-control-yaml-format
 - https://learn.microsoft.com/en-us/power-platform/alm/git-integration/faqs
+
+## Amendment. Module 1, Stage 8. Decision confirmed on evidence
+
+The XML format decision was made on contradictory Microsoft documentation, with a
+commitment to settle it against the tooling before solutions were unpacked. Done.
+
+Power Platform CLI 2.11.2 (.NET Framework 4.8):
+
+| Command | Format switch |
+| --- | --- |
+| pac solution export | None. --managed selects managed or unmanaged, not extraction format |
+| pac solution unpack | None. Fifteen parameters, no --format, no YAML option |
+| pac solution clone | Present on this build, but also no format switch |
+
+No command can request YAML output. The Git integration FAQ, which states that
+unpack, clone and sync do not support YAML, is accurate. The YAML format reference
+page, which instructs the reader to extract using pac solution clone, is wrong: that
+command has no mechanism to produce YAML.
+
+Decision stands. The Module 5 re-evaluation trigger remains, because the canvas app
+question is separate and unresolved. Note that --processCanvasApps does not appear on
+unpack in 2.11.2 either, so canvas handling is not reachable from this command.
+
+## Amendment. Extraction packagetype
+
+Unpack uses --packagetype Both, storing managed and unmanaged XML side by side, with
+both zips exported per solution.
+
+Reason: producing a managed solution for deployment requires either managed XML in
+source or a separate build environment to import unmanaged and export managed. A
+build environment is a fourth environment and the Developer Plan caps at three. Both
+is therefore the only structure that supports a managed release from source.
+
+Done in Module 1 while the solutions are near-empty. Restructuring five populated
+folders at Module 6 would be considerably more expensive.
+
+Export is automated by scripts/export-all.ps1, which is an addition to the repository
+layout in doc 04 Section 9.

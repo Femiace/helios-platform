@@ -1,0 +1,13 @@
+<environmentvariabledefinition schemaname="hel_WeatherApiBaseUrl">
+  <description default="Base URL for the weather risk REST API consumed by the I1 custom connector via a set-host policy template. Value is set in Module 9 when the API is chosen.">
+    <label description="Base URL for the weather risk REST API consumed by the I1 custom connector via a set-host policy template. Value is set in Module 9 when the API is chosen." languagecode="1033" />
+  </description>
+  <displayname default="Weather API Base URL">
+    <label description="Weather API Base URL" languagecode="1033" />
+  </displayname>
+  <introducedversion>1.0.0.0</introducedversion>
+  <iscustomizable>1</iscustomizable>
+  <isrequired>0</isrequired>
+  <secretstore>0</secretstore>
+  <type>100000000</type>
+</environmentvariabledefinition>

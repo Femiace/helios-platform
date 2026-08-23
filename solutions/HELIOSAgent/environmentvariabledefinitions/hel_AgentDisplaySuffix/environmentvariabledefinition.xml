@@ -1,0 +1,13 @@
+<environmentvariabledefinition schemaname="hel_AgentDisplaySuffix">
+  <description default="Appended to the Grid Copilot display name so DEV and TEST instances are distinguishable in Teams. No default value, so every import must supply one. DEV value set in Module 7.">
+    <label description="Appended to the Grid Copilot display name so DEV and TEST instances are distinguishable in Teams. No default value, so every import must supply one. DEV value set in Module 7." languagecode="1033" />
+  </description>
+  <displayname default="Agent Display Suffix">
+    <label description="Agent Display Suffix" languagecode="1033" />
+  </displayname>
+  <introducedversion>1.0.0.0</introducedversion>
+  <iscustomizable>1</iscustomizable>
+  <isrequired>0</isrequired>
+  <secretstore>0</secretstore>
+  <type>100000000</type>
+</environmentvariabledefinition>
