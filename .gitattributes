@@ -24,3 +24,23 @@
 *.jpg     binary
 *.gif     binary
 *.ico     binary
+# --- Web resources and client-side source ---
+*.js      text
+*.jsx     text
+*.css     text
+*.html    text
+*.svg     text
+
+# --- Project and solution files ---
+*.sln     text eol=crlf
+*.csproj  text
+*.cdsproj text
+*.pcfproj text
+*.props   text
+*.targets text
+
+# --- Generated solution source ---
+# Unpacked solutions are produced by pac, not written by hand. Excluding them
+# from GitHub language statistics keeps C# and TypeScript visible on the
+# repository page. They stay fully diffable, just collapsed by default.
+solutions/** linguist-generated=true
