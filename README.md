@@ -42,3 +42,4 @@ the only data platform. There is no production environment.
 This repository is public and contains no credentials. Client secrets, signing keys,
 connection definitions and environment URLs are held in environment variables and
 GitHub Actions secrets. See `.gitignore`.
+Tooling notes for PowerShell and Git are in docs/tooling-primer.md.
