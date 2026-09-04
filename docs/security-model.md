@@ -233,6 +233,20 @@ audit trail.
 The integration profile exists because P2, P3 and I4 write both columns as
 the service principal. Without it those writes fail with no useful error.
 
+### Platform-managed profile
+
+Dataverse maintains an out-of-box System Administrator column security
+profile, id 572329c1-a042-4e22-be47-367c6374ea45 in HELIOS DEV. Enabling
+column security on a column automatically adds a full-access permission row
+for it to that profile. Both hel_replacementcost and hel_compensationdue
+have such a row, created at the moment the column was secured in Stages 4
+and 5.
+
+This is not a HELIOS component and is not carried in HELIOSCore. It is the
+reason system administrators are never blocked from a column they have just
+secured, and the reason the Stage 10 test required removing System
+Administrator from the service principal.
+
 ### Empirical test, M2 Stage 10
 
 Tested with scripts/test-column-security.ps1 using the HELIOS ALM Service
