@@ -1,0 +1,817 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name LocalizedName="Asset Telemetry" OriginalName="Asset Telemetry">hel_AssetTelemetry</Name>
+  <EntityInfo>
+    <entity Name="hel_AssetTelemetry">
+      <LocalizedNames>
+        <LocalizedName description="Asset Telemetry" languagecode="1033" />
+      </LocalizedNames>
+      <LocalizedCollectionNames>
+        <LocalizedCollectionName description="Asset Telemetries" languagecode="1033" />
+      </LocalizedCollectionNames>
+      <Descriptions>
+        <Description description="High-throughput sensor readings. Cosmos DB backed. Partitioned by asset serial number, rows expire via ttlinseconds." languagecode="1033" />
+      </Descriptions>
+      <attributes>
+        <attribute PhysicalName="CreatedBy">
+          <Type>lookup</Type>
+          <Name>createdby</Name>
+          <LogicalName>createdby</LogicalName>
+          <RequiredLevel>none</RequiredLevel>
+          <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
+          <ImeMode>auto</ImeMode>
+          <ValidForUpdateApi>0</ValidForUpdateApi>
+          <ValidForReadApi>1</ValidForReadApi>
+          <ValidForCreateApi>0</ValidForCreateApi>
+          <IsCustomField>0</IsCustomField>
+          <IsAuditEnabled>0</IsAuditEnabled>
+          <IsSecured>0</IsSecured>
+          <IntroducedVersion>1.0</IntroducedVersion>
+          <IsCustomizable>1</IsCustomizable>
+          <IsRenameable>1</IsRenameable>
+          <CanModifySearchSettings>1</CanModifySearchSettings>
+          <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+          <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+          <SourceType>0</SourceType>
+          <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+          <IsSortableEnabled>0</IsSortableEnabled>
+          <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+          <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+          <IsDataSourceSecret>0</IsDataSourceSecret>
+          <AutoNumberFormat></AutoNumberFormat>
+          <IsSearchable>0</IsSearchable>
+          <IsFilterable>0</IsFilterable>
+          <IsRetrievable>0</IsRetrievable>
+          <IsLocalizable>0</IsLocalizable>
+          <LookupStyle>single</LookupStyle>
+          <LookupTypes />
+          <displaynames>
+            <displayname description="Created By" languagecode="1033" />
+          </displaynames>
+          <Descriptions>
+            <Description description="Unique identifier of the user who created the record." languagecode="1033" />
+          </Descriptions>
+        </attribute>
+        <attribute PhysicalName="CreatedOn">
+          <Type>datetime</Type>
+          <Name>createdon</Name>
+          <LogicalName>createdon</LogicalName>
+          <RequiredLevel>none</RequiredLevel>
+          <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
+          <ImeMode>inactive</ImeMode>
+          <ValidForUpdateApi>0</ValidForUpdateApi>
+          <ValidForReadApi>1</ValidForReadApi>
+          <ValidForCreateApi>0</ValidForCreateApi>
+          <IsCustomField>0</IsCustomField>
+          <IsAuditEnabled>0</IsAuditEnabled>
+          <IsSecured>0</IsSecured>
+          <IntroducedVersion>1.0</IntroducedVersion>
+          <IsCustomizable>1</IsCustomizable>
+          <IsRenameable>1</IsRenameable>
+          <CanModifySearchSettings>1</CanModifySearchSettings>
+          <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+          <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+          <SourceType>0</SourceType>
+          <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+          <IsSortableEnabled>0</IsSortableEnabled>
+          <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+          <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+          <IsDataSourceSecret>0</IsDataSourceSecret>
+          <AutoNumberFormat></AutoNumberFormat>
+          <IsSearchable>0</IsSearchable>
+          <IsFilterable>1</IsFilterable>
+          <IsRetrievable>1</IsRetrievable>
+          <IsLocalizable>0</IsLocalizable>
+          <Format>datetime</Format>
+          <CanChangeDateTimeBehavior>0</CanChangeDateTimeBehavior>
+          <Behavior>1</Behavior>
+          <displaynames>
+            <displayname description="Created On" languagecode="1033" />
+          </displaynames>
+          <Descriptions>
+            <Description description="Date and time when the record was created." languagecode="1033" />
+          </Descriptions>
+        </attribute>
+        <attribute PhysicalName="CreatedOnBehalfBy">
+          <Type>lookup</Type>
+          <Name>createdonbehalfby</Name>
+          <LogicalName>createdonbehalfby</LogicalName>
+          <RequiredLevel>none</RequiredLevel>
+          <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
+          <ImeMode>auto</ImeMode>
+          <ValidForUpdateApi>0</ValidForUpdateApi>
+          <ValidForReadApi>1</ValidForReadApi>
+          <ValidForCreateApi>0</ValidForCreateApi>
+          <IsCustomField>0</IsCustomField>
+          <IsAuditEnabled>0</IsAuditEnabled>
+          <IsSecured>0</IsSecured>
+          <IntroducedVersion>1.0</IntroducedVersion>
+          <IsCustomizable>1</IsCustomizable>
+          <IsRenameable>1</IsRenameable>
+          <CanModifySearchSettings>1</CanModifySearchSettings>
+          <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+          <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+          <SourceType>0</SourceType>
+          <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+          <IsSortableEnabled>0</IsSortableEnabled>
+          <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+          <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+          <IsDataSourceSecret>0</IsDataSourceSecret>
+          <AutoNumberFormat></AutoNumberFormat>
+          <IsSearchable>0</IsSearchable>
+          <IsFilterable>0</IsFilterable>
+          <IsRetrievable>0</IsRetrievable>
+          <IsLocalizable>0</IsLocalizable>
+          <LookupStyle>single</LookupStyle>
+          <LookupTypes />
+          <displaynames>
+            <displayname description="Created By (Delegate)" languagecode="1033" />
+          </displaynames>
+          <Descriptions>
+            <Description description="Unique identifier of the delegate user who created the record." languagecode="1033" />
+          </Descriptions>
+        </attribute>
+        <attribute PhysicalName="hel_AssetTelemetryId">
+          <Type>primarykey</Type>
+          <Name>hel_assettelemetryid</Name>
+          <LogicalName>hel_assettelemetryid</LogicalName>
+          <RequiredLevel>systemrequired</RequiredLevel>
+          <DisplayMask>ValidForAdvancedFind|RequiredForGrid</DisplayMask>
+          <ImeMode>auto</ImeMode>
+          <ValidForUpdateApi>0</ValidForUpdateApi>
+          <ValidForReadApi>1</ValidForReadApi>
+          <ValidForCreateApi>1</ValidForCreateApi>
+          <IsCustomField>0</IsCustomField>
+          <IsAuditEnabled>0</IsAuditEnabled>
+          <IsSecured>0</IsSecured>
+          <IntroducedVersion>1.0</IntroducedVersion>
+          <IsCustomizable>1</IsCustomizable>
+          <IsRenameable>1</IsRenameable>
+          <CanModifySearchSettings>1</CanModifySearchSettings>
+          <CanModifyRequirementLevelSettings>0</CanModifyRequirementLevelSettings>
+          <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+          <SourceType>0</SourceType>
+          <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+          <IsSortableEnabled>0</IsSortableEnabled>
+          <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+          <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+          <IsDataSourceSecret>0</IsDataSourceSecret>
+          <AutoNumberFormat></AutoNumberFormat>
+          <IsSearchable>0</IsSearchable>
+          <IsFilterable>1</IsFilterable>
+          <IsRetrievable>1</IsRetrievable>
+          <IsLocalizable>0</IsLocalizable>
+          <displaynames>
+            <displayname description="Asset Telemetry" languagecode="1033" />
+          </displaynames>
+          <Descriptions>
+            <Description description="Unique identifier for entity instances" languagecode="1033" />
+          </Descriptions>
+        </attribute>
+        <attribute PhysicalName="hel_metrictype">
+          <Type>picklist</Type>
+          <Name>hel_metrictype</Name>
+          <LogicalName>hel_metrictype</LogicalName>
+          <RequiredLevel>required</RequiredLevel>
+          <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
+          <ImeMode>auto</ImeMode>
+          <ValidForUpdateApi>1</ValidForUpdateApi>
+          <ValidForReadApi>1</ValidForReadApi>
+          <ValidForCreateApi>1</ValidForCreateApi>
+          <IsCustomField>1</IsCustomField>
+          <IsAuditEnabled>1</IsAuditEnabled>
+          <IsSecured>0</IsSecured>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <IsCustomizable>1</IsCustomizable>
+          <IsRenameable>1</IsRenameable>
+          <CanModifySearchSettings>1</CanModifySearchSettings>
+          <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+          <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+          <SourceType>0</SourceType>
+          <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+          <IsSortableEnabled>0</IsSortableEnabled>
+          <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+          <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+          <IsDataSourceSecret>0</IsDataSourceSecret>
+          <AutoNumberFormat></AutoNumberFormat>
+          <IsSearchable>0</IsSearchable>
+          <IsFilterable>0</IsFilterable>
+          <IsRetrievable>0</IsRetrievable>
+          <IsLocalizable>0</IsLocalizable>
+          <AppDefaultValue>-1</AppDefaultValue>
+          <optionset Name="hel_assettelemetry_hel_metrictype">
+            <OptionSetType>picklist</OptionSetType>
+            <IntroducedVersion>1.0.0.0</IntroducedVersion>
+            <IsCustomizable>1</IsCustomizable>
+            <ExternalTypeName></ExternalTypeName>
+            <displaynames>
+              <displayname description="Metric Type" languagecode="1033" />
+            </displaynames>
+            <Descriptions>
+              <Description description="" languagecode="1033" />
+            </Descriptions>
+            <options>
+              <option value="100000000" ExternalValue="" IsHidden="0">
+                <labels>
+                  <label description="Oil Temperature" languagecode="1033" />
+                </labels>
+                <Descriptions>
+                  <Description description="" languagecode="1033" />
+                </Descriptions>
+              </option>
+              <option value="100000001" ExternalValue="" IsHidden="0">
+                <labels>
+                  <label description="Load Current" languagecode="1033" />
+                </labels>
+                <Descriptions>
+                  <Description description="" languagecode="1033" />
+                </Descriptions>
+              </option>
+              <option value="100000002" ExternalValue="" IsHidden="0">
+                <labels>
+                  <label description="Winding Temperature" languagecode="1033" />
+                </labels>
+                <Descriptions>
+                  <Description description="" languagecode="1033" />
+                </Descriptions>
+              </option>
+              <option value="100000003" ExternalValue="" IsHidden="0">
+                <labels>
+                  <label description="Partial Discharge" languagecode="1033" />
+                </labels>
+                <Descriptions>
+                  <Description description="" languagecode="1033" />
+                </Descriptions>
+              </option>
+              <option value="100000004" ExternalValue="" IsHidden="0">
+                <labels>
+                  <label description="Tap Position" languagecode="1033" />
+                </labels>
+                <Descriptions>
+                  <Description description="" languagecode="1033" />
+                </Descriptions>
+              </option>
+            </options>
+          </optionset>
+          <displaynames>
+            <displayname description="Metric Type" languagecode="1033" />
+          </displaynames>
+          <Descriptions>
+            <Description description="" languagecode="1033" />
+          </Descriptions>
+        </attribute>
+        <attribute PhysicalName="hel_Name">
+          <Type>nvarchar</Type>
+          <Name>hel_name</Name>
+          <LogicalName>hel_name</LogicalName>
+          <RequiredLevel>none</RequiredLevel>
+          <DisplayMask>PrimaryName|ValidForAdvancedFind|ValidForForm|ValidForGrid|RequiredForForm</DisplayMask>
+          <ImeMode>auto</ImeMode>
+          <ValidForUpdateApi>1</ValidForUpdateApi>
+          <ValidForReadApi>1</ValidForReadApi>
+          <ValidForCreateApi>1</ValidForCreateApi>
+          <IsCustomField>1</IsCustomField>
+          <IsAuditEnabled>1</IsAuditEnabled>
+          <IsSecured>0</IsSecured>
+          <IntroducedVersion>1.0</IntroducedVersion>
+          <IsCustomizable>1</IsCustomizable>
+          <IsRenameable>1</IsRenameable>
+          <CanModifySearchSettings>1</CanModifySearchSettings>
+          <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+          <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+          <SourceType>0</SourceType>
+          <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+          <IsSortableEnabled>0</IsSortableEnabled>
+          <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+          <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+          <ExternalName></ExternalName>
+          <IsDataSourceSecret>0</IsDataSourceSecret>
+          <AutoNumberFormat></AutoNumberFormat>
+          <IsSearchable>1</IsSearchable>
+          <IsFilterable>0</IsFilterable>
+          <IsRetrievable>1</IsRetrievable>
+          <IsLocalizable>0</IsLocalizable>
+          <Format>text</Format>
+          <MaxLength>850</MaxLength>
+          <Length>1700</Length>
+          <displaynames>
+            <displayname description="Name" languagecode="1033" />
+          </displaynames>
+          <Descriptions>
+            <Description description="" languagecode="1033" />
+          </Descriptions>
+        </attribute>
+        <attribute PhysicalName="hel_quality">
+          <Type>picklist</Type>
+          <Name>hel_quality</Name>
+          <LogicalName>hel_quality</LogicalName>
+          <RequiredLevel>none</RequiredLevel>
+          <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
+          <ImeMode>auto</ImeMode>
+          <ValidForUpdateApi>1</ValidForUpdateApi>
+          <ValidForReadApi>1</ValidForReadApi>
+          <ValidForCreateApi>1</ValidForCreateApi>
+          <IsCustomField>1</IsCustomField>
+          <IsAuditEnabled>1</IsAuditEnabled>
+          <IsSecured>0</IsSecured>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <IsCustomizable>1</IsCustomizable>
+          <IsRenameable>1</IsRenameable>
+          <CanModifySearchSettings>1</CanModifySearchSettings>
+          <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+          <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+          <SourceType>0</SourceType>
+          <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+          <IsSortableEnabled>0</IsSortableEnabled>
+          <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+          <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+          <IsDataSourceSecret>0</IsDataSourceSecret>
+          <AutoNumberFormat></AutoNumberFormat>
+          <IsSearchable>0</IsSearchable>
+          <IsFilterable>0</IsFilterable>
+          <IsRetrievable>0</IsRetrievable>
+          <IsLocalizable>0</IsLocalizable>
+          <AppDefaultValue>-1</AppDefaultValue>
+          <optionset Name="hel_assettelemetry_hel_quality">
+            <OptionSetType>picklist</OptionSetType>
+            <IntroducedVersion>1.0.0.0</IntroducedVersion>
+            <IsCustomizable>1</IsCustomizable>
+            <ExternalTypeName></ExternalTypeName>
+            <displaynames>
+              <displayname description="Quality" languagecode="1033" />
+            </displaynames>
+            <Descriptions>
+              <Description description="" languagecode="1033" />
+            </Descriptions>
+            <options>
+              <option value="100000000" ExternalValue="" IsHidden="0">
+                <labels>
+                  <label description="Good" languagecode="1033" />
+                </labels>
+                <Descriptions>
+                  <Description description="" languagecode="1033" />
+                </Descriptions>
+              </option>
+              <option value="100000001" ExternalValue="" IsHidden="0">
+                <labels>
+                  <label description="Uncertain" languagecode="1033" />
+                </labels>
+                <Descriptions>
+                  <Description description="" languagecode="1033" />
+                </Descriptions>
+              </option>
+              <option value="100000002" ExternalValue="" IsHidden="0">
+                <labels>
+                  <label description="Bad" languagecode="1033" />
+                </labels>
+                <Descriptions>
+                  <Description description="" languagecode="1033" />
+                </Descriptions>
+              </option>
+              <option value="100000003" ExternalValue="" IsHidden="0">
+                <labels>
+                  <label description="Stale" languagecode="1033" />
+                </labels>
+                <Descriptions>
+                  <Description description="" languagecode="1033" />
+                </Descriptions>
+              </option>
+            </options>
+          </optionset>
+          <displaynames>
+            <displayname description="Quality" languagecode="1033" />
+          </displaynames>
+          <Descriptions>
+            <Description description="" languagecode="1033" />
+          </Descriptions>
+        </attribute>
+        <attribute PhysicalName="hel_timestamp">
+          <Type>datetime</Type>
+          <Name>hel_timestamp</Name>
+          <LogicalName>hel_timestamp</LogicalName>
+          <RequiredLevel>required</RequiredLevel>
+          <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
+          <ImeMode>auto</ImeMode>
+          <ValidForUpdateApi>1</ValidForUpdateApi>
+          <ValidForReadApi>1</ValidForReadApi>
+          <ValidForCreateApi>1</ValidForCreateApi>
+          <IsCustomField>1</IsCustomField>
+          <IsAuditEnabled>1</IsAuditEnabled>
+          <IsSecured>0</IsSecured>
+          <IntroducedVersion>1.0</IntroducedVersion>
+          <IsCustomizable>1</IsCustomizable>
+          <IsRenameable>1</IsRenameable>
+          <CanModifySearchSettings>1</CanModifySearchSettings>
+          <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+          <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+          <SourceType>0</SourceType>
+          <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+          <IsSortableEnabled>0</IsSortableEnabled>
+          <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+          <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+          <IsDataSourceSecret>0</IsDataSourceSecret>
+          <AutoNumberFormat></AutoNumberFormat>
+          <IsSearchable>0</IsSearchable>
+          <IsFilterable>0</IsFilterable>
+          <IsRetrievable>0</IsRetrievable>
+          <IsLocalizable>0</IsLocalizable>
+          <Format>datetime</Format>
+          <Behavior>1</Behavior>
+          <displaynames>
+            <displayname description="Reading Timestamp" languagecode="1033" />
+          </displaynames>
+          <Descriptions>
+            <Description description="" languagecode="1033" />
+          </Descriptions>
+        </attribute>
+        <attribute PhysicalName="hel_value">
+          <Type>decimal</Type>
+          <Name>hel_value</Name>
+          <LogicalName>hel_value</LogicalName>
+          <RequiredLevel>none</RequiredLevel>
+          <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
+          <ImeMode>auto</ImeMode>
+          <ValidForUpdateApi>1</ValidForUpdateApi>
+          <ValidForReadApi>1</ValidForReadApi>
+          <ValidForCreateApi>1</ValidForCreateApi>
+          <IsCustomField>1</IsCustomField>
+          <IsAuditEnabled>1</IsAuditEnabled>
+          <IsSecured>0</IsSecured>
+          <IntroducedVersion>1.0</IntroducedVersion>
+          <IsCustomizable>1</IsCustomizable>
+          <IsRenameable>1</IsRenameable>
+          <CanModifySearchSettings>1</CanModifySearchSettings>
+          <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+          <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+          <SourceType>0</SourceType>
+          <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+          <IsSortableEnabled>0</IsSortableEnabled>
+          <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+          <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+          <IsDataSourceSecret>0</IsDataSourceSecret>
+          <AutoNumberFormat></AutoNumberFormat>
+          <IsSearchable>0</IsSearchable>
+          <IsFilterable>0</IsFilterable>
+          <IsRetrievable>0</IsRetrievable>
+          <IsLocalizable>0</IsLocalizable>
+          <MinValue>-1000000</MinValue>
+          <MaxValue>1000000</MaxValue>
+          <Accuracy>4</Accuracy>
+          <displaynames>
+            <displayname description="Value" languagecode="1033" />
+          </displaynames>
+          <Descriptions>
+            <Description description="" languagecode="1033" />
+          </Descriptions>
+        </attribute>
+        <attribute PhysicalName="ImportSequenceNumber">
+          <Type>int</Type>
+          <Name>importsequencenumber</Name>
+          <LogicalName>importsequencenumber</LogicalName>
+          <RequiredLevel>none</RequiredLevel>
+          <DisplayMask>ValidForAdvancedFind</DisplayMask>
+          <ImeMode>disabled</ImeMode>
+          <ValidForUpdateApi>0</ValidForUpdateApi>
+          <ValidForReadApi>1</ValidForReadApi>
+          <ValidForCreateApi>1</ValidForCreateApi>
+          <IsCustomField>0</IsCustomField>
+          <IsAuditEnabled>1</IsAuditEnabled>
+          <IsSecured>0</IsSecured>
+          <IntroducedVersion>1.0</IntroducedVersion>
+          <IsCustomizable>1</IsCustomizable>
+          <IsRenameable>1</IsRenameable>
+          <CanModifySearchSettings>1</CanModifySearchSettings>
+          <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+          <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+          <SourceType>0</SourceType>
+          <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+          <IsSortableEnabled>0</IsSortableEnabled>
+          <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+          <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+          <IsDataSourceSecret>0</IsDataSourceSecret>
+          <AutoNumberFormat></AutoNumberFormat>
+          <IsSearchable>0</IsSearchable>
+          <IsFilterable>0</IsFilterable>
+          <IsRetrievable>0</IsRetrievable>
+          <IsLocalizable>0</IsLocalizable>
+          <Format></Format>
+          <MinValue>-2147483648</MinValue>
+          <MaxValue>2147483647</MaxValue>
+          <displaynames>
+            <displayname description="Import Sequence Number" languagecode="1033" />
+          </displaynames>
+          <Descriptions>
+            <Description description="Sequence number of the import that created this record." languagecode="1033" />
+          </Descriptions>
+        </attribute>
+        <attribute PhysicalName="ModifiedBy">
+          <Type>lookup</Type>
+          <Name>modifiedby</Name>
+          <LogicalName>modifiedby</LogicalName>
+          <RequiredLevel>none</RequiredLevel>
+          <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
+          <ImeMode>auto</ImeMode>
+          <ValidForUpdateApi>0</ValidForUpdateApi>
+          <ValidForReadApi>1</ValidForReadApi>
+          <ValidForCreateApi>0</ValidForCreateApi>
+          <IsCustomField>0</IsCustomField>
+          <IsAuditEnabled>0</IsAuditEnabled>
+          <IsSecured>0</IsSecured>
+          <IntroducedVersion>1.0</IntroducedVersion>
+          <IsCustomizable>1</IsCustomizable>
+          <IsRenameable>1</IsRenameable>
+          <CanModifySearchSettings>1</CanModifySearchSettings>
+          <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+          <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+          <SourceType>0</SourceType>
+          <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+          <IsSortableEnabled>0</IsSortableEnabled>
+          <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+          <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+          <IsDataSourceSecret>0</IsDataSourceSecret>
+          <AutoNumberFormat></AutoNumberFormat>
+          <IsSearchable>0</IsSearchable>
+          <IsFilterable>0</IsFilterable>
+          <IsRetrievable>0</IsRetrievable>
+          <IsLocalizable>0</IsLocalizable>
+          <LookupStyle>single</LookupStyle>
+          <LookupTypes />
+          <displaynames>
+            <displayname description="Modified By" languagecode="1033" />
+          </displaynames>
+          <Descriptions>
+            <Description description="Unique identifier of the user who modified the record." languagecode="1033" />
+          </Descriptions>
+        </attribute>
+        <attribute PhysicalName="ModifiedOn">
+          <Type>datetime</Type>
+          <Name>modifiedon</Name>
+          <LogicalName>modifiedon</LogicalName>
+          <RequiredLevel>none</RequiredLevel>
+          <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
+          <ImeMode>inactive</ImeMode>
+          <ValidForUpdateApi>0</ValidForUpdateApi>
+          <ValidForReadApi>1</ValidForReadApi>
+          <ValidForCreateApi>0</ValidForCreateApi>
+          <IsCustomField>0</IsCustomField>
+          <IsAuditEnabled>0</IsAuditEnabled>
+          <IsSecured>0</IsSecured>
+          <IntroducedVersion>1.0</IntroducedVersion>
+          <IsCustomizable>1</IsCustomizable>
+          <IsRenameable>1</IsRenameable>
+          <CanModifySearchSettings>1</CanModifySearchSettings>
+          <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+          <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+          <SourceType>0</SourceType>
+          <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+          <IsSortableEnabled>0</IsSortableEnabled>
+          <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+          <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+          <IsDataSourceSecret>0</IsDataSourceSecret>
+          <AutoNumberFormat></AutoNumberFormat>
+          <IsSearchable>0</IsSearchable>
+          <IsFilterable>1</IsFilterable>
+          <IsRetrievable>1</IsRetrievable>
+          <IsLocalizable>0</IsLocalizable>
+          <Format>datetime</Format>
+          <CanChangeDateTimeBehavior>0</CanChangeDateTimeBehavior>
+          <Behavior>1</Behavior>
+          <displaynames>
+            <displayname description="Modified On" languagecode="1033" />
+          </displaynames>
+          <Descriptions>
+            <Description description="Date and time when the record was modified." languagecode="1033" />
+          </Descriptions>
+        </attribute>
+        <attribute PhysicalName="ModifiedOnBehalfBy">
+          <Type>lookup</Type>
+          <Name>modifiedonbehalfby</Name>
+          <LogicalName>modifiedonbehalfby</LogicalName>
+          <RequiredLevel>none</RequiredLevel>
+          <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
+          <ImeMode>auto</ImeMode>
+          <ValidForUpdateApi>0</ValidForUpdateApi>
+          <ValidForReadApi>1</ValidForReadApi>
+          <ValidForCreateApi>0</ValidForCreateApi>
+          <IsCustomField>0</IsCustomField>
+          <IsAuditEnabled>0</IsAuditEnabled>
+          <IsSecured>0</IsSecured>
+          <IntroducedVersion>1.0</IntroducedVersion>
+          <IsCustomizable>1</IsCustomizable>
+          <IsRenameable>1</IsRenameable>
+          <CanModifySearchSettings>1</CanModifySearchSettings>
+          <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+          <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+          <SourceType>0</SourceType>
+          <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+          <IsSortableEnabled>0</IsSortableEnabled>
+          <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+          <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+          <IsDataSourceSecret>0</IsDataSourceSecret>
+          <AutoNumberFormat></AutoNumberFormat>
+          <IsSearchable>0</IsSearchable>
+          <IsFilterable>0</IsFilterable>
+          <IsRetrievable>0</IsRetrievable>
+          <IsLocalizable>0</IsLocalizable>
+          <LookupStyle>single</LookupStyle>
+          <LookupTypes />
+          <displaynames>
+            <displayname description="Modified By (Delegate)" languagecode="1033" />
+          </displaynames>
+          <Descriptions>
+            <Description description="Unique identifier of the delegate user who modified the record." languagecode="1033" />
+          </Descriptions>
+        </attribute>
+        <attribute PhysicalName="OverriddenCreatedOn">
+          <Type>datetime</Type>
+          <Name>overriddencreatedon</Name>
+          <LogicalName>overriddencreatedon</LogicalName>
+          <RequiredLevel>none</RequiredLevel>
+          <DisplayMask>ValidForAdvancedFind|ValidForGrid</DisplayMask>
+          <ImeMode>inactive</ImeMode>
+          <ValidForUpdateApi>0</ValidForUpdateApi>
+          <ValidForReadApi>1</ValidForReadApi>
+          <ValidForCreateApi>1</ValidForCreateApi>
+          <IsCustomField>0</IsCustomField>
+          <IsAuditEnabled>1</IsAuditEnabled>
+          <IsSecured>0</IsSecured>
+          <IntroducedVersion>1.0</IntroducedVersion>
+          <IsCustomizable>1</IsCustomizable>
+          <IsRenameable>1</IsRenameable>
+          <CanModifySearchSettings>1</CanModifySearchSettings>
+          <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+          <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+          <SourceType>0</SourceType>
+          <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+          <IsSortableEnabled>0</IsSortableEnabled>
+          <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+          <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+          <IsDataSourceSecret>0</IsDataSourceSecret>
+          <AutoNumberFormat></AutoNumberFormat>
+          <IsSearchable>0</IsSearchable>
+          <IsFilterable>0</IsFilterable>
+          <IsRetrievable>0</IsRetrievable>
+          <IsLocalizable>0</IsLocalizable>
+          <Format>date</Format>
+          <CanChangeDateTimeBehavior>0</CanChangeDateTimeBehavior>
+          <Behavior>1</Behavior>
+          <displaynames>
+            <displayname description="Record Created On" languagecode="1033" />
+          </displaynames>
+          <Descriptions>
+            <Description description="Date and time that the record was migrated." languagecode="1033" />
+          </Descriptions>
+        </attribute>
+        <attribute PhysicalName="PartitionId">
+          <Type>nvarchar</Type>
+          <Name>partitionid</Name>
+          <LogicalName>partitionid</LogicalName>
+          <RequiredLevel>none</RequiredLevel>
+          <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
+          <ImeMode>auto</ImeMode>
+          <ValidForUpdateApi>1</ValidForUpdateApi>
+          <ValidForReadApi>1</ValidForReadApi>
+          <ValidForCreateApi>1</ValidForCreateApi>
+          <IsCustomField>0</IsCustomField>
+          <IsAuditEnabled>0</IsAuditEnabled>
+          <IsSecured>0</IsSecured>
+          <IntroducedVersion>1.0</IntroducedVersion>
+          <IsCustomizable>1</IsCustomizable>
+          <IsRenameable>1</IsRenameable>
+          <CanModifySearchSettings>1</CanModifySearchSettings>
+          <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+          <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+          <SourceType>0</SourceType>
+          <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+          <IsSortableEnabled>0</IsSortableEnabled>
+          <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+          <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+          <IsDataSourceSecret>0</IsDataSourceSecret>
+          <AutoNumberFormat></AutoNumberFormat>
+          <IsSearchable>0</IsSearchable>
+          <IsFilterable>0</IsFilterable>
+          <IsRetrievable>0</IsRetrievable>
+          <IsLocalizable>0</IsLocalizable>
+          <Format>text</Format>
+          <MaxLength>100</MaxLength>
+          <Length>200</Length>
+          <displaynames>
+            <displayname description="Partition Id" languagecode="1033" />
+          </displaynames>
+          <Descriptions>
+            <Description description="Logical partition id. A logical partition consists of a set of records with same partition id." languagecode="1033" />
+          </Descriptions>
+        </attribute>
+        <attribute PhysicalName="TTLInSeconds">
+          <Type>int</Type>
+          <Name>ttlinseconds</Name>
+          <LogicalName>ttlinseconds</LogicalName>
+          <RequiredLevel>none</RequiredLevel>
+          <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
+          <ImeMode>disabled</ImeMode>
+          <ValidForUpdateApi>1</ValidForUpdateApi>
+          <ValidForReadApi>1</ValidForReadApi>
+          <ValidForCreateApi>1</ValidForCreateApi>
+          <IsCustomField>0</IsCustomField>
+          <IsAuditEnabled>0</IsAuditEnabled>
+          <IsSecured>0</IsSecured>
+          <IntroducedVersion>1.0</IntroducedVersion>
+          <IsCustomizable>1</IsCustomizable>
+          <IsRenameable>1</IsRenameable>
+          <CanModifySearchSettings>1</CanModifySearchSettings>
+          <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+          <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+          <SourceType>0</SourceType>
+          <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+          <IsSortableEnabled>0</IsSortableEnabled>
+          <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+          <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+          <IsDataSourceSecret>0</IsDataSourceSecret>
+          <AutoNumberFormat></AutoNumberFormat>
+          <IsSearchable>0</IsSearchable>
+          <IsFilterable>0</IsFilterable>
+          <IsRetrievable>0</IsRetrievable>
+          <IsLocalizable>0</IsLocalizable>
+          <Format></Format>
+          <MinValue>1</MinValue>
+          <MaxValue>2147483647</MaxValue>
+          <displaynames>
+            <displayname description="Time to live" languagecode="1033" />
+          </displaynames>
+          <Descriptions>
+            <Description description="Time to live in seconds." languagecode="1033" />
+          </Descriptions>
+        </attribute>
+      </attributes>
+      <EntitySetName>hel_assettelemetries</EntitySetName>
+      <IsDuplicateCheckSupported>0</IsDuplicateCheckSupported>
+      <IsBusinessProcessEnabled>0</IsBusinessProcessEnabled>
+      <IsRequiredOffline>0</IsRequiredOffline>
+      <IsInteractionCentricEnabled>0</IsInteractionCentricEnabled>
+      <IsCollaboration>0</IsCollaboration>
+      <AutoRouteToOwnerQueue>0</AutoRouteToOwnerQueue>
+      <IsConnectionsEnabled>0</IsConnectionsEnabled>
+      <IsDocumentManagementEnabled>0</IsDocumentManagementEnabled>
+      <AutoCreateAccessTeams>0</AutoCreateAccessTeams>
+      <IsOneNoteIntegrationEnabled>0</IsOneNoteIntegrationEnabled>
+      <IsKnowledgeManagementEnabled>0</IsKnowledgeManagementEnabled>
+      <IsSLAEnabled>0</IsSLAEnabled>
+      <IsDocumentRecommendationsEnabled>0</IsDocumentRecommendationsEnabled>
+      <DataProviderId>{1d9bde74-9ebd-4da9-8ff5-aa74945b9f74}</DataProviderId>
+      <DataSourceId>{19897b6e-b2c2-461c-8f32-5a2413028030}</DataSourceId>
+      <IsBPFEntity>0</IsBPFEntity>
+      <OwnershipTypeMask>OrgOwned</OwnershipTypeMask>
+      <IsAuditEnabled>0</IsAuditEnabled>
+      <IsRetrieveAuditEnabled>0</IsRetrieveAuditEnabled>
+      <IsRetrieveMultipleAuditEnabled>0</IsRetrieveMultipleAuditEnabled>
+      <IsActivity>0</IsActivity>
+      <ActivityTypeMask></ActivityTypeMask>
+      <IsActivityParty>0</IsActivityParty>
+      <IsReplicated>0</IsReplicated>
+      <IsReplicationUserFiltered>0</IsReplicationUserFiltered>
+      <IsMailMergeEnabled>0</IsMailMergeEnabled>
+      <IsVisibleInMobile>0</IsVisibleInMobile>
+      <IsVisibleInMobileClient>0</IsVisibleInMobileClient>
+      <IsReadOnlyInMobileClient>0</IsReadOnlyInMobileClient>
+      <IsOfflineInMobileClient>0</IsOfflineInMobileClient>
+      <DaysSinceRecordLastModified>0</DaysSinceRecordLastModified>
+      <MobileOfflineFilters></MobileOfflineFilters>
+      <IsMapiGridEnabled>0</IsMapiGridEnabled>
+      <IsReadingPaneEnabled>0</IsReadingPaneEnabled>
+      <IsQuickCreateEnabled>0</IsQuickCreateEnabled>
+      <SyncToExternalSearchIndex>0</SyncToExternalSearchIndex>
+      <IntroducedVersion>1.0</IntroducedVersion>
+      <IsCustomizable>1</IsCustomizable>
+      <IsRenameable>1</IsRenameable>
+      <IsMappable>1</IsMappable>
+      <CanModifyAuditSettings>1</CanModifyAuditSettings>
+      <CanModifyMobileVisibility>1</CanModifyMobileVisibility>
+      <CanModifyMobileClientVisibility>1</CanModifyMobileClientVisibility>
+      <CanModifyMobileClientReadOnly>1</CanModifyMobileClientReadOnly>
+      <CanModifyMobileClientOffline>1</CanModifyMobileClientOffline>
+      <CanModifyConnectionSettings>1</CanModifyConnectionSettings>
+      <CanModifyDuplicateDetectionSettings>1</CanModifyDuplicateDetectionSettings>
+      <CanModifyMailMergeSettings>1</CanModifyMailMergeSettings>
+      <CanModifyQueueSettings>1</CanModifyQueueSettings>
+      <CanCreateAttributes>1</CanCreateAttributes>
+      <CanCreateForms>1</CanCreateForms>
+      <CanCreateCharts>0</CanCreateCharts>
+      <CanCreateViews>1</CanCreateViews>
+      <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+      <CanEnableSyncToExternalSearchIndex>1</CanEnableSyncToExternalSearchIndex>
+      <EnforceStateTransitions>0</EnforceStateTransitions>
+      <CanChangeHierarchicalRelationship>1</CanChangeHierarchicalRelationship>
+      <EntityHelpUrlEnabled>0</EntityHelpUrlEnabled>
+      <ChangeTrackingEnabled>0</ChangeTrackingEnabled>
+      <CanChangeTrackingBeEnabled>0</CanChangeTrackingBeEnabled>
+      <IsEnabledForExternalChannels>0</IsEnabledForExternalChannels>
+      <ExternalName>hel_AssetTelemetry</ExternalName>
+      <ExternalCollectionName>hel_AssetTelemetries</ExternalCollectionName>
+      <IsMSTeamsIntegrationEnabled>0</IsMSTeamsIntegrationEnabled>
+      <IsSolutionAware>0</IsSolutionAware>
+    </entity>
+  </EntityInfo>
+  <FormXml />
+  <SavedQueries />
+  <RibbonDiffXml />
+</Entity>

@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FieldSecurityProfiles xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <FieldSecurityProfile name="HELIOS Commercial Data" description="Read and write access to asset replacement cost. Asset planning and commercial roles only." fieldsecurityprofileid="{a452deca-57a8-f111-aaac-002248c75f1e}">
+    <FieldPermissions>
+      <FieldPermission>
+        <EntityName>hel_asset</EntityName>
+        <AttributeName>hel_replacementcost</AttributeName>
+        <CanRead>4</CanRead>
+        <CanUpdate>4</CanUpdate>
+        <CanCreate>4</CanCreate>
+        <CanReadUnmasked>0</CanReadUnmasked>
+      </FieldPermission>
+    </FieldPermissions>
+  </FieldSecurityProfile>
+  <FieldSecurityProfile name="HELIOS Integration Column Access" description="G6 companion. Grants the ALM service principal the secured column access that plug-ins P2, P3 &amp; I4 " fieldsecurityprofileid="{dce72889-5ca8-f111-aaac-002248c75f1e}">
+    <FieldPermissions>
+      <FieldPermission>
+        <EntityName>hel_outage</EntityName>
+        <AttributeName>hel_compensationdue</AttributeName>
+        <CanRead>4</CanRead>
+        <CanUpdate>4</CanUpdate>
+        <CanCreate>4</CanCreate>
+        <CanReadUnmasked>0</CanReadUnmasked>
+      </FieldPermission>
+      <FieldPermission>
+        <EntityName>hel_asset</EntityName>
+        <AttributeName>hel_replacementcost</AttributeName>
+        <CanRead>4</CanRead>
+        <CanUpdate>4</CanUpdate>
+        <CanCreate>4</CanCreate>
+        <CanReadUnmasked>0</CanReadUnmasked>
+      </FieldPermission>
+    </FieldPermissions>
+  </FieldSecurityProfile>
+  <FieldSecurityProfile name="HELIOS Regulatory Financials" description="Read-only access to outage compensation due. Written by plug-in P3, never by a person." fieldsecurityprofileid="{570a4f50-59a8-f111-aaac-002248c75f1e}">
+    <FieldPermissions>
+      <FieldPermission>
+        <EntityName>hel_outage</EntityName>
+        <AttributeName>hel_compensationdue</AttributeName>
+        <CanRead>4</CanRead>
+        <CanUpdate>0</CanUpdate>
+        <CanCreate>0</CanCreate>
+        <CanReadUnmasked>0</CanReadUnmasked>
+      </FieldPermission>
+    </FieldPermissions>
+  </FieldSecurityProfile>
+</FieldSecurityProfiles>

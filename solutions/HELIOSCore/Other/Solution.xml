@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ImportExportXml version="9.2.26081.151" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" OrganizationVersion="9.2.26081.151" OrganizationSchemaType="Standard" CRMServerServiceabilityVersion="9.2.26081.00151">
+<ImportExportXml version="9.2.26082.148" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" OrganizationVersion="9.2.26082.148" OrganizationSchemaType="Standard" CRMServerServiceabilityVersion="9.2.26082.00148">
   <SolutionManifest>
     <UniqueName>HELIOSCore</UniqueName>
     <LocalizedNames>
@@ -81,7 +81,46 @@
         </Address>
       </Addresses>
     </Publisher>
-    <RootComponents />
-    <MissingDependencies />
+    <RootComponents>
+      <RootComponent type="1" schemaName="hel_asset" behavior="0" />
+      <RootComponent type="1" schemaName="hel_assettelemetry" behavior="0" />
+      <RootComponent type="1" schemaName="hel_compliancerule" behavior="0" />
+      <RootComponent type="1" schemaName="hel_engineerprofile" behavior="0" />
+      <RootComponent type="1" schemaName="hel_fieldnote" behavior="0" />
+      <RootComponent type="1" schemaName="hel_inspection" behavior="0" />
+      <RootComponent type="1" schemaName="hel_integrationlog" behavior="0" />
+      <RootComponent type="1" schemaName="hel_outage" behavior="0" />
+      <RootComponent type="1" schemaName="hel_region" behavior="0" />
+      <RootComponent type="1" schemaName="hel_riskscore" behavior="0" />
+      <RootComponent type="1" schemaName="hel_sladefinition" behavior="0" />
+      <RootComponent type="1" schemaName="hel_substation" behavior="0" />
+      <RootComponent type="1" schemaName="hel_workorder" behavior="0" />
+      <RootComponent type="1" schemaName="systemuser" behavior="1" />
+      <RootComponent type="20" id="{3af764ea-92a7-f111-aaac-002248c75f1e}" behavior="0" />
+      <RootComponent type="20" id="{5a2b28b3-9da7-f111-aaac-002248c75f1e}" behavior="0" />
+      <RootComponent type="20" id="{b1b6bfde-92a7-f111-aaac-002248c75f1e}" behavior="0" />
+      <RootComponent type="20" id="{bb9b7e1e-faa6-f111-aaac-002248c75f1e}" behavior="0" />
+      <RootComponent type="20" id="{c7fd69c4-92a7-f111-aaac-002248c75f1e}" behavior="0" />
+      <RootComponent type="20" id="{dd3decd4-92a7-f111-aaac-002248c75f1e}" behavior="0" />
+      <RootComponent type="70" id="{570a4f50-59a8-f111-aaac-002248c75f1e}" behavior="0" />
+      <RootComponent type="70" id="{a452deca-57a8-f111-aaac-002248c75f1e}" behavior="0" />
+      <RootComponent type="70" id="{dce72889-5ca8-f111-aaac-002248c75f1e}" behavior="0" />
+      <RootComponent type="9" schemaName="hel_severity" behavior="0" />
+      <RootComponent type="9" schemaName="hel_skills" behavior="0" />
+    </RootComponents>
+    <MissingDependencies>
+      <MissingDependency>
+        <Required type="181" schemaName="NonRelational Data Provider" displayName="NonRelational Data Provider" solution="NonRelationalDataProvider (9.1.0.469)" id="{1d9bde74-9ebd-4da9-8ff5-aa74945b9f74}">
+          <package appName="NonRelational Data Provider Package" version="9.1.0.469">NonRelationalCustomActions (9.1.0.469)</package>
+        </Required>
+        <Dependent type="1" schemaName="hel_assettelemetry" displayName="Asset Telemetry" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="183" schemaName="NonRelational Data Provider" displayName="NonRelational Data Provider" solution="NonRelationalDataProvider (9.1.0.469)" id="{19897b6e-b2c2-461c-8f32-5a2413028030}">
+          <package appName="NonRelational Data Provider Package" version="9.1.0.469">NonRelationalCustomActions (9.1.0.469)</package>
+        </Required>
+        <Dependent type="1" schemaName="hel_assettelemetry" displayName="Asset Telemetry" />
+      </MissingDependency>
+    </MissingDependencies>
   </SolutionManifest>
 </ImportExportXml>

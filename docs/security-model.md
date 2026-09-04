@@ -94,11 +94,165 @@ Consequences:
 
 ## 5. Security roles
 
-Completed in Stage 9. Not yet written.
+All six created in the root business unit org66baaad2 and replicated by the
+platform into North, Midlands and South. Twenty-four role rows for six
+roles. Role IDs are not stable; match on roletemplateid or name.
+
+Depth key: U = User, BU = Business Unit, PC = Parent and Child Business
+Units, Org = Organization, blank = None.
+
+### HELIOS Control Room Operator
+
+| Table | C | R | W | D | Ap | ApTo | As | Sh |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Outage Event | BU | BU | BU | | BU | BU | BU | BU |
+| Work Order | BU | BU | BU | | BU | BU | BU | BU |
+| Activity (Core Records) | BU | BU | BU | | BU | BU | | |
+| Grid Asset | | Org | | | | Org | | |
+| Substation | | Org | | | | Org | | |
+| Region | | Org | | | | | | |
+| Engineer Profile | | Org | | | | Org | | |
+| Inspection | | Org | | | | | | |
+| Risk Score | | Org | | | | | | |
+| Compliance Rule | | Org | | | | | | |
+| SLA Definition | | Org | | | | | | |
+| Asset Telemetry | | Org | | | | | | |
+| User | | Org | | | | Org | | |
+
+### HELIOS Field Engineer
+
+| Table | C | R | W | D | Ap | ApTo | As | Sh |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Work Order | | U | U | | U | U | | |
+| Outage Event | | BU | | | | BU | | |
+| Inspection | U | U | U | | U | U | | |
+| Activity (Core Records) | U | U | U | | U | U | | |
+| Engineer Profile | | U | U | | | | | |
+| Grid Asset | | Org | | | | Org | | |
+| Substation | | Org | | | | | | |
+| Region | | Org | | | | | | |
+| Asset Telemetry | | Org | | | | | | |
+
+### HELIOS Asset Planner
+
+| Table | C | R | W | D | Ap | ApTo | As | Sh |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Grid Asset | Org | Org | Org | | Org | Org | | |
+| Substation | Org | Org | Org | | Org | Org | | |
+| Region | Org | Org | Org | | Org | Org | | |
+| Inspection | Org | Org | Org | | Org | Org | | |
+| Outage Event | | Org | | | | Org | | |
+| Work Order | | Org | | | | | | |
+| Activity (Core Records) | | Org | | | | | | |
+| Risk Score | | Org | | | | | | |
+| Asset Telemetry | | Org | | | | | | |
+| Compliance Rule | | Org | | | | | | |
+| SLA Definition | | Org | | | | | | |
+
+### HELIOS Regional Manager
+
+| Table | C | R | W | D | Ap | ApTo | As | Sh |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Outage Event | PC | PC | PC | PC | PC | PC | PC | PC |
+| Work Order | PC | PC | PC | PC | PC | PC | PC | PC |
+| Activity (Core Records) | PC | PC | PC | PC | PC | PC | PC | PC |
+| Inspection | | PC | PC | | PC | PC | PC | |
+| Engineer Profile | | Org | PC | | | Org | | |
+| Grid Asset | | Org | | | | Org | | |
+| Substation | | Org | | | | Org | | |
+| Region | | Org | | | | | | |
+| Risk Score | | Org | | | | | | |
+| Compliance Rule | | Org | | | | | | |
+| SLA Definition | | Org | | | | | | |
+| Asset Telemetry | | Org | | | | | | |
+| User | | Org | | | | Org | | |
+
+### HELIOS Compliance Auditor
+
+Read at Organization on all thirteen hel_ tables and on Activity. No other
+privilege anywhere.
+
+### HELIOS Integration Service (G6)
+
+| Table | C | R | W | D | Ap | ApTo | As |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Outage Event | Org | Org | Org | | Org | Org | |
+| Work Order | Org | Org | Org | | Org | Org | Org |
+| Risk Score | Org | Org | Org | | Org | Org | |
+| Integration Log | Org | Org | Org | | Org | | |
+| Asset Telemetry | Org | Org | Org | | | | |
+| Activity (Core Records) | Org | Org | Org | | Org | Org | |
+| Grid Asset | | Org | Org | | | Org | |
+| Substation | | Org | | | | Org | |
+| Region | | Org | | | | | |
+| Engineer Profile | | Org | | | | Org | |
+| Inspection | | Org | | | | | |
+| Compliance Rule | | Org | | | | | |
+| SLA Definition | | Org | | | | | |
+| Process | | Org | | | | | |
+
+App Opener privileges included on the five human roles, excluded on HELIOS
+Integration Service. Member's privilege inheritance left at the default,
+Direct User (Basic) access level and Team privileges, on all six.
+
+### Assignment
+
+| Principal | Role |
+| --- | --- |
+| North Operations team | HELIOS Control Room Operator |
+| Midlands Operations team | None. Control group. |
+| South Operations team | None. Control group. |
+| HELIOS ALM Service Principal application user | HELIOS Integration Service, plus System Administrator |
+| HELIOS Admin | System Administrator only |
+
+### Activity privilege note
+
+hel_fieldnote has no privilege row. Custom activities inherit security
+through ActivityPointer, so the Activity table under Core Records governs
+every activity type in the environment at once.
 
 ## 6. Column security profiles
 
-Completed in Stage 10. Not yet written.
+Two secured columns: hel_replacementcost on hel_asset, hel_compensationdue
+on hel_outage. Both Currency type. Both IsSecured true.
+
+| Profile | Column | Read | Read unmasked | Update | Create | Members |
+| --- | --- | --- | --- | --- | --- | --- |
+| HELIOS Commercial Data | hel_replacementcost | Allowed | Not Allowed | Allowed | Allowed | North Operations team |
+| HELIOS Regulatory Financials | hel_compensationdue | Allowed | Not Allowed | Not Allowed | Not Allowed | North Operations team |
+| HELIOS Integration Column Access | hel_replacementcost | Allowed | Not Allowed | Allowed | Allowed | HELIOS ALM Service Principal |
+| HELIOS Integration Column Access | hel_compensationdue | Allowed | Not Allowed | Allowed | Allowed | HELIOS ALM Service Principal |
+
+Profiles are assigned to users and teams, never to security roles.
+
+Compensation Due is deliberately Read without Update outside the
+integration profile. P3 derives the value from customers affected, SLA
+target minutes and penalty per minute. A human overwrite would break the
+audit trail.
+
+The integration profile exists because P2, P3 and I4 write both columns as
+the service principal. Without it those writes fail with no useful error.
+
+### Empirical test, M2 Stage 10
+
+Tested with scripts/test-column-security.ps1 using the HELIOS ALM Service
+Principal authenticated by client credentials, with System Administrator
+temporarily removed. Column-level security does not apply to system
+administrators, so no other identity in this environment could test it.
+
+| Run | Profile membership | hel_replacementcost | hel_replacementcost_base | hel_compensationdue | hel_compensationdue_base |
+| --- | --- | --- | --- | --- | --- |
+| 1 | None | null | null | null | null |
+| 2 | HELIOS Integration Column Access | 45000 | 45000 | 18400 | 18400 |
+
+Finding: base currency columns report IsSecured false and
+CanBeSecuredForRead false, but their visibility tracks the source column's
+permission in both directions. There is no exposure. The metadata is
+misleading and only the empirical test settles it.
+
+Second finding: a denied column is returned as null, not omitted from the
+response. Plug-in and flow logic that treats null as "no value set" will
+behave incorrectly when the caller simply lacks column access.
 
 ## 7. DLP policy design
 

@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Role id="{dd3decd4-92a7-f111-aaac-002248c75f1e}" name="HELIOS Asset Planner" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <IsCustomizable>1</IsCustomizable>
+  <IsAutoAssigned>0</IsAutoAssigned>
+  <AppliesTo>HELIOS Control Tower and Operations Hub</AppliesTo>
+  <Description>Asset planning and back office. Owns the asset register and substation data organization-wide. Read-only on incidents.</Description>
+  <SummaryOfCoreTablePermissions>Outage Event, Work Order, Field Note at business unit depth. Read-only on the asset register.</SummaryOfCoreTablePermissions>
+  <RolePrivileges>
+    <RolePrivilege name="prvActivateSynchronousWorkflow" level="Basic" />
+    <RolePrivilege name="prvAppendhel_asset" level="Global" />
+    <RolePrivilege name="prvAppendhel_Inspection" level="Global" />
+    <RolePrivilege name="prvAppendhel_Region" level="Global" />
+    <RolePrivilege name="prvAppendhel_Substation" level="Global" />
+    <RolePrivilege name="prvAppendNewProcess" level="Global" />
+    <RolePrivilege name="prvAppendToAsyncOperation" level="Basic" />
+    <RolePrivilege name="prvAppendTohel_asset" level="Global" />
+    <RolePrivilege name="prvAppendTohel_Inspection" level="Global" />
+    <RolePrivilege name="prvAppendTohel_Outage" level="Global" />
+    <RolePrivilege name="prvAppendTohel_Region" level="Global" />
+    <RolePrivilege name="prvAppendTohel_Substation" level="Global" />
+    <RolePrivilege name="prvAppendToNewProcess" level="Global" />
+    <RolePrivilege name="prvAppendToTranslationProcess" level="Global" />
+    <RolePrivilege name="prvAppendToWorkflow" level="Global" />
+    <RolePrivilege name="prvAppendToWorkflowSession" level="Basic" />
+    <RolePrivilege name="prvAppendTranslationProcess" level="Global" />
+    <RolePrivilege name="prvAppendWorkflow" level="Basic" />
+    <RolePrivilege name="prvAppendWorkflowSession" level="Basic" />
+    <RolePrivilege name="prvAssignAsyncOperation" level="Basic" />
+    <RolePrivilege name="prvAssignWorkflow" level="Basic" />
+    <RolePrivilege name="prvAssignWorkflowSession" level="Basic" />
+    <RolePrivilege name="prvCreatehel_asset" level="Global" />
+    <RolePrivilege name="prvCreatehel_Inspection" level="Global" />
+    <RolePrivilege name="prvCreatehel_Region" level="Global" />
+    <RolePrivilege name="prvCreatehel_Substation" level="Global" />
+    <RolePrivilege name="prvCreateNewProcess" level="Global" />
+    <RolePrivilege name="prvCreateSharePointData" level="Global" />
+    <RolePrivilege name="prvCreateTranslationProcess" level="Global" />
+    <RolePrivilege name="prvCreateUserApplicationMetadata" level="Basic" />
+    <RolePrivilege name="prvCreateUserEntityUISettings" level="Basic" />
+    <RolePrivilege name="prvCreateWorkflow" level="Basic" />
+    <RolePrivilege name="prvCreateWorkflowSession" level="Basic" />
+    <RolePrivilege name="prvDeleteNewProcess" level="Global" />
+    <RolePrivilege name="prvDeleteTranslationProcess" level="Global" />
+    <RolePrivilege name="prvDeleteUserApplicationMetadata" level="Basic" />
+    <RolePrivilege name="prvDeleteUserEntityUISettings" level="Basic" />
+    <RolePrivilege name="prvDeleteWorkflow" level="Basic" />
+    <RolePrivilege name="prvDeleteWorkflowSession" level="Basic" />
+    <RolePrivilege name="prvFlow" level="Global" />
+    <RolePrivilege name="prvReadAppConfigMaster" level="Global" />
+    <RolePrivilege name="prvReadAppModule" level="Global" />
+    <RolePrivilege name="prvReadAsyncOperation" level="Basic" />
+    <RolePrivilege name="prvReadAttribute" level="Global" />
+    <RolePrivilege name="prvReadAttributeMap" level="Global" />
+    <RolePrivilege name="prvReadBusinessUnit" level="Global" />
+    <RolePrivilege name="prvReadComplexControl" level="Global" />
+    <RolePrivilege name="prvReadCustomization" level="Global" />
+    <RolePrivilege name="prvReadEntity" level="Global" />
+    <RolePrivilege name="prvReadEntityKey" level="Global" />
+    <RolePrivilege name="prvReadEntityMap" level="Global" />
+    <RolePrivilege name="prvReadhel_asset" level="Global" />
+    <RolePrivilege name="prvReadhel_AssetTelemetry" level="Global" />
+    <RolePrivilege name="prvReadhel_ComplianceRule" level="Global" />
+    <RolePrivilege name="prvReadhel_Inspection" level="Global" />
+    <RolePrivilege name="prvReadhel_Outage" level="Global" />
+    <RolePrivilege name="prvReadhel_Region" level="Global" />
+    <RolePrivilege name="prvReadhel_RiskScore" level="Global" />
+    <RolePrivilege name="prvReadhel_SlaDefinition" level="Global" />
+    <RolePrivilege name="prvReadhel_Substation" level="Global" />
+    <RolePrivilege name="prvReadhel_WorkOrder" level="Global" />
+    <RolePrivilege name="prvReadHierarchyRule" level="Global" />
+    <RolePrivilege name="prvReadNewProcess" level="Global" />
+    <RolePrivilege name="prvReadOptionSet" level="Global" />
+    <RolePrivilege name="prvReadOrganization" level="Global" />
+    <RolePrivilege name="prvReadPluginAssembly" level="Global" />
+    <RolePrivilege name="prvReadPluginTraceLog" level="Global" />
+    <RolePrivilege name="prvReadPluginType" level="Global" />
+    <RolePrivilege name="prvReadQuery" level="Global" />
+    <RolePrivilege name="prvReadRelationship" level="Global" />
+    <RolePrivilege name="prvReadReport" level="Basic" />
+    <RolePrivilege name="prvReadRole" level="Global" />
+    <RolePrivilege name="prvReadSavedQueryVisualizations" level="Global" />
+    <RolePrivilege name="prvReadSdkMessage" level="Global" />
+    <RolePrivilege name="prvReadSdkMessageProcessingStep" level="Global" />
+    <RolePrivilege name="prvReadSdkMessageProcessingStepImage" level="Global" />
+    <RolePrivilege name="prvReadSharePointData" level="Global" />
+    <RolePrivilege name="prvReadSharePointDocument" level="Global" />
+    <RolePrivilege name="prvReadSystemApplicationMetadata" level="Global" />
+    <RolePrivilege name="prvReadSystemForm" level="Global" />
+    <RolePrivilege name="prvReadTeam" level="Global" />
+    <RolePrivilege name="prvReadTraceLog" level="Global" />
+    <RolePrivilege name="prvReadTransactionCurrency" level="Global" />
+    <RolePrivilege name="prvReadTranslationProcess" level="Global" />
+    <RolePrivilege name="prvReadUserApplicationMetadata" level="Basic" />
+    <RolePrivilege name="prvReadUserEntityUISettings" level="Basic" />
+    <RolePrivilege name="prvReadUserQuery" level="Basic" />
+    <RolePrivilege name="prvReadUserSettings" level="Global" />
+    <RolePrivilege name="prvReadWebResource" level="Global" />
+    <RolePrivilege name="prvReadWorkflow" level="Global" />
+    <RolePrivilege name="prvReadWorkflowSession" level="Global" />
+    <RolePrivilege name="prvShareUserEntityUISettings" level="Basic" />
+    <RolePrivilege name="prvShareWorkflow" level="Basic" />
+    <RolePrivilege name="prvShareWorkflowSession" level="Basic" />
+    <RolePrivilege name="prvWorkflowExecution" level="Global" />
+    <RolePrivilege name="prvWriteAsyncOperation" level="Basic" />
+    <RolePrivilege name="prvWritehel_asset" level="Global" />
+    <RolePrivilege name="prvWritehel_Inspection" level="Global" />
+    <RolePrivilege name="prvWritehel_Region" level="Global" />
+    <RolePrivilege name="prvWritehel_Substation" level="Global" />
+    <RolePrivilege name="prvWriteNewProcess" level="Global" />
+    <RolePrivilege name="prvWriteSharePointData" level="Global" />
+    <RolePrivilege name="prvWriteTranslationProcess" level="Global" />
+    <RolePrivilege name="prvWriteUserApplicationMetadata" level="Basic" />
+    <RolePrivilege name="prvWriteUserEntityUISettings" level="Basic" />
+    <RolePrivilege name="prvWriteWorkflow" level="Basic" />
+    <RolePrivilege name="prvWriteWorkflowSession" level="Basic" />
+  </RolePrivileges>
+</Role>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ImportExportXml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" OrganizationVersion="9.2.26081.151" OrganizationSchemaType="Standard" CRMServerServiceabilityVersion="9.2.26081.00151">
+<ImportExportXml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" OrganizationVersion="9.2.26082.148" OrganizationSchemaType="Standard" CRMServerServiceabilityVersion="9.2.26082.00148">
   <Entities />
   <Roles />
   <Workflows />
@@ -10,6 +10,16 @@
   <OrganizationSettings />
   <optionsets />
   <CustomControls />
+  <teamtemplates>
+    <teamtemplate teamtemplateid="c7d05cd5-3ca6-f111-aaac-002248c75f1e">
+      <entitylogicalname>hel_workorder</entitylogicalname>
+      <defaultaccessrightsmask>19</defaultaccessrightsmask>
+      <description>Ad-hoc read and write sharing of a single work order with engineers outside the owning region.</description>
+      <iscustomizable>1</iscustomizable>
+      <issystem>0</issystem>
+      <teamtemplatename>HELIOS Work Order Collaborators</teamtemplatename>
+    </teamtemplate>
+  </teamtemplates>
   <EntityDataProviders />
   <Languages>
     <Language>1033</Language>

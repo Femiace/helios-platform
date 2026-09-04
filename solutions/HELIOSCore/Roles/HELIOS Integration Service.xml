@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Role id="{5a2b28b3-9da7-f111-aaac-002248c75f1e}" name="HELIOS Integration Service" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <IsCustomizable>1</IsCustomizable>
+  <IsAutoAssigned>0</IsAutoAssigned>
+  <AppliesTo>HELIOS ALM Service Principal application user</AppliesTo>
+  <Description>G6. Least privilege role for the HELIOS ALM service principal. Grants only what plug-ins P1 to P4 and flows F1 to F7 require.</Description>
+  <SummaryOfCoreTablePermissions>Organization depth on transactional and log tables. Read-only on configuration. No delete, no customization, no administration.</SummaryOfCoreTablePermissions>
+  <RolePrivileges>
+    <RolePrivilege name="prvAppendActivity" level="Global" />
+    <RolePrivilege name="prvAppendhel_IntegrationLog" level="Global" />
+    <RolePrivilege name="prvAppendhel_Outage" level="Global" />
+    <RolePrivilege name="prvAppendhel_RiskScore" level="Global" />
+    <RolePrivilege name="prvAppendhel_WorkOrder" level="Global" />
+    <RolePrivilege name="prvAppendToActivity" level="Global" />
+    <RolePrivilege name="prvAppendTohel_asset" level="Global" />
+    <RolePrivilege name="prvAppendTohel_EngineerProfile" level="Global" />
+    <RolePrivilege name="prvAppendTohel_Outage" level="Global" />
+    <RolePrivilege name="prvAppendTohel_RiskScore" level="Global" />
+    <RolePrivilege name="prvAppendTohel_Substation" level="Global" />
+    <RolePrivilege name="prvAppendTohel_WorkOrder" level="Global" />
+    <RolePrivilege name="prvAssignhel_WorkOrder" level="Global" />
+    <RolePrivilege name="prvCreateActivity" level="Global" />
+    <RolePrivilege name="prvCreatehel_AssetTelemetry" level="Global" />
+    <RolePrivilege name="prvCreatehel_IntegrationLog" level="Global" />
+    <RolePrivilege name="prvCreatehel_Outage" level="Global" />
+    <RolePrivilege name="prvCreatehel_RiskScore" level="Global" />
+    <RolePrivilege name="prvCreatehel_WorkOrder" level="Global" />
+    <RolePrivilege name="prvCreateSharePointData" level="Global" />
+    <RolePrivilege name="prvReadActivity" level="Global" />
+    <RolePrivilege name="prvReadhel_asset" level="Global" />
+    <RolePrivilege name="prvReadhel_AssetTelemetry" level="Global" />
+    <RolePrivilege name="prvReadhel_ComplianceRule" level="Global" />
+    <RolePrivilege name="prvReadhel_EngineerProfile" level="Global" />
+    <RolePrivilege name="prvReadhel_Inspection" level="Global" />
+    <RolePrivilege name="prvReadhel_IntegrationLog" level="Global" />
+    <RolePrivilege name="prvReadhel_Outage" level="Global" />
+    <RolePrivilege name="prvReadhel_Region" level="Global" />
+    <RolePrivilege name="prvReadhel_RiskScore" level="Global" />
+    <RolePrivilege name="prvReadhel_SlaDefinition" level="Global" />
+    <RolePrivilege name="prvReadhel_Substation" level="Global" />
+    <RolePrivilege name="prvReadhel_WorkOrder" level="Global" />
+    <RolePrivilege name="prvReadPluginAssembly" level="Global" />
+    <RolePrivilege name="prvReadPluginType" level="Global" />
+    <RolePrivilege name="prvReadSdkMessage" level="Global" />
+    <RolePrivilege name="prvReadSdkMessageProcessingStep" level="Global" />
+    <RolePrivilege name="prvReadSdkMessageProcessingStepImage" level="Global" />
+    <RolePrivilege name="prvReadSharePointData" level="Global" />
+    <RolePrivilege name="prvReadSharePointDocument" level="Global" />
+    <RolePrivilege name="prvReadWorkflow" level="Global" />
+    <RolePrivilege name="prvWriteActivity" level="Global" />
+    <RolePrivilege name="prvWritehel_asset" level="Global" />
+    <RolePrivilege name="prvWritehel_AssetTelemetry" level="Global" />
+    <RolePrivilege name="prvWritehel_IntegrationLog" level="Global" />
+    <RolePrivilege name="prvWritehel_Outage" level="Global" />
+    <RolePrivilege name="prvWritehel_RiskScore" level="Global" />
+    <RolePrivilege name="prvWritehel_WorkOrder" level="Global" />
+    <RolePrivilege name="prvWriteSharePointData" level="Global" />
+  </RolePrivileges>
+</Role>

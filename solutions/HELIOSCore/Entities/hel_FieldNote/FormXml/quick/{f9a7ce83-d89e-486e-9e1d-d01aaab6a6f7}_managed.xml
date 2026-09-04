@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{f9a7ce83-d89e-486e-9e1d-d01aaab6a6f7}</formid>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab verticallayout="true" id="{26236a44-4f07-44d9-8514-9ad06913c0af}" IsUserDefined="1">
+          <labels>
+            <label description="" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{c4fb154f-969d-430c-9f8b-688aaadf05b5}">
+                  <labels>
+                    <label description="GENERAL" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{a9d0150c-9286-4398-afb4-a36fd56979ad}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="subject" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="subject" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{df691b8a-30d4-430a-af85-66ce8937ea3e}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="regardingobjectid" classid="{F3015350-44A2-4aa0-97B5-00166532B5E9}" datafieldname="regardingobjectid" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{2721b0fa-279f-42d6-b49a-fd62886d273d}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="statecode" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="statecode" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{ec351b2c-9aa6-4f88-8f35-aceb3c9a417c}">
+                  <labels>
+                    <label description="OTHER DETAILS" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{43656ac9-e4c0-4caa-be34-42bafbc744d3}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="prioritycode" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="prioritycode" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{2e649fc1-ade7-4ef3-8606-137216cb57d4}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="scheduledend" classid="{5B773807-9FB2-42db-97C3-7A91EFF8ADFF}" datafieldname="scheduledend" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{2562169c-80ff-474c-ab4d-67035c9bfcba}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+    </LocalizedNames>
+  </systemform>
+</forms>

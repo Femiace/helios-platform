@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{e529f543-32a5-4739-9dbc-f6c2c43afd4b}</savedqueryid>
+    <layoutxml>
+      <grid name="hel_assettelemetries" jump="hel_name" select="1" icon="1" preview="0">
+        <row name="hel_assettelemetry" id="hel_assettelemetryid">
+          <cell name="hel_name" width="300" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>64</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="hel_assettelemetry">
+          <attribute name="hel_assettelemetryid" />
+          <attribute name="hel_name" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Asset Telemetry Lookup View" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>
