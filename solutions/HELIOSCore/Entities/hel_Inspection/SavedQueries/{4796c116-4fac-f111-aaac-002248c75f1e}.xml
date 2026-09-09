@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{4796c116-4fac-f111-aaac-002248c75f1e}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="hel_name" select="1" icon="1" preview="1">
+        <row name="result" id="hel_inspectionid">
+          <cell name="hel_name" width="200" />
+          <cell name="hel_asset" width="101" />
+          <cell name="hel_inspectiondate" width="129" />
+          <cell name="hel_resultinghealthindex" width="170" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" output-format="xml-platform" mapping="logical">
+        <entity name="hel_inspection">
+          <attribute name="hel_name" />
+          <attribute name="hel_inspectionid" />
+          <attribute name="hel_asset" />
+          <attribute name="hel_inspectiondate" />
+          <attribute name="hel_resultinghealthindex" />
+          <order attribute="hel_inspectiondate" descending="true" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Recent Inspections" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

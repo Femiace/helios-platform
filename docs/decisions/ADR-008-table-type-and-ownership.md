@@ -138,3 +138,54 @@ Define alternate keys to reference rows:
 https://learn.microsoft.com/power-apps/maker/data-platform/define-alternate-keys-reference-records
 Edit a table, options that can only be enabled:
 https://learn.microsoft.com/power-apps/maker/data-platform/edit-entities
+
+## Amendments after build, M2 Stage 11
+
+### Corrections to the original decision
+
+hel_asset was created with schema name hel_asset in lowercase, while every
+other table used a leading capital (hel_Region, hel_Substation, hel_Outage,
+hel_WorkOrder and the rest). Schema name is permanent. The effect is
+cosmetic: the logical name is hel_asset either way and every runtime
+reference uses the logical name. It surfaces in generated relationship
+names such as hel_WorkOrder_hel_asset_hel_asset, and it will surface in
+class names if pac modelbuilder is used in M6. Not rebuilt. Documented as
+the one exception to the naming convention.
+
+### Consequence of the activity table decision
+
+hel_fieldnote does not appear in the security role editor and cannot be
+given its own privileges. Activity security is inherited through the
+ActivityPointer table, so the Activity privilege under Core Records governs
+every activity type in the environment at once, including custom ones.
+
+Choosing an activity table bought the timeline control and the polymorphic
+Regarding lookup, and gave up per-table security granularity. A standard
+table would have had its own privilege row and two separate lookups. The
+trade is accepted. If a future requirement needs field notes secured
+differently from other activity types, this decision has to be revisited
+and it is a rebuild.
+
+### Base currency column exposure: not a real exposure
+
+The original Consequences section recorded that hel_replacementcost carries
+column security while hel_replacementcost_base reports IsSecured false and
+CanBeSecuredForRead false, and treated that as an unfixable exposure.
+
+Empirically tested in M2 Stage 10 using the HELIOS ALM Service Principal
+with System Administrator removed. Both the secured column and its base
+column returned null when the caller was in no column security profile, and
+both returned values when the caller was added to one. The base column's
+visibility tracks the source column's permission in both directions on both
+hel_asset and hel_outage.
+
+The metadata is misleading. There is no exposure. The Currency data type is
+retained rather than switching to Decimal Number.
+
+### Elastic table keys: corrected statement
+
+hel_assettelemetry does have a key. The platform creates
+KeyForNoSqlEntityWithPKPartitionId on hel_assettelemetryid plus
+partitionid, IsCustomizable false, IsSynchronous true because Cosmos
+indexes on write. The accurate statement is that elastic tables support no
+custom alternate keys, not that they support no keys.

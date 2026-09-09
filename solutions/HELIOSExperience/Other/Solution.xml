@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ImportExportXml version="9.2.26082.148" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" OrganizationVersion="9.2.26082.148" OrganizationSchemaType="Standard" CRMServerServiceabilityVersion="9.2.26082.00148">
+<ImportExportXml version="9.2.26083.157" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" OrganizationVersion="9.2.26083.157" OrganizationSchemaType="Standard" CRMServerServiceabilityVersion="9.2.26083.00157">
   <SolutionManifest>
     <UniqueName>HELIOSExperience</UniqueName>
     <LocalizedNames>
@@ -81,7 +81,307 @@
         </Address>
       </Addresses>
     </Publisher>
-    <RootComponents />
-    <MissingDependencies />
+    <RootComponents>
+      <RootComponent type="1" schemaName="hel_asset" behavior="2" />
+      <RootComponent type="1" schemaName="hel_engineerprofile" behavior="2" />
+      <RootComponent type="1" schemaName="hel_inspection" behavior="2" />
+      <RootComponent type="1" schemaName="hel_outage" behavior="2" />
+      <RootComponent type="1" schemaName="hel_substation" behavior="2" />
+      <RootComponent type="1" schemaName="hel_workorder" behavior="2" />
+    </RootComponents>
+    <MissingDependencies>
+      <MissingDependency>
+        <Required type="1" schemaName="hel_asset" displayName="Grid Asset" solution="Active" />
+        <Dependent type="1" schemaName="hel_asset" displayName="Grid Asset" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="hel_engineerprofile" displayName="Engineer Profile" solution="Active" />
+        <Dependent type="1" schemaName="hel_engineerprofile" displayName="Engineer Profile" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="hel_inspection" displayName="Inspection" solution="Active" />
+        <Dependent type="1" schemaName="hel_inspection" displayName="Inspection" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="hel_outage" displayName="Outage Event" solution="Active" />
+        <Dependent type="1" schemaName="hel_outage" displayName="Outage Event" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="hel_substation" displayName="Substation" solution="Active" />
+        <Dependent type="1" schemaName="hel_substation" displayName="Substation" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="hel_workorder" displayName="Work Order" solution="Active" />
+        <Dependent type="1" schemaName="hel_workorder" displayName="Work Order" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="createdby" displayName="Created By" parentSchemaName="hel_asset" parentDisplayName="Grid Asset" solution="Active" />
+        <Dependent type="26" schemaName="Assets Needing Attention" displayName="Assets Needing Attention" parentSchemaName="hel_asset" parentDisplayName="Grid Asset" id="{52d5acb1-4eac-f111-aaac-002248c75f1e}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="hel_actualrestoration" displayName="Actual Restoration" parentSchemaName="hel_outage" parentDisplayName="Outage Event" solution="Active" />
+        <Dependent type="26" schemaName="Open Outages" displayName="Open Outages" parentSchemaName="hel_outage" parentDisplayName="Outage Event" id="{8f517210-4cac-f111-aaac-002248c75f1e}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="hel_actualrestoration" displayName="Actual Restoration" parentSchemaName="hel_outage" parentDisplayName="Outage Event" solution="Active" />
+        <Dependent type="26" schemaName="All Outages" displayName="All Outages" parentSchemaName="hel_outage" parentDisplayName="Outage Event" id="{e17520f7-4cac-f111-aaac-002248c75f1e}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="hel_asset" displayName="Grid Asset" parentSchemaName="hel_inspection" parentDisplayName="Inspection" solution="Active" />
+        <Dependent type="26" schemaName="Recent Inspections" displayName="Recent Inspections" parentSchemaName="hel_inspection" parentDisplayName="Inspection" id="{4796c116-4fac-f111-aaac-002248c75f1e}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="hel_asset" displayName="Grid Asset" parentSchemaName="hel_outage" parentDisplayName="Outage Event" solution="Active" />
+        <Dependent type="26" schemaName="Open Outages" displayName="Open Outages" parentSchemaName="hel_outage" parentDisplayName="Outage Event" id="{8f517210-4cac-f111-aaac-002248c75f1e}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="hel_asset" displayName="Grid Asset" parentSchemaName="hel_outage" parentDisplayName="Outage Event" solution="Active" />
+        <Dependent type="26" schemaName="All Outages" displayName="All Outages" parentSchemaName="hel_outage" parentDisplayName="Outage Event" id="{e17520f7-4cac-f111-aaac-002248c75f1e}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="hel_asset" displayName="Grid Asset" parentSchemaName="hel_workorder" parentDisplayName="Work Order" solution="Active" />
+        <Dependent type="26" schemaName="Work Orders for Outage" displayName="Work Orders for Outage" parentSchemaName="hel_workorder" parentDisplayName="Work Order" id="{a0fdcae0-4dac-f111-aaac-002248c75f1e}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="hel_asset" displayName="Grid Asset" parentSchemaName="hel_workorder" parentDisplayName="Work Order" solution="Active" />
+        <Dependent type="26" schemaName="Open Work Orders" displayName="Open Work Orders" parentSchemaName="hel_workorder" parentDisplayName="Work Order" id="{af9339b3-4dac-f111-aaac-002248c75f1e}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="hel_assetid" displayName="Grid Asset" parentSchemaName="hel_asset" parentDisplayName="Grid Asset" solution="Active" />
+        <Dependent type="26" schemaName="Assets Needing Attention" displayName="Assets Needing Attention" parentSchemaName="hel_asset" parentDisplayName="Grid Asset" id="{52d5acb1-4eac-f111-aaac-002248c75f1e}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="hel_assetid" displayName="Grid Asset" parentSchemaName="hel_asset" parentDisplayName="Grid Asset" solution="Active" />
+        <Dependent type="26" schemaName="In Service Assets" displayName="In Service Assets" parentSchemaName="hel_asset" parentDisplayName="Grid Asset" id="{c71f4c5a-4eac-f111-aaac-002248c75f1e}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="hel_assettype" displayName="Asset Type" parentSchemaName="hel_asset" parentDisplayName="Grid Asset" solution="Active" />
+        <Dependent type="26" schemaName="Assets Needing Attention" displayName="Assets Needing Attention" parentSchemaName="hel_asset" parentDisplayName="Grid Asset" id="{52d5acb1-4eac-f111-aaac-002248c75f1e}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="hel_assettype" displayName="Asset Type" parentSchemaName="hel_asset" parentDisplayName="Grid Asset" solution="Active" />
+        <Dependent type="26" schemaName="In Service Assets" displayName="In Service Assets" parentSchemaName="hel_asset" parentDisplayName="Grid Asset" id="{c71f4c5a-4eac-f111-aaac-002248c75f1e}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="hel_available" displayName="Available" parentSchemaName="hel_engineerprofile" parentDisplayName="Engineer Profile" solution="Active" />
+        <Dependent type="26" schemaName="Available Engineers" displayName="Available Engineers" parentSchemaName="hel_engineerprofile" parentDisplayName="Engineer Profile" id="{9170b35d-4fac-f111-aaac-002248c75f1e}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="hel_cause" displayName="Cause" parentSchemaName="hel_outage" parentDisplayName="Outage Event" solution="Active" />
+        <Dependent type="26" schemaName="All Outages" displayName="All Outages" parentSchemaName="hel_outage" parentDisplayName="Outage Event" id="{e17520f7-4cac-f111-aaac-002248c75f1e}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="hel_certificationexpiry" displayName="Certification Expiry" parentSchemaName="hel_engineerprofile" parentDisplayName="Engineer Profile" solution="Active" />
+        <Dependent type="26" schemaName="Available Engineers" displayName="Available Engineers" parentSchemaName="hel_engineerprofile" parentDisplayName="Engineer Profile" id="{9170b35d-4fac-f111-aaac-002248c75f1e}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="hel_criticality" displayName="Criticality" parentSchemaName="hel_asset" parentDisplayName="Grid Asset" solution="Active" />
+        <Dependent type="26" schemaName="Assets Needing Attention" displayName="Assets Needing Attention" parentSchemaName="hel_asset" parentDisplayName="Grid Asset" id="{52d5acb1-4eac-f111-aaac-002248c75f1e}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="hel_criticality" displayName="Criticality" parentSchemaName="hel_asset" parentDisplayName="Grid Asset" solution="Active" />
+        <Dependent type="26" schemaName="In Service Assets" displayName="In Service Assets" parentSchemaName="hel_asset" parentDisplayName="Grid Asset" id="{c71f4c5a-4eac-f111-aaac-002248c75f1e}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="hel_customersaffected" displayName="Customers Affected" parentSchemaName="hel_outage" parentDisplayName="Outage Event" solution="Active" />
+        <Dependent type="26" schemaName="Open Outages" displayName="Open Outages" parentSchemaName="hel_outage" parentDisplayName="Outage Event" id="{8f517210-4cac-f111-aaac-002248c75f1e}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="hel_customersaffected" displayName="Customers Affected" parentSchemaName="hel_outage" parentDisplayName="Outage Event" solution="Active" />
+        <Dependent type="26" schemaName="All Outages" displayName="All Outages" parentSchemaName="hel_outage" parentDisplayName="Outage Event" id="{e17520f7-4cac-f111-aaac-002248c75f1e}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="hel_customerscount" displayName="Customers Count" parentSchemaName="hel_substation" parentDisplayName="Substation" solution="Active" />
+        <Dependent type="26" schemaName="Substations by Region" displayName="Substations by Region" parentSchemaName="hel_substation" parentDisplayName="Substation" id="{785bf7de-4eac-f111-aaac-002248c75f1e}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="hel_engineer" displayName="Engineer" parentSchemaName="hel_workorder" parentDisplayName="Work Order" solution="Active" />
+        <Dependent type="26" schemaName="Work Orders for Outage" displayName="Work Orders for Outage" parentSchemaName="hel_workorder" parentDisplayName="Work Order" id="{a0fdcae0-4dac-f111-aaac-002248c75f1e}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="hel_engineer" displayName="Engineer" parentSchemaName="hel_workorder" parentDisplayName="Work Order" solution="Active" />
+        <Dependent type="26" schemaName="Open Work Orders" displayName="Open Work Orders" parentSchemaName="hel_workorder" parentDisplayName="Work Order" id="{af9339b3-4dac-f111-aaac-002248c75f1e}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="hel_engineerprofileid" displayName="Engineer Profile" parentSchemaName="hel_engineerprofile" parentDisplayName="Engineer Profile" solution="Active" />
+        <Dependent type="26" schemaName="Available Engineers" displayName="Available Engineers" parentSchemaName="hel_engineerprofile" parentDisplayName="Engineer Profile" id="{9170b35d-4fac-f111-aaac-002248c75f1e}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="hel_estimatedrestoration" displayName="Estimated Restoration" parentSchemaName="hel_outage" parentDisplayName="Outage Event" solution="Active" />
+        <Dependent type="26" schemaName="Open Outages" displayName="Open Outages" parentSchemaName="hel_outage" parentDisplayName="Outage Event" id="{8f517210-4cac-f111-aaac-002248c75f1e}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="hel_healthindex" displayName="Health Index" parentSchemaName="hel_asset" parentDisplayName="Grid Asset" solution="Active" />
+        <Dependent type="26" schemaName="Assets Needing Attention" displayName="Assets Needing Attention" parentSchemaName="hel_asset" parentDisplayName="Grid Asset" id="{52d5acb1-4eac-f111-aaac-002248c75f1e}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="hel_healthindex" displayName="Health Index" parentSchemaName="hel_asset" parentDisplayName="Grid Asset" solution="Active" />
+        <Dependent type="26" schemaName="In Service Assets" displayName="In Service Assets" parentSchemaName="hel_asset" parentDisplayName="Grid Asset" id="{c71f4c5a-4eac-f111-aaac-002248c75f1e}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="hel_inspectiondate" displayName="Inspection Date" parentSchemaName="hel_inspection" parentDisplayName="Inspection" solution="Active" />
+        <Dependent type="26" schemaName="Recent Inspections" displayName="Recent Inspections" parentSchemaName="hel_inspection" parentDisplayName="Inspection" id="{4796c116-4fac-f111-aaac-002248c75f1e}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="hel_inspectionid" displayName="Inspection" parentSchemaName="hel_inspection" parentDisplayName="Inspection" solution="Active" />
+        <Dependent type="26" schemaName="Recent Inspections" displayName="Recent Inspections" parentSchemaName="hel_inspection" parentDisplayName="Inspection" id="{4796c116-4fac-f111-aaac-002248c75f1e}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="hel_name" displayName="Name" parentSchemaName="hel_asset" parentDisplayName="Grid Asset" solution="Active" />
+        <Dependent type="26" schemaName="Assets Needing Attention" displayName="Assets Needing Attention" parentSchemaName="hel_asset" parentDisplayName="Grid Asset" id="{52d5acb1-4eac-f111-aaac-002248c75f1e}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="hel_name" displayName="Name" parentSchemaName="hel_asset" parentDisplayName="Grid Asset" solution="Active" />
+        <Dependent type="26" schemaName="In Service Assets" displayName="In Service Assets" parentSchemaName="hel_asset" parentDisplayName="Grid Asset" id="{c71f4c5a-4eac-f111-aaac-002248c75f1e}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="hel_name" displayName="Name" parentSchemaName="hel_engineerprofile" parentDisplayName="Engineer Profile" solution="Active" />
+        <Dependent type="26" schemaName="Available Engineers" displayName="Available Engineers" parentSchemaName="hel_engineerprofile" parentDisplayName="Engineer Profile" id="{9170b35d-4fac-f111-aaac-002248c75f1e}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="hel_name" displayName="Name" parentSchemaName="hel_inspection" parentDisplayName="Inspection" solution="Active" />
+        <Dependent type="26" schemaName="Recent Inspections" displayName="Recent Inspections" parentSchemaName="hel_inspection" parentDisplayName="Inspection" id="{4796c116-4fac-f111-aaac-002248c75f1e}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="hel_name" displayName="Name" parentSchemaName="hel_outage" parentDisplayName="Outage Event" solution="Active" />
+        <Dependent type="26" schemaName="Open Outages" displayName="Open Outages" parentSchemaName="hel_outage" parentDisplayName="Outage Event" id="{8f517210-4cac-f111-aaac-002248c75f1e}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="hel_name" displayName="Name" parentSchemaName="hel_outage" parentDisplayName="Outage Event" solution="Active" />
+        <Dependent type="26" schemaName="All Outages" displayName="All Outages" parentSchemaName="hel_outage" parentDisplayName="Outage Event" id="{e17520f7-4cac-f111-aaac-002248c75f1e}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="hel_name" displayName="Name" parentSchemaName="hel_substation" parentDisplayName="Substation" solution="Active" />
+        <Dependent type="26" schemaName="Substations by Region" displayName="Substations by Region" parentSchemaName="hel_substation" parentDisplayName="Substation" id="{785bf7de-4eac-f111-aaac-002248c75f1e}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="hel_name" displayName="Name" parentSchemaName="hel_workorder" parentDisplayName="Work Order" solution="Active" />
+        <Dependent type="26" schemaName="Work Orders for Outage" displayName="Work Orders for Outage" parentSchemaName="hel_workorder" parentDisplayName="Work Order" id="{a0fdcae0-4dac-f111-aaac-002248c75f1e}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="hel_name" displayName="Name" parentSchemaName="hel_workorder" parentDisplayName="Work Order" solution="Active" />
+        <Dependent type="26" schemaName="Open Work Orders" displayName="Open Work Orders" parentSchemaName="hel_workorder" parentDisplayName="Work Order" id="{af9339b3-4dac-f111-aaac-002248c75f1e}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="hel_outage" displayName="Outage Event" parentSchemaName="hel_workorder" parentDisplayName="Work Order" solution="Active" />
+        <Dependent type="26" schemaName="Open Work Orders" displayName="Open Work Orders" parentSchemaName="hel_workorder" parentDisplayName="Work Order" id="{af9339b3-4dac-f111-aaac-002248c75f1e}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="hel_outageid" displayName="Outage Event" parentSchemaName="hel_outage" parentDisplayName="Outage Event" solution="Active" />
+        <Dependent type="26" schemaName="Open Outages" displayName="Open Outages" parentSchemaName="hel_outage" parentDisplayName="Outage Event" id="{8f517210-4cac-f111-aaac-002248c75f1e}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="hel_outageid" displayName="Outage Event" parentSchemaName="hel_outage" parentDisplayName="Outage Event" solution="Active" />
+        <Dependent type="26" schemaName="All Outages" displayName="All Outages" parentSchemaName="hel_outage" parentDisplayName="Outage Event" id="{e17520f7-4cac-f111-aaac-002248c75f1e}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="hel_priority" displayName="Priority" parentSchemaName="hel_workorder" parentDisplayName="Work Order" solution="Active" />
+        <Dependent type="26" schemaName="Work Orders for Outage" displayName="Work Orders for Outage" parentSchemaName="hel_workorder" parentDisplayName="Work Order" id="{a0fdcae0-4dac-f111-aaac-002248c75f1e}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="hel_priority" displayName="Priority" parentSchemaName="hel_workorder" parentDisplayName="Work Order" solution="Active" />
+        <Dependent type="26" schemaName="Open Work Orders" displayName="Open Work Orders" parentSchemaName="hel_workorder" parentDisplayName="Work Order" id="{af9339b3-4dac-f111-aaac-002248c75f1e}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="hel_region" displayName="Region" parentSchemaName="hel_engineerprofile" parentDisplayName="Engineer Profile" solution="Active" />
+        <Dependent type="26" schemaName="Available Engineers" displayName="Available Engineers" parentSchemaName="hel_engineerprofile" parentDisplayName="Engineer Profile" id="{9170b35d-4fac-f111-aaac-002248c75f1e}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="hel_region" displayName="Region" parentSchemaName="hel_substation" parentDisplayName="Substation" solution="Active" />
+        <Dependent type="26" schemaName="Substations by Region" displayName="Substations by Region" parentSchemaName="hel_substation" parentDisplayName="Substation" id="{785bf7de-4eac-f111-aaac-002248c75f1e}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="hel_resultinghealthindex" displayName="Resulting Health Index" parentSchemaName="hel_inspection" parentDisplayName="Inspection" solution="Active" />
+        <Dependent type="26" schemaName="Recent Inspections" displayName="Recent Inspections" parentSchemaName="hel_inspection" parentDisplayName="Inspection" id="{4796c116-4fac-f111-aaac-002248c75f1e}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="hel_safetyclearance" displayName="Safety Clearance" parentSchemaName="hel_workorder" parentDisplayName="Work Order" solution="Active" />
+        <Dependent type="26" schemaName="Work Orders for Outage" displayName="Work Orders for Outage" parentSchemaName="hel_workorder" parentDisplayName="Work Order" id="{a0fdcae0-4dac-f111-aaac-002248c75f1e}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="hel_safetyclearance" displayName="Safety Clearance" parentSchemaName="hel_workorder" parentDisplayName="Work Order" solution="Active" />
+        <Dependent type="26" schemaName="Open Work Orders" displayName="Open Work Orders" parentSchemaName="hel_workorder" parentDisplayName="Work Order" id="{af9339b3-4dac-f111-aaac-002248c75f1e}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="hel_scheduledstart" displayName="Scheduled Start" parentSchemaName="hel_workorder" parentDisplayName="Work Order" solution="Active" />
+        <Dependent type="26" schemaName="Work Orders for Outage" displayName="Work Orders for Outage" parentSchemaName="hel_workorder" parentDisplayName="Work Order" id="{a0fdcae0-4dac-f111-aaac-002248c75f1e}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="hel_scheduledstart" displayName="Scheduled Start" parentSchemaName="hel_workorder" parentDisplayName="Work Order" solution="Active" />
+        <Dependent type="26" schemaName="Open Work Orders" displayName="Open Work Orders" parentSchemaName="hel_workorder" parentDisplayName="Work Order" id="{af9339b3-4dac-f111-aaac-002248c75f1e}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="hel_serialnumber" displayName="Serial Number" parentSchemaName="hel_asset" parentDisplayName="Grid Asset" solution="Active" />
+        <Dependent type="26" schemaName="Assets Needing Attention" displayName="Assets Needing Attention" parentSchemaName="hel_asset" parentDisplayName="Grid Asset" id="{52d5acb1-4eac-f111-aaac-002248c75f1e}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="hel_serialnumber" displayName="Serial Number" parentSchemaName="hel_asset" parentDisplayName="Grid Asset" solution="Active" />
+        <Dependent type="26" schemaName="In Service Assets" displayName="In Service Assets" parentSchemaName="hel_asset" parentDisplayName="Grid Asset" id="{c71f4c5a-4eac-f111-aaac-002248c75f1e}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="hel_severity" displayName="Severity" parentSchemaName="hel_outage" parentDisplayName="Outage Event" solution="Active" />
+        <Dependent type="26" schemaName="Open Outages" displayName="Open Outages" parentSchemaName="hel_outage" parentDisplayName="Outage Event" id="{8f517210-4cac-f111-aaac-002248c75f1e}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="hel_severity" displayName="Severity" parentSchemaName="hel_outage" parentDisplayName="Outage Event" solution="Active" />
+        <Dependent type="26" schemaName="All Outages" displayName="All Outages" parentSchemaName="hel_outage" parentDisplayName="Outage Event" id="{e17520f7-4cac-f111-aaac-002248c75f1e}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="hel_skills" displayName="Skills" parentSchemaName="hel_engineerprofile" parentDisplayName="Engineer Profile" solution="Active" />
+        <Dependent type="26" schemaName="Available Engineers" displayName="Available Engineers" parentSchemaName="hel_engineerprofile" parentDisplayName="Engineer Profile" id="{9170b35d-4fac-f111-aaac-002248c75f1e}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="hel_slabreached" displayName="SLA Breached" parentSchemaName="hel_outage" parentDisplayName="Outage Event" solution="Active" />
+        <Dependent type="26" schemaName="Open Outages" displayName="Open Outages" parentSchemaName="hel_outage" parentDisplayName="Outage Event" id="{8f517210-4cac-f111-aaac-002248c75f1e}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="hel_starttime" displayName="Outage Start" parentSchemaName="hel_outage" parentDisplayName="Outage Event" solution="Active" />
+        <Dependent type="26" schemaName="Open Outages" displayName="Open Outages" parentSchemaName="hel_outage" parentDisplayName="Outage Event" id="{8f517210-4cac-f111-aaac-002248c75f1e}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="hel_starttime" displayName="Outage Start" parentSchemaName="hel_outage" parentDisplayName="Outage Event" solution="Active" />
+        <Dependent type="26" schemaName="All Outages" displayName="All Outages" parentSchemaName="hel_outage" parentDisplayName="Outage Event" id="{e17520f7-4cac-f111-aaac-002248c75f1e}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="hel_status" displayName="Asset Status" parentSchemaName="hel_asset" parentDisplayName="Grid Asset" solution="Active" />
+        <Dependent type="26" schemaName="Assets Needing Attention" displayName="Assets Needing Attention" parentSchemaName="hel_asset" parentDisplayName="Grid Asset" id="{52d5acb1-4eac-f111-aaac-002248c75f1e}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="hel_status" displayName="Asset Status" parentSchemaName="hel_asset" parentDisplayName="Grid Asset" solution="Active" />
+        <Dependent type="26" schemaName="In Service Assets" displayName="In Service Assets" parentSchemaName="hel_asset" parentDisplayName="Grid Asset" id="{c71f4c5a-4eac-f111-aaac-002248c75f1e}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="hel_status" displayName="Work Order Status" parentSchemaName="hel_workorder" parentDisplayName="Work Order" solution="Active" />
+        <Dependent type="26" schemaName="Work Orders for Outage" displayName="Work Orders for Outage" parentSchemaName="hel_workorder" parentDisplayName="Work Order" id="{a0fdcae0-4dac-f111-aaac-002248c75f1e}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="hel_status" displayName="Work Order Status" parentSchemaName="hel_workorder" parentDisplayName="Work Order" solution="Active" />
+        <Dependent type="26" schemaName="Open Work Orders" displayName="Open Work Orders" parentSchemaName="hel_workorder" parentDisplayName="Work Order" id="{af9339b3-4dac-f111-aaac-002248c75f1e}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="hel_substation" displayName="Substation" parentSchemaName="hel_asset" parentDisplayName="Grid Asset" solution="Active" />
+        <Dependent type="26" schemaName="Assets Needing Attention" displayName="Assets Needing Attention" parentSchemaName="hel_asset" parentDisplayName="Grid Asset" id="{52d5acb1-4eac-f111-aaac-002248c75f1e}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="hel_substation" displayName="Substation" parentSchemaName="hel_asset" parentDisplayName="Grid Asset" solution="Active" />
+        <Dependent type="26" schemaName="In Service Assets" displayName="In Service Assets" parentSchemaName="hel_asset" parentDisplayName="Grid Asset" id="{c71f4c5a-4eac-f111-aaac-002248c75f1e}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="hel_substationid" displayName="Substation" parentSchemaName="hel_substation" parentDisplayName="Substation" solution="Active" />
+        <Dependent type="26" schemaName="Substations by Region" displayName="Substations by Region" parentSchemaName="hel_substation" parentDisplayName="Substation" id="{785bf7de-4eac-f111-aaac-002248c75f1e}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="hel_voltagelevel" displayName="Voltage Level" parentSchemaName="hel_substation" parentDisplayName="Substation" solution="Active" />
+        <Dependent type="26" schemaName="Substations by Region" displayName="Substations by Region" parentSchemaName="hel_substation" parentDisplayName="Substation" id="{785bf7de-4eac-f111-aaac-002248c75f1e}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="hel_workorderid" displayName="Work Order" parentSchemaName="hel_workorder" parentDisplayName="Work Order" solution="Active" />
+        <Dependent type="26" schemaName="Work Orders for Outage" displayName="Work Orders for Outage" parentSchemaName="hel_workorder" parentDisplayName="Work Order" id="{a0fdcae0-4dac-f111-aaac-002248c75f1e}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="hel_workorderid" displayName="Work Order" parentSchemaName="hel_workorder" parentDisplayName="Work Order" solution="Active" />
+        <Dependent type="26" schemaName="Open Work Orders" displayName="Open Work Orders" parentSchemaName="hel_workorder" parentDisplayName="Work Order" id="{af9339b3-4dac-f111-aaac-002248c75f1e}" />
+      </MissingDependency>
+    </MissingDependencies>
   </SolutionManifest>
 </ImportExportXml>
