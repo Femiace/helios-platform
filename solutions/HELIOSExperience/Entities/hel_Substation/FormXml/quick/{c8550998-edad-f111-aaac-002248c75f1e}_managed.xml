@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{c8550998-edad-f111-aaac-002248c75f1e}</formid>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab id="ACBA75B7-97B6-4116-AA55-51312992B721" name="tab_1" showlabel="false" labelid="{72982b18-7e15-4eba-b2fc-779b8adaa157}">
+          <labels>
+            <label description="New Tab" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section id="AD49B5BF-256F-46A8-9C75-947146172EB9" name="tab_1_column_1_section_1" columns="1" showlabel="true" showbar="false" IsUserDefined="0" labelwidth="130" labelid="{f1e87220-3574-4350-8206-1a1742384fb7}">
+                  <labels>
+                    <label description="New Section" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="C0550AC7-0F44-45A4-8EF5-D2911C0689D9" labelid="{6abe457b-3119-495a-9181-4149d2f5024f}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{70d5dac9-36d0-486c-868b-34a76ae54f4b}" locklevel="0" colspan="1" rowspan="1" labelid="{abbb7626-880f-4bdc-8f5e-a6ee9d346013}">
+                        <labels>
+                          <label description="Name" languagecode="1033" />
+                        </labels>
+                        <control id="hel_name" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="hel_name" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{6990c39b-d8ef-4658-80a2-073965a6ab6a}" locklevel="0" colspan="1" rowspan="1" labelid="{d6180337-5e5b-4add-8f5d-2f7d19142ba8}">
+                        <labels>
+                          <label description="Region" languagecode="1033" />
+                        </labels>
+                        <control id="hel_region" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="hel_region" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{a72d0b59-813b-48b0-bb42-4541a57350e2}" locklevel="0" colspan="1" rowspan="1" labelid="{f29c02d4-cd5c-4f08-8426-63a97459b451}">
+                        <labels>
+                          <label description="Voltage Level" languagecode="1033" />
+                        </labels>
+                        <control id="hel_voltagelevel" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="hel_voltagelevel" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{b47957aa-caf9-4952-8b69-1cee08a5fcf6}" locklevel="0" colspan="1" rowspan="1" labelid="{df099d95-6c99-4806-b1ea-cfab0ebb4887}">
+                        <labels>
+                          <label description="Customers Count" languagecode="1033" />
+                        </labels>
+                        <control id="hel_customerscount" classid="{C6D124CA-7EDA-4A60-AEA9-7FB8D318B68F}" datafieldname="hel_customerscount" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <DisplayConditions Order="1" FallbackForm="true">
+        <Role Id="{627090ff-40a3-4053-8790-584edc5be201}" />
+        <Role Id="{119f245c-3cc8-4b62-b31c-d1a046ced15d}" />
+      </DisplayConditions>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Substation Quick View" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="Read-only substation summary shown on grid asset forms" languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>

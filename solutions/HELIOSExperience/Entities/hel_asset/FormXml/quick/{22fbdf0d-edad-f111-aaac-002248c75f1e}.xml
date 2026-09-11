@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{22fbdf0d-edad-f111-aaac-002248c75f1e}</formid>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab id="ACBA75B7-97B6-4116-AA55-51312992B721" name="tab_1" showlabel="false" labelid="{fe3399af-f08c-4c7c-aaaa-0c047f3e0f60}">
+          <labels>
+            <label description="New Tab" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section id="AD49B5BF-256F-46A8-9C75-947146172EB9" name="tab_1_column_1_section_1" columns="1" showlabel="true" showbar="false" IsUserDefined="0" labelwidth="130" labelid="{f06c120f-3687-421b-9df1-04cc178665d0}">
+                  <labels>
+                    <label description="New Section" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="C0550AC7-0F44-45A4-8EF5-D2911C0689D9" labelid="{a7888437-66e6-4436-a163-f73dc93bc563}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{52fd3ccd-d017-44ba-bb17-f42b6510a8f0}" locklevel="0" colspan="1" rowspan="1" labelid="{c2edf317-9e73-4f4b-828d-5f4a01f8cf29}">
+                        <labels>
+                          <label description="Name" languagecode="1033" />
+                        </labels>
+                        <control id="hel_name" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="hel_name" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{ef4569fe-41d4-4d4f-ada9-b5faef57e676}" locklevel="0" colspan="1" rowspan="1" labelid="{ddda5c4d-b96e-4a9c-a600-1d5cc9c31625}">
+                        <labels>
+                          <label description="Serial Number" languagecode="1033" />
+                        </labels>
+                        <control id="hel_serialnumber" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="hel_serialnumber" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{8bfa0b91-1ce6-497a-b9e6-d9c4c34ebfbc}" locklevel="0" colspan="1" rowspan="1" labelid="{fddb88ed-6482-4cb7-9aea-4a2d6b2dde2e}">
+                        <labels>
+                          <label description="Asset Type" languagecode="1033" />
+                        </labels>
+                        <control id="hel_assettype" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="hel_assettype" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{637e72d3-4c11-4c5c-a152-63fef106d5ca}" locklevel="0" colspan="1" rowspan="1" labelid="{93e6b4b6-9070-4629-8e33-7c547399b45a}">
+                        <labels>
+                          <label description="Criticality" languagecode="1033" />
+                        </labels>
+                        <control id="hel_criticality" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="hel_criticality" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{181569d9-8984-44f9-bb5c-0d1fca2bc7c9}" locklevel="0" colspan="1" rowspan="1" labelid="{02d27ce1-e7e4-4fb3-b971-ce7e3ee635b6}">
+                        <labels>
+                          <label description="Asset Status" languagecode="1033" />
+                        </labels>
+                        <control id="hel_status" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="hel_status" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{6519b316-052f-4bf9-b622-209f16a7abfc}" locklevel="0" colspan="1" rowspan="1" labelid="{b53d4d93-a318-45b0-8d63-fc629860be9c}">
+                        <labels>
+                          <label description="Health Index" languagecode="1033" />
+                        </labels>
+                        <control id="hel_healthindex" classid="{C3EFE0C3-0EC6-42BE-8349-CBD9079DFD8E}" datafieldname="hel_healthindex" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{b34944a7-a395-450b-b7a2-b9ccc535864f}" locklevel="0" colspan="1" rowspan="1" labelid="{4a851567-d58b-4f21-bc5e-697041e2e5ac}">
+                        <labels>
+                          <label description="Substation" languagecode="1033" />
+                        </labels>
+                        <control id="hel_substation" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="hel_substation" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <DisplayConditions Order="1" FallbackForm="true">
+        <Role Id="{db5adaee-b22f-3237-750a-0ddffef52aea}" />
+        <Role Id="{a6658342-fe1e-e0e1-aec9-410337566e3e}" />
+        <Role Id="{627090ff-40a3-4053-8790-584edc5be201}" />
+        <Role Id="{119f245c-3cc8-4b62-b31c-d1a046ced15d}" />
+        <Role Id="{e3497220-25ba-aa7e-b7f2-f543dcd7fa7d}" />
+      </DisplayConditions>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Grid Asset Quick View" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="Read-only asset summary shown on outage and work order forms" languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>

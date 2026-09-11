@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{3bec426d-edad-f111-aaac-002248c75f1e}</formid>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab id="ACBA75B7-97B6-4116-AA55-51312992B721" name="tab_1" showlabel="false" labelid="{87621faf-8f9f-4065-8fb2-b054733cb200}">
+          <labels>
+            <label description="New Tab" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section id="AD49B5BF-256F-46A8-9C75-947146172EB9" name="tab_1_column_1_section_1" columns="1" showlabel="true" showbar="false" IsUserDefined="0" labelwidth="130" labelid="{9fa0e3b4-f93f-4081-9294-37c5cd2f5865}">
+                  <labels>
+                    <label description="New Section" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="C0550AC7-0F44-45A4-8EF5-D2911C0689D9" labelid="{010692d2-2573-47f2-b5d2-3e198a945b89}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{e5a460e8-cfc4-4964-8a89-10aa0850a998}" locklevel="0" colspan="1" rowspan="1" labelid="{16062a1f-21b8-42b8-bdfc-1ad4dd7d94db}">
+                        <labels>
+                          <label description="Name" languagecode="1033" />
+                        </labels>
+                        <control id="hel_name" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="hel_name" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{273f3abb-765d-4789-9c52-e7f6e7d53b75}" locklevel="0" colspan="1" rowspan="1" labelid="{cd391b92-fb8c-4437-9231-9c8a349fdad2}">
+                        <labels>
+                          <label description="Severity" languagecode="1033" />
+                        </labels>
+                        <control id="hel_severity" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="hel_severity" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{2b7c047b-c716-4ae0-86e6-44d96d993202}" locklevel="0" colspan="1" rowspan="1" labelid="{d598266e-3760-4b17-bc3a-06ee6f179190}">
+                        <labels>
+                          <label description="Cause" languagecode="1033" />
+                        </labels>
+                        <control id="hel_cause" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="hel_cause" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{8675769e-7532-4ab7-ad6a-98b7b26d71c6}" locklevel="0" colspan="1" rowspan="1" labelid="{c6565230-6df3-4ef0-abcc-e88bfd699c03}">
+                        <labels>
+                          <label description="Outage Start" languagecode="1033" />
+                        </labels>
+                        <control id="hel_starttime" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="hel_starttime" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{5c85d8bc-2c0e-4077-a9d3-aff6fa420a3a}" locklevel="0" colspan="1" rowspan="1" labelid="{1381b48a-b51c-4e4a-9353-eb4f5e8023b1}">
+                        <labels>
+                          <label description="Estimated Restoration" languagecode="1033" />
+                        </labels>
+                        <control id="hel_estimatedrestoration" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="hel_estimatedrestoration" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{75f4b797-12c5-4585-9b7e-8a5b1fe150ae}" locklevel="0" colspan="1" rowspan="1" labelid="{1e0788ef-6186-42c3-9b74-255080a01348}">
+                        <labels>
+                          <label description="Customers Affected" languagecode="1033" />
+                        </labels>
+                        <control id="hel_customersaffected" classid="{C6D124CA-7EDA-4A60-AEA9-7FB8D318B68F}" datafieldname="hel_customersaffected" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{06a5096c-8ebc-4521-8cc2-58a0415f3398}" locklevel="0" colspan="1" rowspan="1" labelid="{525bab66-7dd0-4ef4-a2a1-3614de613e60}">
+                        <labels>
+                          <label description="SLA Breached" languagecode="1033" />
+                        </labels>
+                        <control id="hel_slabreached" classid="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}" datafieldname="hel_slabreached" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <DisplayConditions Order="1" FallbackForm="true">
+        <Role Id="{627090ff-40a3-4053-8790-584edc5be201}" />
+        <Role Id="{119f245c-3cc8-4b62-b31c-d1a046ced15d}" />
+      </DisplayConditions>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Outage Event Quick View" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="Read-only outage summary shown on work order forms" languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>
