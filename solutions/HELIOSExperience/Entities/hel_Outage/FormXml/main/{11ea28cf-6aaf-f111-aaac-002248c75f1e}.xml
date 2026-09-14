@@ -1,0 +1,449 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{11ea28cf-6aaf-f111-aaac-002248c75f1e}</formid>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form headerdensity="HighWithControls">
+      <tabs>
+        <tab verticallayout="true" id="{5e173d2c-d824-44ac-8377-4c1d98f99ceb}" IsUserDefined="1" name="tab_general" labelid="{710a5be4-b0da-4a3c-ae90-1b6f9a8c2375}">
+          <labels>
+            <label description="General" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="50%">
+              <sections>
+                <section showlabel="true" showbar="false" IsUserDefined="0" id="{70543882-557c-4842-a8c7-f0a0526eafaf}" labelid="{0e86d948-6b40-43c3-be70-3666a0b1adc3}" name="section_summary">
+                  <labels>
+                    <label description="Summary" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{8ccf8390-db86-4d75-b6cb-5c4fcb226ccb}" labelid="{0bc5b081-c6fc-49d4-a88c-7d69093d7ec1}">
+                        <labels>
+                          <label description="Name" languagecode="1033" />
+                        </labels>
+                        <control id="hel_name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="hel_name" disabled="true" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{12424cd0-c257-46df-a2b6-0809c1dfc4c9}" labelid="{bfe3a1f6-71ef-4fef-b7bb-89fc040f2f55}">
+                        <labels>
+                          <label description="Owner" languagecode="1033" />
+                        </labels>
+                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="section_asset" id="5dd1b744-602f-44a2-bc7b-d146c0af538a" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Asset" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell locklevel="0" id="{8a91bb51-9a7d-49f0-b232-09a8893e7eca}" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Asset" languagecode="1033" />
+                        </labels>
+                        <control id="quickview_asset" classid="{5C5600E0-1D6E-4205-A272-BE80DA87FD42}" datafieldname="hel_asset">
+                          <parameters>
+                            <DisplayAsCustomer360Tile>false</DisplayAsCustomer360Tile>
+                            <QuickForms>&lt;QuickFormIds&gt;&lt;QuickFormId entityname="hel_asset"&gt;22fbdf0d-edad-f111-aaac-002248c75f1e&lt;/QuickFormId&gt;&lt;/QuickFormIds&gt;</QuickForms>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="section_fieldnotes" id="6a927f8c-6942-4b12-af1a-c803ce4030dd" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Field Notes" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell locklevel="0" id="{03d4f596-bf5c-4cc0-9ea6-28692ab5de7b}" rowspan="15" colspan="1">
+                        <labels>
+                          <label description="Note Text" languagecode="1033" />
+                        </labels>
+                        <control id="notescontrol" classid="{06375649-C143-495E-A496-C962E5B4488E}" disabled="false" />
+                      </cell>
+                    </row>
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                  </rows>
+                </section>
+              </sections>
+            </column>
+            <column width="50%">
+              <sections>
+                <section name="section_details" id="e724dcc0-8937-48f9-aef6-34bc35907801" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115" labelid="{afc518ae-7b2c-4303-aa58-d35924dc94a0}">
+                  <labels>
+                    <label description="Outage Details" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell id="{a0453787-7c4f-40c0-ba80-c00337743318}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Grid Asset" languagecode="1033" />
+                        </labels>
+                        <control id="hel_asset" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="hel_asset" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{9e79157f-bc9b-49c9-b23f-f5c7fbcc6745}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Severity" languagecode="1033" />
+                        </labels>
+                        <control id="hel_severity" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="hel_severity" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{ca6e89e8-bc97-4c1a-9652-c976e81d786e}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Cause" languagecode="1033" />
+                        </labels>
+                        <control id="hel_cause" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="hel_cause" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{5bdec13a-b3c7-4a5c-a18a-2138722a0ce8}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Outage Start" languagecode="1033" />
+                        </labels>
+                        <control id="hel_starttime" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="hel_starttime" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{b982c193-71e5-4241-a926-f19481a3358e}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Estimated Restoration" languagecode="1033" />
+                        </labels>
+                        <control id="hel_estimatedrestoration" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="hel_estimatedrestoration" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{335b6a1a-e02a-4ac8-a9d9-a6a70cef26ed}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Actual Restoration" languagecode="1033" />
+                        </labels>
+                        <control id="hel_actualrestoration" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="hel_actualrestoration" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{54486d2c-ddf2-4392-81d5-53c46252ebed}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Customers Affected" languagecode="1033" />
+                        </labels>
+                        <control id="hel_customersaffected" classid="{C6D124CA-7EDA-4A60-AEA9-7FB8D318B68F}" datafieldname="hel_customersaffected" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{c8257766-3a18-489f-898e-2dcfa7a2fbfe}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="SLA Breached" languagecode="1033" />
+                        </labels>
+                        <control id="hel_slabreached" classid="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}" datafieldname="hel_slabreached" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="section_regulatory" id="c4f7a627-017d-4bc2-993e-afb1a89fa655" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Regulatory" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell id="{a487a94c-0c4c-4355-a2bf-49441683cb42}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Compensation Due" languagecode="1033" />
+                        </labels>
+                        <control id="hel_compensationdue" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="hel_compensationdue" disabled="true" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab name="tab_workorders" id="fd4cf74f-708e-41eb-9cf5-8de8b9326fae" IsUserDefined="0" locklevel="0" showlabel="true">
+          <labels>
+            <label description="Work Orders" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section name="section_workorders" id="830816a3-5041-4a86-9801-ce63229b0c85" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Work Orders" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell locklevel="0" id="{01d43d0c-8849-4947-baf4-93382ab1b61c}" rowspan="4" colspan="1" auto="false">
+                        <labels>
+                          <label description="Work Orders" languagecode="1033" />
+                        </labels>
+                        <control indicationOfSubgrid="true" id="subgrid_workorders" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="{c568f769-fb84-4f47-9ad8-39c0eb1d5014}">
+                          <parameters>
+                            <RecordsPerPage>4</RecordsPerPage>
+                            <AutoExpand>Fixed</AutoExpand>
+                            <EnableQuickFind>false</EnableQuickFind>
+                            <EnableViewPicker>false</EnableViewPicker>
+                            <EnableChartPicker>true</EnableChartPicker>
+                            <ChartGridMode>All</ChartGridMode>
+                            <RelationshipName>hel_WorkOrder_hel_outage_hel_Outage</RelationshipName>
+                            <TargetEntityType>hel_workorder</TargetEntityType>
+                            <ViewId>{A0FDCAE0-4DAC-F111-AAAC-002248C75F1E}</ViewId>
+                            <ViewIds>{1BD98E9D-FAC3-4F4B-A123-AB31BF88C504},{A0FDCAE0-4DAC-F111-AAAC-002248C75F1E}</ViewIds>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row />
+                    <row />
+                    <row />
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <header id="{c9cc647a-56ac-4936-a4e9-53efc1395671}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{26b567e5-2465-4ce0-acc2-5b8bc06753c5}" showlabel="false" labelid="{a6088d14-52af-4a1d-9396-82c9c235b258}">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{f1eb6725-a4e8-4dbf-908a-0677a842b0e4}" showlabel="false" labelid="{d6542ab3-a7d4-4fb9-80c1-f977afff86ae}">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{4ed8a34a-f26b-4b07-ab52-b4441f7dc0f3}" showlabel="false" labelid="{89363ef1-9d87-429c-bd0b-0699d6ea03f4}">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{f65301aa-ad9b-4ebf-a418-7aedf7ca8207}" locklevel="0" colspan="1" rowspan="1">
+              <labels>
+                <label description="Severity" languagecode="1033" />
+              </labels>
+              <control id="header_hel_severity" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="hel_severity" disabled="false" />
+            </cell>
+            <cell id="{1dd67957-00f8-40af-8b72-d2e65d9b9040}" locklevel="0" colspan="1" rowspan="1">
+              <labels>
+                <label description="Customers Affected" languagecode="1033" />
+              </labels>
+              <control id="header_hel_customersaffected" classid="{C6D124CA-7EDA-4A60-AEA9-7FB8D318B68F}" datafieldname="hel_customersaffected" disabled="false" />
+            </cell>
+            <cell id="{2c3af08c-4857-4953-b073-e4f938b5b430}" locklevel="0" colspan="1" rowspan="1">
+              <labels>
+                <label description="Owner" languagecode="1033" />
+              </labels>
+              <control id="header_ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" disabled="false" />
+            </cell>
+          </row>
+        </rows>
+      </header>
+      <footer id="{3b66f9d3-3fdf-4cdc-9004-95a6f0263c02}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{fdac0365-ea5a-4ecf-8c3b-3f09b0f1836b}" showlabel="false" labelid="{4a0cbed4-7d61-4ae4-babe-238eab214e98}">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{7e28cb42-8693-4a48-a58e-7d0be82ca1c5}" showlabel="false" labelid="{ea12d7b9-0f59-4318-84b5-7356a2f7bdeb}">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{31169ec9-de6e-49b9-b2d0-72f6bc1fb28a}" showlabel="false" labelid="{c93bf869-e096-4d34-8423-82b76b6954ff}">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </footer>
+      <DisplayConditions Order="1" FallbackForm="true">
+        <Role Id="{db5adaee-b22f-3237-750a-0ddffef52aea}" />
+        <Role Id="{a6658342-fe1e-e0e1-aec9-410337566e3e}" />
+        <Role Id="{627090ff-40a3-4053-8790-584edc5be201}" />
+        <Role Id="{119f245c-3cc8-4b62-b31c-d1a046ced15d}" />
+        <Role Id="{e3497220-25ba-aa7e-b7f2-f543dcd7fa7d}" />
+      </DisplayConditions>
+      <controlDescriptions>
+        <controlDescription forControl="{c568f769-fb84-4f47-9ad8-39c0eb1d5014}">
+          <customControl id="{E7A81278-8635-4D9E-8D4D-59480B391C5B}">
+            <parameters>
+              <RecordsPerPage>4</RecordsPerPage>
+              <AutoExpand>Fixed</AutoExpand>
+              <EnableQuickFind>false</EnableQuickFind>
+              <EnableViewPicker>false</EnableViewPicker>
+              <EnableChartPicker>true</EnableChartPicker>
+              <ChartGridMode>All</ChartGridMode>
+              <RelationshipName>hel_WorkOrder_hel_outage_hel_Outage</RelationshipName>
+              <TargetEntityType>hel_workorder</TargetEntityType>
+              <ViewId>{A0FDCAE0-4DAC-F111-AAAC-002248C75F1E}</ViewId>
+              <ViewIds>{1BD98E9D-FAC3-4F4B-A123-AB31BF88C504},{A0FDCAE0-4DAC-F111-AAAC-002248C75F1E}</ViewIds>
+            </parameters>
+          </customControl>
+          <customControl formFactor="0" name="Microsoft.PowerApps.PowerAppsOneGrid">
+            <parameters>
+              <data-set name="Items">
+                <ViewId>{a0fdcae0-4dac-f111-aaac-002248c75f1e}</ViewId>
+                <TargetEntityType>hel_workorder</TargetEntityType>
+                <IsUserView>false</IsUserView>
+                <EnableViewPicker>false</EnableViewPicker>
+                <RelationshipName>hel_WorkOrder_hel_outage_hel_Outage</RelationshipName>
+                <FilteredViewIds>{1BD98E9D-FAC3-4F4B-A123-AB31BF88C504},{A0FDCAE0-4DAC-F111-AAAC-002248C75F1E}</FilteredViewIds>
+              </data-set>
+              <EnableEditing type="Enum" static="true">yes</EnableEditing>
+              <DisableChildItemsEditing type="Enum" static="true">no</DisableChildItemsEditing>
+              <HeadlessRendering type="Enum" static="true">no</HeadlessRendering>
+              <EnableFiltering type="Enum" static="true">yes</EnableFiltering>
+              <EnableSorting type="Enum" static="true">yes</EnableSorting>
+              <EnableGrouping type="Enum" static="true">no</EnableGrouping>
+              <EnableAggregation type="Enum" static="true">no</EnableAggregation>
+              <EnableColumnMoving type="Enum" static="true">no</EnableColumnMoving>
+              <EnableMultipleSelection type="Enum" static="true">yes</EnableMultipleSelection>
+              <EnableRangeSelection type="Enum" static="true">yes</EnableRangeSelection>
+              <EnableJumpBar type="Enum" static="true">no</EnableJumpBar>
+              <EnablePagination type="Enum" static="true">no</EnablePagination>
+              <EnableDropdownColor type="Enum" static="true">no</EnableDropdownColor>
+              <EnableStatusIcons type="Enum" static="true">yes</EnableStatusIcons>
+              <EnableTypeIcons type="Enum" static="true">no</EnableTypeIcons>
+              <NavigationTypesAllowed type="Enum" static="true">all</NavigationTypesAllowed>
+              <ReflowBehavior type="Enum" static="true">Reflow</ReflowBehavior>
+              <ShowAvatar type="Enum" static="true">yes</ShowAvatar>
+              <ShowColumnNamesForListView type="Enum" static="true">no</ShowColumnNamesForListView>
+              <EnableBandedRowsForListView type="Enum" static="true">no</EnableBandedRowsForListView>
+              <NumberOfListColumns type="Whole.None" static="true">3</NumberOfListColumns>
+              <ShowFooter type="Enum" static="true">yes</ShowFooter>
+              <ShowColumnHeaders type="Enum" static="true">yes</ShowColumnHeaders>
+              <ContextualLookupColumnFilters type="Enum" static="true">yes</ContextualLookupColumnFilters>
+              <LookupFilterBeginsWith type="Enum" static="true">no</LookupFilterBeginsWith>
+              <UseFirstColumnForLookupEdits type="Enum" static="true">no</UseFirstColumnForLookupEdits>
+              <DateTimeFormat type="Enum" static="true">none</DateTimeFormat>
+              <DateOnlyFormat type="Enum" static="true">none</DateOnlyFormat>
+              <EnableStatusColumn type="Enum" static="true">yes</EnableStatusColumn>
+            </parameters>
+          </customControl>
+          <customControl formFactor="2" name="Microsoft.PowerApps.PowerAppsOneGrid">
+            <parameters>
+              <data-set name="Items">
+                <ViewId>{a0fdcae0-4dac-f111-aaac-002248c75f1e}</ViewId>
+                <TargetEntityType>hel_workorder</TargetEntityType>
+                <IsUserView>false</IsUserView>
+                <EnableViewPicker>false</EnableViewPicker>
+                <RelationshipName>hel_WorkOrder_hel_outage_hel_Outage</RelationshipName>
+                <FilteredViewIds>{1BD98E9D-FAC3-4F4B-A123-AB31BF88C504},{A0FDCAE0-4DAC-F111-AAAC-002248C75F1E}</FilteredViewIds>
+              </data-set>
+              <EnableEditing type="Enum" static="true">yes</EnableEditing>
+              <DisableChildItemsEditing type="Enum" static="true">no</DisableChildItemsEditing>
+              <HeadlessRendering type="Enum" static="true">no</HeadlessRendering>
+              <EnableFiltering type="Enum" static="true">yes</EnableFiltering>
+              <EnableSorting type="Enum" static="true">yes</EnableSorting>
+              <EnableGrouping type="Enum" static="true">no</EnableGrouping>
+              <EnableAggregation type="Enum" static="true">no</EnableAggregation>
+              <EnableColumnMoving type="Enum" static="true">no</EnableColumnMoving>
+              <EnableMultipleSelection type="Enum" static="true">yes</EnableMultipleSelection>
+              <EnableRangeSelection type="Enum" static="true">yes</EnableRangeSelection>
+              <EnableJumpBar type="Enum" static="true">no</EnableJumpBar>
+              <EnablePagination type="Enum" static="true">no</EnablePagination>
+              <EnableDropdownColor type="Enum" static="true">no</EnableDropdownColor>
+              <EnableStatusIcons type="Enum" static="true">yes</EnableStatusIcons>
+              <EnableTypeIcons type="Enum" static="true">no</EnableTypeIcons>
+              <NavigationTypesAllowed type="Enum" static="true">all</NavigationTypesAllowed>
+              <ReflowBehavior type="Enum" static="true">Reflow</ReflowBehavior>
+              <ShowAvatar type="Enum" static="true">yes</ShowAvatar>
+              <ShowColumnNamesForListView type="Enum" static="true">no</ShowColumnNamesForListView>
+              <EnableBandedRowsForListView type="Enum" static="true">no</EnableBandedRowsForListView>
+              <NumberOfListColumns type="Whole.None" static="true">3</NumberOfListColumns>
+              <ShowFooter type="Enum" static="true">yes</ShowFooter>
+              <ShowColumnHeaders type="Enum" static="true">yes</ShowColumnHeaders>
+              <ContextualLookupColumnFilters type="Enum" static="true">yes</ContextualLookupColumnFilters>
+              <LookupFilterBeginsWith type="Enum" static="true">no</LookupFilterBeginsWith>
+              <UseFirstColumnForLookupEdits type="Enum" static="true">no</UseFirstColumnForLookupEdits>
+              <DateTimeFormat type="Enum" static="true">none</DateTimeFormat>
+              <DateOnlyFormat type="Enum" static="true">none</DateOnlyFormat>
+              <EnableStatusColumn type="Enum" static="true">yes</EnableStatusColumn>
+            </parameters>
+          </customControl>
+          <customControl formFactor="1" name="Microsoft.PowerApps.PowerAppsOneGrid">
+            <parameters>
+              <data-set name="Items">
+                <ViewId>{a0fdcae0-4dac-f111-aaac-002248c75f1e}</ViewId>
+                <TargetEntityType>hel_workorder</TargetEntityType>
+                <IsUserView>false</IsUserView>
+                <EnableViewPicker>false</EnableViewPicker>
+                <RelationshipName>hel_WorkOrder_hel_outage_hel_Outage</RelationshipName>
+                <FilteredViewIds>{1BD98E9D-FAC3-4F4B-A123-AB31BF88C504},{A0FDCAE0-4DAC-F111-AAAC-002248C75F1E}</FilteredViewIds>
+              </data-set>
+              <EnableEditing type="Enum" static="true">yes</EnableEditing>
+              <DisableChildItemsEditing type="Enum" static="true">no</DisableChildItemsEditing>
+              <HeadlessRendering type="Enum" static="true">no</HeadlessRendering>
+              <EnableFiltering type="Enum" static="true">yes</EnableFiltering>
+              <EnableSorting type="Enum" static="true">yes</EnableSorting>
+              <EnableGrouping type="Enum" static="true">no</EnableGrouping>
+              <EnableAggregation type="Enum" static="true">no</EnableAggregation>
+              <EnableColumnMoving type="Enum" static="true">no</EnableColumnMoving>
+              <EnableMultipleSelection type="Enum" static="true">yes</EnableMultipleSelection>
+              <EnableRangeSelection type="Enum" static="true">yes</EnableRangeSelection>
+              <EnableJumpBar type="Enum" static="true">no</EnableJumpBar>
+              <EnablePagination type="Enum" static="true">no</EnablePagination>
+              <EnableDropdownColor type="Enum" static="true">no</EnableDropdownColor>
+              <EnableStatusIcons type="Enum" static="true">yes</EnableStatusIcons>
+              <EnableTypeIcons type="Enum" static="true">no</EnableTypeIcons>
+              <NavigationTypesAllowed type="Enum" static="true">all</NavigationTypesAllowed>
+              <ReflowBehavior type="Enum" static="true">Reflow</ReflowBehavior>
+              <ShowAvatar type="Enum" static="true">yes</ShowAvatar>
+              <ShowColumnNamesForListView type="Enum" static="true">no</ShowColumnNamesForListView>
+              <EnableBandedRowsForListView type="Enum" static="true">no</EnableBandedRowsForListView>
+              <NumberOfListColumns type="Whole.None" static="true">3</NumberOfListColumns>
+              <ShowFooter type="Enum" static="true">yes</ShowFooter>
+              <ShowColumnHeaders type="Enum" static="true">yes</ShowColumnHeaders>
+              <ContextualLookupColumnFilters type="Enum" static="true">yes</ContextualLookupColumnFilters>
+              <LookupFilterBeginsWith type="Enum" static="true">no</LookupFilterBeginsWith>
+              <UseFirstColumnForLookupEdits type="Enum" static="true">no</UseFirstColumnForLookupEdits>
+              <DateTimeFormat type="Enum" static="true">none</DateTimeFormat>
+              <DateOnlyFormat type="Enum" static="true">none</DateOnlyFormat>
+              <EnableStatusColumn type="Enum" static="true">yes</EnableStatusColumn>
+            </parameters>
+          </customControl>
+        </controlDescription>
+      </controlDescriptions>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Outage Event Main" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="Operations Hub main form for outages" languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>

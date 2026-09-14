@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ImportExportXml version="9.2.26084.147" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" OrganizationVersion="9.2.26084.147" OrganizationSchemaType="Standard" CRMServerServiceabilityVersion="9.2.26084.00147">
+<ImportExportXml version="9.2.26084.149" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" OrganizationVersion="9.2.26084.149" OrganizationSchemaType="Standard" CRMServerServiceabilityVersion="9.2.26084.00149">
   <SolutionManifest>
     <UniqueName>HELIOSExperience</UniqueName>
     <LocalizedNames>
@@ -88,6 +88,7 @@
       <RootComponent type="1" schemaName="hel_outage" behavior="2" />
       <RootComponent type="1" schemaName="hel_substation" behavior="2" />
       <RootComponent type="1" schemaName="hel_workorder" behavior="2" />
+      <RootComponent type="29" id="{4ab33fea-3bb0-f111-aaac-002248c75f1e}" behavior="0" />
     </RootComponents>
     <MissingDependencies>
       <MissingDependency>
@@ -119,6 +120,10 @@
         <Dependent type="60" displayName="Grid Asset Quick View" parentDisplayName="Grid Asset" id="{22fbdf0d-edad-f111-aaac-002248c75f1e}" />
       </MissingDependency>
       <MissingDependency>
+        <Required type="10" schemaName="hel_Outage_hel_asset_hel_asset" displayName="hel_Outage_hel_asset_hel_asset" parentSchemaName="hel_asset" parentDisplayName="Grid Asset" solution="Active" />
+        <Dependent type="60" displayName="Outage Event Main" parentDisplayName="Outage Event" id="{11ea28cf-6aaf-f111-aaac-002248c75f1e}" />
+      </MissingDependency>
+      <MissingDependency>
         <Required type="10" schemaName="hel_Substation_hel_region_hel_Region" displayName="hel_Substation_hel_region_hel_Region" parentSchemaName="hel_region" parentDisplayName="Region" solution="Active" />
         <Dependent type="60" displayName="Substation Quick View" parentDisplayName="Substation" id="{c8550998-edad-f111-aaac-002248c75f1e}" />
       </MissingDependency>
@@ -135,6 +140,14 @@
         <Dependent type="26" schemaName="All Outages" displayName="All Outages" parentSchemaName="hel_outage" parentDisplayName="Outage Event" id="{e17520f7-4cac-f111-aaac-002248c75f1e}" />
       </MissingDependency>
       <MissingDependency>
+        <Required type="2" schemaName="hel_actualrestoration" displayName="Actual Restoration" parentSchemaName="hel_outage" parentDisplayName="Outage Event" solution="Active" />
+        <Dependent type="29" displayName="Lock closed outage" id="{4ab33fea-3bb0-f111-aaac-002248c75f1e}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="hel_actualrestoration" displayName="Actual Restoration" parentSchemaName="hel_outage" parentDisplayName="Outage Event" solution="Active" />
+        <Dependent type="60" displayName="Outage Event Main" parentDisplayName="Outage Event" id="{11ea28cf-6aaf-f111-aaac-002248c75f1e}" />
+      </MissingDependency>
+      <MissingDependency>
         <Required type="2" schemaName="hel_asset" displayName="Grid Asset" parentSchemaName="hel_inspection" parentDisplayName="Inspection" solution="Active" />
         <Dependent type="26" schemaName="Recent Inspections" displayName="Recent Inspections" parentSchemaName="hel_inspection" parentDisplayName="Inspection" id="{4796c116-4fac-f111-aaac-002248c75f1e}" />
       </MissingDependency>
@@ -145,6 +158,14 @@
       <MissingDependency>
         <Required type="2" schemaName="hel_asset" displayName="Grid Asset" parentSchemaName="hel_outage" parentDisplayName="Outage Event" solution="Active" />
         <Dependent type="26" schemaName="All Outages" displayName="All Outages" parentSchemaName="hel_outage" parentDisplayName="Outage Event" id="{e17520f7-4cac-f111-aaac-002248c75f1e}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="hel_asset" displayName="Grid Asset" parentSchemaName="hel_outage" parentDisplayName="Outage Event" solution="Active" />
+        <Dependent type="29" displayName="Lock closed outage" id="{4ab33fea-3bb0-f111-aaac-002248c75f1e}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="hel_asset" displayName="Grid Asset" parentSchemaName="hel_outage" parentDisplayName="Outage Event" solution="Active" />
+        <Dependent type="60" displayName="Outage Event Main" parentDisplayName="Outage Event" id="{11ea28cf-6aaf-f111-aaac-002248c75f1e}" />
       </MissingDependency>
       <MissingDependency>
         <Required type="2" schemaName="hel_asset" displayName="Grid Asset" parentSchemaName="hel_workorder" parentDisplayName="Work Order" solution="Active" />
@@ -184,11 +205,19 @@
       </MissingDependency>
       <MissingDependency>
         <Required type="2" schemaName="hel_cause" displayName="Cause" parentSchemaName="hel_outage" parentDisplayName="Outage Event" solution="Active" />
+        <Dependent type="60" displayName="Outage Event Main" parentDisplayName="Outage Event" id="{11ea28cf-6aaf-f111-aaac-002248c75f1e}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="hel_cause" displayName="Cause" parentSchemaName="hel_outage" parentDisplayName="Outage Event" solution="Active" />
         <Dependent type="60" displayName="Outage Event Quick View" parentDisplayName="Outage Event" id="{3bec426d-edad-f111-aaac-002248c75f1e}" />
       </MissingDependency>
       <MissingDependency>
         <Required type="2" schemaName="hel_certificationexpiry" displayName="Certification Expiry" parentSchemaName="hel_engineerprofile" parentDisplayName="Engineer Profile" solution="Active" />
         <Dependent type="26" schemaName="Available Engineers" displayName="Available Engineers" parentSchemaName="hel_engineerprofile" parentDisplayName="Engineer Profile" id="{9170b35d-4fac-f111-aaac-002248c75f1e}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="hel_compensationdue" displayName="Compensation Due" parentSchemaName="hel_outage" parentDisplayName="Outage Event" solution="Active" />
+        <Dependent type="60" displayName="Outage Event Main" parentDisplayName="Outage Event" id="{11ea28cf-6aaf-f111-aaac-002248c75f1e}" />
       </MissingDependency>
       <MissingDependency>
         <Required type="2" schemaName="hel_criticality" displayName="Criticality" parentSchemaName="hel_asset" parentDisplayName="Grid Asset" solution="Active" />
@@ -209,6 +238,10 @@
       <MissingDependency>
         <Required type="2" schemaName="hel_customersaffected" displayName="Customers Affected" parentSchemaName="hel_outage" parentDisplayName="Outage Event" solution="Active" />
         <Dependent type="26" schemaName="All Outages" displayName="All Outages" parentSchemaName="hel_outage" parentDisplayName="Outage Event" id="{e17520f7-4cac-f111-aaac-002248c75f1e}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="hel_customersaffected" displayName="Customers Affected" parentSchemaName="hel_outage" parentDisplayName="Outage Event" solution="Active" />
+        <Dependent type="60" displayName="Outage Event Main" parentDisplayName="Outage Event" id="{11ea28cf-6aaf-f111-aaac-002248c75f1e}" />
       </MissingDependency>
       <MissingDependency>
         <Required type="2" schemaName="hel_customersaffected" displayName="Customers Affected" parentSchemaName="hel_outage" parentDisplayName="Outage Event" solution="Active" />
@@ -237,6 +270,10 @@
       <MissingDependency>
         <Required type="2" schemaName="hel_estimatedrestoration" displayName="Estimated Restoration" parentSchemaName="hel_outage" parentDisplayName="Outage Event" solution="Active" />
         <Dependent type="26" schemaName="Open Outages" displayName="Open Outages" parentSchemaName="hel_outage" parentDisplayName="Outage Event" id="{8f517210-4cac-f111-aaac-002248c75f1e}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="hel_estimatedrestoration" displayName="Estimated Restoration" parentSchemaName="hel_outage" parentDisplayName="Outage Event" solution="Active" />
+        <Dependent type="60" displayName="Outage Event Main" parentDisplayName="Outage Event" id="{11ea28cf-6aaf-f111-aaac-002248c75f1e}" />
       </MissingDependency>
       <MissingDependency>
         <Required type="2" schemaName="hel_estimatedrestoration" displayName="Estimated Restoration" parentSchemaName="hel_outage" parentDisplayName="Outage Event" solution="Active" />
@@ -292,6 +329,14 @@
       </MissingDependency>
       <MissingDependency>
         <Required type="2" schemaName="hel_name" displayName="Name" parentSchemaName="hel_outage" parentDisplayName="Outage Event" solution="Active" />
+        <Dependent type="29" displayName="Lock closed outage" id="{4ab33fea-3bb0-f111-aaac-002248c75f1e}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="hel_name" displayName="Name" parentSchemaName="hel_outage" parentDisplayName="Outage Event" solution="Active" />
+        <Dependent type="60" displayName="Outage Event Main" parentDisplayName="Outage Event" id="{11ea28cf-6aaf-f111-aaac-002248c75f1e}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="hel_name" displayName="Name" parentSchemaName="hel_outage" parentDisplayName="Outage Event" solution="Active" />
         <Dependent type="60" displayName="Outage Event Quick View" parentDisplayName="Outage Event" id="{3bec426d-edad-f111-aaac-002248c75f1e}" />
       </MissingDependency>
       <MissingDependency>
@@ -321,6 +366,10 @@
       <MissingDependency>
         <Required type="2" schemaName="hel_outageid" displayName="Outage Event" parentSchemaName="hel_outage" parentDisplayName="Outage Event" solution="Active" />
         <Dependent type="26" schemaName="All Outages" displayName="All Outages" parentSchemaName="hel_outage" parentDisplayName="Outage Event" id="{e17520f7-4cac-f111-aaac-002248c75f1e}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="hel_outageid" displayName="Outage Event" parentSchemaName="hel_outage" parentDisplayName="Outage Event" solution="Active" />
+        <Dependent type="29" displayName="Lock closed outage" id="{4ab33fea-3bb0-f111-aaac-002248c75f1e}" />
       </MissingDependency>
       <MissingDependency>
         <Required type="2" schemaName="hel_priority" displayName="Priority" parentSchemaName="hel_workorder" parentDisplayName="Work Order" solution="Active" />
@@ -384,6 +433,10 @@
       </MissingDependency>
       <MissingDependency>
         <Required type="2" schemaName="hel_severity" displayName="Severity" parentSchemaName="hel_outage" parentDisplayName="Outage Event" solution="Active" />
+        <Dependent type="60" displayName="Outage Event Main" parentDisplayName="Outage Event" id="{11ea28cf-6aaf-f111-aaac-002248c75f1e}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="hel_severity" displayName="Severity" parentSchemaName="hel_outage" parentDisplayName="Outage Event" solution="Active" />
         <Dependent type="60" displayName="Outage Event Quick View" parentDisplayName="Outage Event" id="{3bec426d-edad-f111-aaac-002248c75f1e}" />
       </MissingDependency>
       <MissingDependency>
@@ -396,6 +449,10 @@
       </MissingDependency>
       <MissingDependency>
         <Required type="2" schemaName="hel_slabreached" displayName="SLA Breached" parentSchemaName="hel_outage" parentDisplayName="Outage Event" solution="Active" />
+        <Dependent type="60" displayName="Outage Event Main" parentDisplayName="Outage Event" id="{11ea28cf-6aaf-f111-aaac-002248c75f1e}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="hel_slabreached" displayName="SLA Breached" parentSchemaName="hel_outage" parentDisplayName="Outage Event" solution="Active" />
         <Dependent type="60" displayName="Outage Event Quick View" parentDisplayName="Outage Event" id="{3bec426d-edad-f111-aaac-002248c75f1e}" />
       </MissingDependency>
       <MissingDependency>
@@ -405,6 +462,14 @@
       <MissingDependency>
         <Required type="2" schemaName="hel_starttime" displayName="Outage Start" parentSchemaName="hel_outage" parentDisplayName="Outage Event" solution="Active" />
         <Dependent type="26" schemaName="All Outages" displayName="All Outages" parentSchemaName="hel_outage" parentDisplayName="Outage Event" id="{e17520f7-4cac-f111-aaac-002248c75f1e}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="hel_starttime" displayName="Outage Start" parentSchemaName="hel_outage" parentDisplayName="Outage Event" solution="Active" />
+        <Dependent type="29" displayName="Lock closed outage" id="{4ab33fea-3bb0-f111-aaac-002248c75f1e}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="hel_starttime" displayName="Outage Start" parentSchemaName="hel_outage" parentDisplayName="Outage Event" solution="Active" />
+        <Dependent type="60" displayName="Outage Event Main" parentDisplayName="Outage Event" id="{11ea28cf-6aaf-f111-aaac-002248c75f1e}" />
       </MissingDependency>
       <MissingDependency>
         <Required type="2" schemaName="hel_starttime" displayName="Outage Start" parentSchemaName="hel_outage" parentDisplayName="Outage Event" solution="Active" />
@@ -461,6 +526,16 @@
       <MissingDependency>
         <Required type="2" schemaName="hel_workorderid" displayName="Work Order" parentSchemaName="hel_workorder" parentDisplayName="Work Order" solution="Active" />
         <Dependent type="26" schemaName="Open Work Orders" displayName="Open Work Orders" parentSchemaName="hel_workorder" parentDisplayName="Work Order" id="{af9339b3-4dac-f111-aaac-002248c75f1e}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="ownerid" displayName="Owner" parentSchemaName="hel_outage" parentDisplayName="Outage Event" solution="Active" />
+        <Dependent type="60" displayName="Outage Event Main" parentDisplayName="Outage Event" id="{11ea28cf-6aaf-f111-aaac-002248c75f1e}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="Microsoft.PowerApps.PowerAppsOneGrid" displayName="Microsoft.PowerApps.PowerAppsOneGrid" solution="BaseCustomControlsCore (9.0.2608.4008)">
+          <package appName="Base Custom Controls" version="9.0.2608.4008">BaseCustomControlsCore (9.0.2608.4008)</package>
+        </Required>
+        <Dependent type="60" displayName="Outage Event Main" parentDisplayName="Outage Event" id="{11ea28cf-6aaf-f111-aaac-002248c75f1e}" />
       </MissingDependency>
     </MissingDependencies>
   </SolutionManifest>

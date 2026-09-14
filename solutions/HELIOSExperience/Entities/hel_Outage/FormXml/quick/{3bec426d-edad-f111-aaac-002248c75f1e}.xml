@@ -14,7 +14,7 @@
           <columns>
             <column width="100%">
               <sections>
-                <section id="AD49B5BF-256F-46A8-9C75-947146172EB9" name="tab_1_column_1_section_1" columns="1" showlabel="true" showbar="false" IsUserDefined="0" labelwidth="130" labelid="{9fa0e3b4-f93f-4081-9294-37c5cd2f5865}">
+                <section id="AD49B5BF-256F-46A8-9C75-947146172EB9" name="tab_1_column_1_section_1" columns="1" showlabel="false" showbar="false" IsUserDefined="0" labelwidth="130" labelid="{9fa0e3b4-f93f-4081-9294-37c5cd2f5865}">
                   <labels>
                     <label description="New Section" languagecode="1033" />
                   </labels>
