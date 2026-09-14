@@ -89,6 +89,8 @@
       <RootComponent type="1" schemaName="hel_substation" behavior="2" />
       <RootComponent type="1" schemaName="hel_workorder" behavior="2" />
       <RootComponent type="29" id="{4ab33fea-3bb0-f111-aaac-002248c75f1e}" behavior="0" />
+      <RootComponent type="62" schemaName="hel_HELIOSOperationsHub" behavior="0" />
+      <RootComponent type="80" schemaName="hel_HELIOSOperationsHub" behavior="0" />
     </RootComponents>
     <MissingDependencies>
       <MissingDependency>
@@ -96,16 +98,72 @@
         <Dependent type="1" schemaName="hel_asset" displayName="Grid Asset" />
       </MissingDependency>
       <MissingDependency>
+        <Required type="1" schemaName="hel_assettelemetry" displayName="Asset Telemetry" solution="Active" />
+        <Dependent type="62" schemaName="hel_HELIOSOperationsHub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="hel_assettelemetry" displayName="Asset Telemetry" solution="Active" />
+        <Dependent type="80" schemaName="hel_HELIOSOperationsHub" displayName="HELIOS Operations Hub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="hel_compliancerule" displayName="Compliance Rule" solution="Active" />
+        <Dependent type="62" schemaName="hel_HELIOSOperationsHub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="hel_compliancerule" displayName="Compliance Rule" solution="Active" />
+        <Dependent type="80" schemaName="hel_HELIOSOperationsHub" displayName="HELIOS Operations Hub" />
+      </MissingDependency>
+      <MissingDependency>
         <Required type="1" schemaName="hel_engineerprofile" displayName="Engineer Profile" solution="Active" />
         <Dependent type="1" schemaName="hel_engineerprofile" displayName="Engineer Profile" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="hel_fieldnote" displayName="Field Note" solution="Active" />
+        <Dependent type="62" schemaName="hel_HELIOSOperationsHub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="hel_fieldnote" displayName="Field Note" solution="Active" />
+        <Dependent type="80" schemaName="hel_HELIOSOperationsHub" displayName="HELIOS Operations Hub" />
       </MissingDependency>
       <MissingDependency>
         <Required type="1" schemaName="hel_inspection" displayName="Inspection" solution="Active" />
         <Dependent type="1" schemaName="hel_inspection" displayName="Inspection" />
       </MissingDependency>
       <MissingDependency>
+        <Required type="1" schemaName="hel_integrationlog" displayName="Integration Log" solution="Active" />
+        <Dependent type="62" schemaName="hel_HELIOSOperationsHub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="hel_integrationlog" displayName="Integration Log" solution="Active" />
+        <Dependent type="80" schemaName="hel_HELIOSOperationsHub" displayName="HELIOS Operations Hub" />
+      </MissingDependency>
+      <MissingDependency>
         <Required type="1" schemaName="hel_outage" displayName="Outage Event" solution="Active" />
         <Dependent type="1" schemaName="hel_outage" displayName="Outage Event" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="hel_region" displayName="Region" solution="Active" />
+        <Dependent type="62" schemaName="hel_HELIOSOperationsHub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="hel_region" displayName="Region" solution="Active" />
+        <Dependent type="80" schemaName="hel_HELIOSOperationsHub" displayName="HELIOS Operations Hub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="hel_riskscore" displayName="Risk Score" solution="Active" />
+        <Dependent type="62" schemaName="hel_HELIOSOperationsHub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="hel_riskscore" displayName="Risk Score" solution="Active" />
+        <Dependent type="80" schemaName="hel_HELIOSOperationsHub" displayName="HELIOS Operations Hub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="hel_sladefinition" displayName="SLA Definition" solution="Active" />
+        <Dependent type="62" schemaName="hel_HELIOSOperationsHub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="hel_sladefinition" displayName="SLA Definition" solution="Active" />
+        <Dependent type="80" schemaName="hel_HELIOSOperationsHub" displayName="HELIOS Operations Hub" />
       </MissingDependency>
       <MissingDependency>
         <Required type="1" schemaName="hel_substation" displayName="Substation" solution="Active" />
@@ -624,6 +682,10 @@
         <Dependent type="60" displayName="Work Order Main" parentDisplayName="Work Order" id="{fc9c0c89-48b0-f111-aaac-002248c75f1e}" />
       </MissingDependency>
       <MissingDependency>
+        <Required type="26" schemaName="Active Grid Assets" displayName="Active Grid Assets" parentSchemaName="hel_asset" parentDisplayName="Grid Asset" solution="Active" id="{271b3c00-bcca-48d7-8941-6e6563a591ae}" />
+        <Dependent type="80" schemaName="hel_HELIOSOperationsHub" displayName="HELIOS Operations Hub" />
+      </MissingDependency>
+      <MissingDependency>
         <Required type="26" schemaName="Active Inspections" displayName="Active Inspections" parentSchemaName="hel_inspection" parentDisplayName="Inspection" solution="Active" id="{68d4ac4e-9240-477f-b42d-d9b413ba9f1c}" />
         <Dependent type="60" displayName="Grid Asset Main" parentDisplayName="Grid Asset" id="{9aad493e-4bb0-f111-aaac-002248c75f1e}" />
       </MissingDependency>
@@ -632,10 +694,102 @@
         <Dependent type="60" displayName="Grid Asset Main" parentDisplayName="Grid Asset" id="{9aad493e-4bb0-f111-aaac-002248c75f1e}" />
       </MissingDependency>
       <MissingDependency>
+        <Required type="26" schemaName="Active Outage Events" displayName="Active Outage Events" parentSchemaName="hel_outage" parentDisplayName="Outage Event" solution="Active" id="{75aaace9-8deb-416e-aed0-f504ea9b14af}" />
+        <Dependent type="80" schemaName="hel_HELIOSOperationsHub" displayName="HELIOS Operations Hub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="26" schemaName="Active Work Orders" displayName="Active Work Orders" parentSchemaName="hel_workorder" parentDisplayName="Work Order" solution="Active" id="{1bd98e9d-fac3-4f4b-a123-ab31bf88c504}" />
+        <Dependent type="80" schemaName="hel_HELIOSOperationsHub" displayName="HELIOS Operations Hub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="26" schemaName="Grid Asset Advanced Find View" displayName="Grid Asset Advanced Find View" parentSchemaName="hel_asset" parentDisplayName="Grid Asset" solution="Active" id="{bb6b053a-6bfa-466e-b506-2c9a14f17528}" />
+        <Dependent type="80" schemaName="hel_HELIOSOperationsHub" displayName="HELIOS Operations Hub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="26" schemaName="Grid Asset Associated View" displayName="Grid Asset Associated View" parentSchemaName="hel_asset" parentDisplayName="Grid Asset" solution="Active" id="{11c86857-9f5a-45b3-b1cb-2c64e01321cb}" />
+        <Dependent type="80" schemaName="hel_HELIOSOperationsHub" displayName="HELIOS Operations Hub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="26" schemaName="Grid Asset Lookup View" displayName="Grid Asset Lookup View" parentSchemaName="hel_asset" parentDisplayName="Grid Asset" solution="Active" id="{f9af06f7-9cd3-4fa1-9cd3-4740d6c3af80}" />
+        <Dependent type="80" schemaName="hel_HELIOSOperationsHub" displayName="HELIOS Operations Hub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="26" schemaName="Outage Event Advanced Find View" displayName="Outage Event Advanced Find View" parentSchemaName="hel_outage" parentDisplayName="Outage Event" solution="Active" id="{528e955f-d770-4301-9834-55dde2774029}" />
+        <Dependent type="80" schemaName="hel_HELIOSOperationsHub" displayName="HELIOS Operations Hub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="26" schemaName="Outage Event Associated View" displayName="Outage Event Associated View" parentSchemaName="hel_outage" parentDisplayName="Outage Event" solution="Active" id="{1ac66c66-2550-41d9-8336-bc42f2d74476}" />
+        <Dependent type="80" schemaName="hel_HELIOSOperationsHub" displayName="HELIOS Operations Hub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="26" schemaName="Outage Event Lookup View" displayName="Outage Event Lookup View" parentSchemaName="hel_outage" parentDisplayName="Outage Event" solution="Active" id="{52a219a3-6212-4e94-ab35-0cbcdd95b661}" />
+        <Dependent type="80" schemaName="hel_HELIOSOperationsHub" displayName="HELIOS Operations Hub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="26" schemaName="Quick Find Active Grid Assets" displayName="Quick Find Active Grid Assets" parentSchemaName="hel_asset" parentDisplayName="Grid Asset" solution="Active" id="{bc553cc1-5d15-4ea8-b57e-d141b672ce43}" />
+        <Dependent type="80" schemaName="hel_HELIOSOperationsHub" displayName="HELIOS Operations Hub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="26" schemaName="Quick Find Active Outage Events" displayName="Quick Find Active Outage Events" parentSchemaName="hel_outage" parentDisplayName="Outage Event" solution="Active" id="{01da2ebe-3b57-4dda-8548-3cda330a9338}" />
+        <Dependent type="80" schemaName="hel_HELIOSOperationsHub" displayName="HELIOS Operations Hub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="26" schemaName="Quick Find Active Work Orders" displayName="Quick Find Active Work Orders" parentSchemaName="hel_workorder" parentDisplayName="Work Order" solution="Active" id="{bcb18a51-0d3d-4dff-95be-1864fe97af7e}" />
+        <Dependent type="80" schemaName="hel_HELIOSOperationsHub" displayName="HELIOS Operations Hub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="26" schemaName="Work Order Advanced Find View" displayName="Work Order Advanced Find View" parentSchemaName="hel_workorder" parentDisplayName="Work Order" solution="Active" id="{ae27b6eb-50fe-457a-863d-43f0cd81d73c}" />
+        <Dependent type="80" schemaName="hel_HELIOSOperationsHub" displayName="HELIOS Operations Hub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="26" schemaName="Work Order Associated View" displayName="Work Order Associated View" parentSchemaName="hel_workorder" parentDisplayName="Work Order" solution="Active" id="{af0c875d-a56a-4a9c-b638-c143691ee676}" />
+        <Dependent type="80" schemaName="hel_HELIOSOperationsHub" displayName="HELIOS Operations Hub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="26" schemaName="Work Order Lookup View" displayName="Work Order Lookup View" parentSchemaName="hel_workorder" parentDisplayName="Work Order" solution="Active" id="{15ab8b06-bff0-4232-b7b9-7cd24f39a384}" />
+        <Dependent type="80" schemaName="hel_HELIOSOperationsHub" displayName="HELIOS Operations Hub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="60" displayName="Information" parentDisplayName="Outage Event" solution="Active" id="{0d49106b-5995-41b1-a6c1-bb110393198a}" />
+        <Dependent type="80" schemaName="hel_HELIOSOperationsHub" displayName="HELIOS Operations Hub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="60" displayName="Information" parentDisplayName="Grid Asset" solution="Active" id="{2d58d9e9-4b10-4524-ae46-7dbd2591d72c}" />
+        <Dependent type="80" schemaName="hel_HELIOSOperationsHub" displayName="HELIOS Operations Hub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="60" displayName="Information" parentDisplayName="Grid Asset" solution="Active" id="{5b4a649c-5113-4976-98e3-251b08ee8e48}" />
+        <Dependent type="80" schemaName="hel_HELIOSOperationsHub" displayName="HELIOS Operations Hub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="60" displayName="Information" parentDisplayName="Outage Event" solution="Active" id="{69e52cd8-760d-48aa-93f3-9337f670d364}" />
+        <Dependent type="80" schemaName="hel_HELIOSOperationsHub" displayName="HELIOS Operations Hub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="60" displayName="Information" parentDisplayName="Work Order" solution="Active" id="{8712174a-0d21-4a11-9cbc-21962430a8a2}" />
+        <Dependent type="80" schemaName="hel_HELIOSOperationsHub" displayName="HELIOS Operations Hub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="60" displayName="Information" parentDisplayName="Work Order" solution="Active" id="{f1185734-06ac-420f-b796-c65230c86838}" />
+        <Dependent type="80" schemaName="hel_HELIOSOperationsHub" displayName="HELIOS Operations Hub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="msdyn_/Images/AppModule_Default_Icon.png" displayName="msdyn_/Images/AppModule_Default_Icon.png" solution="AppModuleWebResources (2.5)">
+          <package appName="AppModule Web Resources Package" version="2.5">AppModuleWebResources (2.5)</package>
+        </Required>
+        <Dependent type="80" schemaName="hel_HELIOSOperationsHub" displayName="HELIOS Operations Hub" />
+      </MissingDependency>
+      <MissingDependency>
         <Required type="66" schemaName="Microsoft.PowerApps.PowerAppsOneGrid" displayName="Microsoft.PowerApps.PowerAppsOneGrid" solution="BaseCustomControlsCore (9.0.2608.4008)">
           <package appName="Base Custom Controls" version="9.0.2608.4008">BaseCustomControlsCore (9.0.2608.4008)</package>
         </Required>
         <Dependent type="60" displayName="Outage Event Main" parentDisplayName="Outage Event" id="{11ea28cf-6aaf-f111-aaac-002248c75f1e}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="SettingDefinition" displayName="AppChannel" solution="msdyn_AppFrameworkInfraExtensions (1.0.0.20)" id.uniquename="AppChannel">
+          <package appName="PowerAppsAppFramework Package" version="1.0.0.25">PowerAppsAppFramework_Anchor (1.0.0.25)</package>
+        </Required>
+        <Dependent type="AppSetting" displayName="parentappmoduleid.uniquename=hel_HELIOSOperationsHub,settingdefinitionid.uniquename=AppChannel" id.parentappmoduleid.uniquename="hel_HELIOSOperationsHub" id.settingdefinitionid.uniquename="AppChannel" />
       </MissingDependency>
     </MissingDependencies>
   </SolutionManifest>
