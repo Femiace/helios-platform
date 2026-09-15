@@ -48,10 +48,7 @@
     <AppModuleComponent type="60" id="{11ea28cf-6aaf-f111-aaac-002248c75f1e}" />
     <AppModuleComponent type="60" id="{fc9c0c89-48b0-f111-aaac-002248c75f1e}" />
     <AppModuleComponent type="60" id="{9aad493e-4bb0-f111-aaac-002248c75f1e}" />
-    <AppModuleComponent type="60" id="{8712174a-0d21-4a11-9cbc-21962430a8a2}" />
     <AppModuleComponent type="60" id="{5b4a649c-5113-4976-98e3-251b08ee8e48}" />
-    <AppModuleComponent type="60" id="{2d58d9e9-4b10-4524-ae46-7dbd2591d72c}" />
-    <AppModuleComponent type="60" id="{69e52cd8-760d-48aa-93f3-9337f670d364}" />
     <AppModuleComponent type="60" id="{0d49106b-5995-41b1-a6c1-bb110393198a}" />
     <AppModuleComponent type="60" id="{f1185734-06ac-420f-b796-c65230c86838}" />
     <AppModuleComponent type="62" schemaName="hel_HELIOSOperationsHub" />
@@ -66,6 +63,15 @@
   <Descriptions>
     <Description description="Back-office console for asset planners and control room supervisors" languagecode="1033" />
   </Descriptions>
+  <appelements>
+    <appelement uniquename="hel_hel_HELIOSOperationsHub_canvasappid_hel_heliosdispatchboard_3214c">
+      <canvasappid>
+        <name>hel_heliosdispatchboard_3214c</name>
+      </canvasappid>
+      <iscustomizable>1</iscustomizable>
+      <name>hel_hel_HELIOSOperationsHub_canvasappid_hel_heliosdispatchboard_3214c</name>
+    </appelement>
+  </appelements>
   <appsettings>
     <appsetting settingdefinitionid.uniquename="AppChannel">
       <iscustomizable>1</iscustomizable>

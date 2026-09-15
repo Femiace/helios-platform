@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CanvasApp xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>hel_heliosdispatchboard_3214c</Name>
+  <AppVersion>2026-09-15T13:57:16Z</AppVersion>
+  <Status>Ready</Status>
+  <CreatedByClientVersion>3.26085.11.0</CreatedByClientVersion>
+  <MinClientVersion>3.26085.11.0</MinClientVersion>
+  <Tags>{"primaryDeviceWidth":"1366","primaryDeviceHeight":"768","supportsPortrait":"true","supportsLandscape":"true","primaryFormFactor":"Tablet","showStatusBar":"false","publisherVersion":"3.26085.11","minimumRequiredApiVersion":"2.2.0","hasComponent":"false","hasUnlockedComponent":"false","isUnifiedRootApp":"false","m365CopilotSettingValue":"0","sienaVersion":"20260915T125108Z-3.26085.11.0"}</Tags>
+  <IsCdsUpgraded>0</IsCdsUpgraded>
+  <GalleryItemId xsi:nil="true"></GalleryItemId>
+  <BackgroundColor>RGBA(0,176,240,1)</BackgroundColor>
+  <DisplayName>HELIOS Dispatch Board</DisplayName>
+  <Description xsi:nil="true"></Description>
+  <CommitMessage xsi:nil="true"></CommitMessage>
+  <Publisher xsi:nil="true"></Publisher>
+  <AuthorizationReferences>[]</AuthorizationReferences>
+  <ConnectionReferences>{}</ConnectionReferences>
+  <DatabaseReferences>{"default.cds":{"databaseDetails":{"referenceType":"Environmental","environmentName":"default.cds","overrideValues":{"status":"NotSpecified","environmentVariableName":""}},"dataSources":{"Outage Events":{"entitySetName":"hel_outages","logicalName":"hel_outage"},"Work Orders":{"entitySetName":"hel_workorders","logicalName":"hel_workorder"},"Engineer Profiles":{"entitySetName":"hel_engineerprofiles","logicalName":"hel_engineerprofile"},"Users":{"entitySetName":"systemusers","logicalName":"systemuser"},"Regions":{"entitySetName":"hel_regions","logicalName":"hel_region"}}}}</DatabaseReferences>
+  <AppComponents>[]</AppComponents>
+  <AppComponentDependencies>[]</AppComponentDependencies>
+  <CanConsumeAppPass>1</CanConsumeAppPass>
+  <CanvasAppType>2</CanvasAppType>
+  <BypassConsent>0</BypassConsent>
+  <AdminControlBypassConsent>0</AdminControlBypassConsent>
+  <EmbeddedApp xsi:nil="true"></EmbeddedApp>
+  <IntroducedVersion>1.0</IntroducedVersion>
+  <CdsDependencies>{"cdsdependencies":[{"logicalname":"hel_outage","componenttype":1},{"logicalname":"hel_workorder","componenttype":1},{"logicalname":"hel_engineerprofile","componenttype":1},{"logicalname":"systemuser","componenttype":1},{"logicalname":"hel_region","componenttype":1}]}</CdsDependencies>
+  <IsCustomizable>1</IsCustomizable>
+  <BackgroundImageUri>/CanvasApps/hel_heliosdispatchboard_3214c_BackgroundImageUri</BackgroundImageUri>
+  <DocumentUri>/CanvasApps/hel_heliosdispatchboard_3214c_DocumentUri.msapp</DocumentUri>
+  <AdditionalUris>
+    <AdditionalUri>/CanvasApps/hel_heliosdispatchboard_3214c_AdditionalUris0_identity.json</AdditionalUri>
+  </AdditionalUris>
+</CanvasApp>

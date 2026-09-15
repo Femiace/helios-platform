@@ -89,6 +89,7 @@
       <RootComponent type="1" schemaName="hel_substation" behavior="2" />
       <RootComponent type="1" schemaName="hel_workorder" behavior="2" />
       <RootComponent type="29" id="{4ab33fea-3bb0-f111-aaac-002248c75f1e}" behavior="0" />
+      <RootComponent type="300" schemaName="hel_heliosdispatchboard_3214c" behavior="0" />
       <RootComponent type="62" schemaName="hel_HELIOSOperationsHub" behavior="0" />
       <RootComponent type="80" schemaName="hel_HELIOSOperationsHub" behavior="0" />
     </RootComponents>
@@ -140,6 +141,10 @@
       <MissingDependency>
         <Required type="1" schemaName="hel_outage" displayName="Outage Event" solution="Active" />
         <Dependent type="1" schemaName="hel_outage" displayName="Outage Event" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="hel_region" displayName="Region" solution="Active" />
+        <Dependent type="300" schemaName="hel_heliosdispatchboard_3214c" displayName="HELIOS Dispatch Board" />
       </MissingDependency>
       <MissingDependency>
         <Required type="1" schemaName="hel_region" displayName="Region" solution="Active" />
@@ -754,19 +759,7 @@
         <Dependent type="80" schemaName="hel_HELIOSOperationsHub" displayName="HELIOS Operations Hub" />
       </MissingDependency>
       <MissingDependency>
-        <Required type="60" displayName="Information" parentDisplayName="Grid Asset" solution="Active" id="{2d58d9e9-4b10-4524-ae46-7dbd2591d72c}" />
-        <Dependent type="80" schemaName="hel_HELIOSOperationsHub" displayName="HELIOS Operations Hub" />
-      </MissingDependency>
-      <MissingDependency>
         <Required type="60" displayName="Information" parentDisplayName="Grid Asset" solution="Active" id="{5b4a649c-5113-4976-98e3-251b08ee8e48}" />
-        <Dependent type="80" schemaName="hel_HELIOSOperationsHub" displayName="HELIOS Operations Hub" />
-      </MissingDependency>
-      <MissingDependency>
-        <Required type="60" displayName="Information" parentDisplayName="Outage Event" solution="Active" id="{69e52cd8-760d-48aa-93f3-9337f670d364}" />
-        <Dependent type="80" schemaName="hel_HELIOSOperationsHub" displayName="HELIOS Operations Hub" />
-      </MissingDependency>
-      <MissingDependency>
-        <Required type="60" displayName="Information" parentDisplayName="Work Order" solution="Active" id="{8712174a-0d21-4a11-9cbc-21962430a8a2}" />
         <Dependent type="80" schemaName="hel_HELIOSOperationsHub" displayName="HELIOS Operations Hub" />
       </MissingDependency>
       <MissingDependency>
