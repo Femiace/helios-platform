@@ -1,0 +1,38 @@
+<appaction uniquename="hel__OpenDispatchBoard!9197b06fcae742f9bf5d2c6b3bab7fbb!hel_HELIOSOperationsHub!hel_outage!0">
+  <appmoduleid>
+    <uniquename>hel_HELIOSOperationsHub</uniquename>
+  </appmoduleid>
+  <buttonlabeltext default="Open Dispatch Board">
+    <label description="Open Dispatch Board" languagecode="1033" />
+  </buttonlabeltext>
+  <buttontooltipdescription default="Opens the Dispatch Board page">
+    <label description="Opens the Dispatch Board page" languagecode="1033" />
+  </buttontooltipdescription>
+  <buttontooltiptitle default="Dispatch Board">
+    <label description="Dispatch Board" languagecode="1033" />
+  </buttontooltiptitle>
+  <context>1</context>
+  <contextentity>
+    <logicalname>hel_outage</logicalname>
+  </contextentity>
+  <contextvalue>hel_outage</contextvalue>
+  <fonticon>OpenPane</fonticon>
+  <hidden>0</hidden>
+  <iscustomizable>1</iscustomizable>
+  <isdisabled>0</isdisabled>
+  <isgrouptitlehidden>0</isgrouptitlehidden>
+  <location>0</location>
+  <name>OpenDispatchBoard!9197b06fcae742f9bf5d2c6b3bab7fbb</name>
+  <onclickeventformulacomponentlibraryid>
+    <name>hel_heliosoperationshubdefaultcommandlibrary_121cf</name>
+  </onclickeventformulacomponentlibraryid>
+  <onclickeventformulacomponentname>6afc43ed304f4e75b4ab84cb35b55e58</onclickeventformulacomponentname>
+  <onclickeventformulafunctionname>OnSelect</onclickeventformulafunctionname>
+  <onclickeventtype>1</onclickeventtype>
+  <origin>0</origin>
+  <sequence>100100018.7500000000</sequence>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+  <type>0</type>
+  <visibilitytype>0</visibilitytype>
+</appaction>

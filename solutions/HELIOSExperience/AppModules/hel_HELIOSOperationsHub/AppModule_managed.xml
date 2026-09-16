@@ -71,6 +71,13 @@
       <iscustomizable>1</iscustomizable>
       <name>hel_hel_HELIOSOperationsHub_canvasappid_hel_heliosdispatchboard_3214c</name>
     </appelement>
+    <appelement uniquename="hel_hel_HELIOSOperationsHub_canvasappid_hel_heliosoperationshubdefaultcommandlibrary_121cf">
+      <canvasappid>
+        <name>hel_heliosoperationshubdefaultcommandlibrary_121cf</name>
+      </canvasappid>
+      <iscustomizable>1</iscustomizable>
+      <name>hel_hel_HELIOSOperationsHub_canvasappid_hel_heliosoperationshubdefaultcommandlibrary_121cf</name>
+    </appelement>
   </appelements>
   <appsettings>
     <appsetting settingdefinitionid.uniquename="AppChannel">

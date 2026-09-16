@@ -1,0 +1,43 @@
+<appaction uniquename="hel__MarkSLABreached!8fcfc979a96d40c8ad5f0d4e13f517cf!hel_HELIOSOperationsHub!hel_outage!0">
+  <appmoduleid>
+    <uniquename>hel_HELIOSOperationsHub</uniquename>
+  </appmoduleid>
+  <buttonlabeltext default="Mark SLA Breached">
+    <label description="Mark SLA Breached" languagecode="1033" />
+  </buttonlabeltext>
+  <buttontooltipdescription default="Sets SLA Breached to Yes after confirmation">
+    <label description="Sets SLA Breached to Yes after confirmation" languagecode="1033" />
+  </buttontooltipdescription>
+  <buttontooltiptitle default="Record an SLA breach">
+    <label description="Record an SLA breach" languagecode="1033" />
+  </buttontooltiptitle>
+  <context>1</context>
+  <contextentity>
+    <logicalname>hel_outage</logicalname>
+  </contextentity>
+  <contextvalue>hel_outage</contextvalue>
+  <fonticon>$clientsvg:Accept</fonticon>
+  <hidden>0</hidden>
+  <iscustomizable>1</iscustomizable>
+  <isdisabled>0</isdisabled>
+  <isgrouptitlehidden>0</isgrouptitlehidden>
+  <location>0</location>
+  <name>MarkSLABreached!8fcfc979a96d40c8ad5f0d4e13f517cf</name>
+  <onclickeventformulacomponentlibraryid>
+    <name>hel_heliosoperationshubdefaultcommandlibrary_121cf</name>
+  </onclickeventformulacomponentlibraryid>
+  <onclickeventformulacomponentname>34858c37ef694afdb209bb5eca36a1d0</onclickeventformulacomponentname>
+  <onclickeventformulafunctionname>OnSelect</onclickeventformulafunctionname>
+  <onclickeventtype>1</onclickeventtype>
+  <origin>0</origin>
+  <sequence>100100015.0000000000</sequence>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+  <type>0</type>
+  <visibilityformulacomponentlibraryid>
+    <name>hel_heliosoperationshubdefaultcommandlibrary_121cf</name>
+  </visibilityformulacomponentlibraryid>
+  <visibilityformulacomponentname>34858c37ef694afdb209bb5eca36a1d0</visibilityformulacomponentname>
+  <visibilityformulafunctionname>Visible</visibilityformulafunctionname>
+  <visibilitytype>1</visibilitytype>
+</appaction>

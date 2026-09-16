@@ -1,0 +1,43 @@
+<appaction uniquename="hel__ReleaseWorkOrders!7990053abe4b4a369dc126fa2af63dc9!hel_HELIOSOperationsHub!hel_outage!0">
+  <appmoduleid>
+    <uniquename>hel_HELIOSOperationsHub</uniquename>
+  </appmoduleid>
+  <buttonlabeltext default="Release Work Orders">
+    <label description="Release Work Orders" languagecode="1033" />
+  </buttonlabeltext>
+  <buttontooltipdescription default="Calls hel_ReleaseWorkOrderBatch for this outage">
+    <label description="Calls hel_ReleaseWorkOrderBatch for this outage" languagecode="1033" />
+  </buttontooltipdescription>
+  <buttontooltiptitle default="Release work orders">
+    <label description="Release work orders" languagecode="1033" />
+  </buttontooltiptitle>
+  <context>1</context>
+  <contextentity>
+    <logicalname>hel_outage</logicalname>
+  </contextentity>
+  <contextvalue>hel_outage</contextvalue>
+  <fonticon>SadSmiley</fonticon>
+  <hidden>0</hidden>
+  <iscustomizable>1</iscustomizable>
+  <isdisabled>0</isdisabled>
+  <isgrouptitlehidden>0</isgrouptitlehidden>
+  <location>0</location>
+  <name>ReleaseWorkOrders!7990053abe4b4a369dc126fa2af63dc9</name>
+  <onclickeventjavascriptfunctionname>Hel.OutageForm.releaseWorkOrders</onclickeventjavascriptfunctionname>
+  <onclickeventjavascriptparameters>[{"type":5}]</onclickeventjavascriptparameters>
+  <onclickeventjavascriptwebresourceid>
+    <webresourceid>c0323abd-8cb1-f111-aaac-002248c75f1e</webresourceid>
+  </onclickeventjavascriptwebresourceid>
+  <onclickeventtype>2</onclickeventtype>
+  <origin>0</origin>
+  <sequence>100100017.5000000000</sequence>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+  <type>0</type>
+  <visibilityformulacomponentlibraryid>
+    <name>hel_heliosoperationshubdefaultcommandlibrary_121cf</name>
+  </visibilityformulacomponentlibraryid>
+  <visibilityformulacomponentname>1938449b691a41e39471cefaeb1cc677</visibilityformulacomponentname>
+  <visibilityformulafunctionname>Visible</visibilityformulafunctionname>
+  <visibilitytype>1</visibilitytype>
+</appaction>

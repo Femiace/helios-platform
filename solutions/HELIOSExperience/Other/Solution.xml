@@ -90,6 +90,7 @@
       <RootComponent type="1" schemaName="hel_workorder" behavior="2" />
       <RootComponent type="29" id="{4ab33fea-3bb0-f111-aaac-002248c75f1e}" behavior="0" />
       <RootComponent type="300" schemaName="hel_heliosdispatchboard_3214c" behavior="0" />
+      <RootComponent type="300" schemaName="hel_heliosoperationshubdefaultcommandlibrary_121cf" behavior="0" />
       <RootComponent type="61" schemaName="hel_outageForm.js" behavior="0" />
       <RootComponent type="62" schemaName="hel_HELIOSOperationsHub" behavior="0" />
       <RootComponent type="80" schemaName="hel_HELIOSOperationsHub" behavior="0" />
