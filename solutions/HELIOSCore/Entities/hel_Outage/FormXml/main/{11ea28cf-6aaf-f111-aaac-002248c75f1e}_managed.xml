@@ -447,6 +447,11 @@
             <Handler functionName="Hel.OutageForm.onCustomersAffectedChange" libraryName="hel_outageForm.js" handlerUniqueId="{48968bc7-ec9d-4bfc-a132-9a5b5037a18d}" enabled="true" parameters="" passExecutionContext="true" />
           </Handlers>
         </event>
+        <event name="onsave" application="false" active="false">
+          <Handlers>
+            <Handler functionName="Hel.OutageForm.onSave" libraryName="hel_outageForm.js" handlerUniqueId="{ca8d364b-8508-4a63-aa31-6d5e1039ebcf}" enabled="true" parameters="" passExecutionContext="true" />
+          </Handlers>
+        </event>
       </events>
     </form>
     <IsCustomizable>1</IsCustomizable>
