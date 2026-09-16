@@ -122,6 +122,10 @@
         <Dependent type="1" schemaName="hel_assettelemetry" displayName="Asset Telemetry" />
       </MissingDependency>
       <MissingDependency>
+        <Required type="61" schemaName="hel_outageForm.js" displayName="hel_outageForm.js" solution="Active" />
+        <Dependent type="60" displayName="Outage Event Main" parentDisplayName="Outage Event" id="{11ea28cf-6aaf-f111-aaac-002248c75f1e}" />
+      </MissingDependency>
+      <MissingDependency>
         <Required type="66" schemaName="Microsoft.PowerApps.PowerAppsOneGrid" displayName="Microsoft.PowerApps.PowerAppsOneGrid" solution="BaseCustomControlsCore (9.0.2608.4008)">
           <package appName="Base Custom Controls" version="9.0.2608.4008">BaseCustomControlsCore (9.0.2608.4008)</package>
         </Required>
