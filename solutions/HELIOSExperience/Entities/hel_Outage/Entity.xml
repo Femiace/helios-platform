@@ -1,6 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Name LocalizedName="Outage Event" OriginalName="Outage Event">hel_Outage</Name>
+  <EntityInfo>
+    <entity Name="hel_Outage" unmodified="1">
+      <attributes />
+    </entity>
+  </EntityInfo>
   <FormXml />
   <SavedQueries />
   <RibbonDiffXml />

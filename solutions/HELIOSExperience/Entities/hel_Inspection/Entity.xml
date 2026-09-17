@@ -1,6 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Name LocalizedName="Inspection" OriginalName="Inspection">hel_Inspection</Name>
+  <EntityInfo>
+    <entity Name="hel_Inspection" unmodified="1">
+      <attributes />
+    </entity>
+  </EntityInfo>
   <SavedQueries />
   <RibbonDiffXml />
 </Entity>
