@@ -1,0 +1,4 @@
+   {
+    "typescript.tsdk": "src/pcf/AssetHealthGauge/node_modules/typescript/lib",
+    "js/ts.tsdk.path": "src/pcf/AssetHealthGauge/node_modules/typescript/lib"
+   }
