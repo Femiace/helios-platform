@@ -1,0 +1,52 @@
+   <?xml version="1.0" encoding="utf-8"?>
+   <root>
+     <resheader name="resmimetype">
+       <value>text/microsoft-resx</value>
+     </resheader>
+     <resheader name="version">
+       <value>2.0</value>
+     </resheader>
+     <resheader name="reader">
+       <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+     </resheader>
+     <resheader name="writer">
+       <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+     </resheader>
+     <data name="AssetHealthGauge_Name" xml:space="preserve">
+       <value>HELIOS Asset Health Gauge</value>
+     </data>
+     <data name="AssetHealthGauge_Desc" xml:space="preserve">
+       <value>Shows an asset health index as a gauge with recent inspections, serial scan check and asset comparison.</value>
+     </data>
+     <data name="HealthIndex_Name" xml:space="preserve">
+       <value>Health Index</value>
+     </data>
+     <data name="HealthIndex_Desc" xml:space="preserve">
+       <value>The numeric health column the gauge displays and edits.</value>
+     </data>
+     <data name="SerialNumber_Name" xml:space="preserve">
+       <value>Serial Number</value>
+     </data>
+     <data name="SerialNumber_Desc" xml:space="preserve">
+       <value>The serial number column compared against a scanned barcode.</value>
+     </data>
+     <data name="WarningThreshold_Name" xml:space="preserve">
+       <value>Warning Threshold</value>
+     </data>
+     <data name="WarningThreshold_Desc" xml:space="preserve">
+       <value>Health index below this value shows amber.</value>
+     </data>
+     <data name="CriticalThreshold_Name" xml:space="preserve">
+       <value>Critical Threshold</value>
+     </data>
+     <data name="CriticalThreshold_Desc" xml:space="preserve">
+       <value>Health index below this value shows red.</value>
+     </data>
+     <data name="LastScanResult_Name" xml:space="preserve">
+       <value>Last Scan Result</value>
+     </data>
+     <data name="LastScanResult_Desc" xml:space="preserve">
+       <value>Match or Mismatch after the most recent serial scan.</value>
+     </data>
+   </root>
+   
