@@ -1,0 +1,11 @@
+﻿src\pcf\AssetHealthGauge\.gitignore
+src\pcf\AssetHealthGauge\AssetHealthGauge.pcfproj
+src\pcf\AssetHealthGauge\eslint.config.mjs
+src\pcf\AssetHealthGauge\package-lock.json
+src\pcf\AssetHealthGauge\package.json
+src\pcf\AssetHealthGauge\pcfconfig.json
+src\pcf\AssetHealthGauge\tsconfig.json
+src\pcf\AssetHealthGauge\AssetHealthGauge\ControlManifest.Input.xml
+src\pcf\AssetHealthGauge\AssetHealthGauge\HelloWorld.tsx
+src\pcf\AssetHealthGauge\AssetHealthGauge\index.ts
+src\pcf\AssetHealthGauge\AssetHealthGauge\generated\ManifestTypes.d.ts
