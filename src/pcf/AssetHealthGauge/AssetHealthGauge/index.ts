@@ -1,57 +1,147 @@
-import { IInputs, IOutputs } from "./generated/ManifestTypes";
-import { HelloWorld, IHelloWorldProps } from "./HelloWorld";
-import * as React from "react";
+   import { IInputs, IOutputs } from "./generated/ManifestTypes";
+   import { HealthGauge, IHealthGaugeProps, HealthBand } from "./HealthGauge";
+   import * as React from "react";
 
-export class AssetHealthGauge implements ComponentFramework.ReactControl<IInputs, IOutputs> {
-    private notifyOutputChanged: () => void;
+   const LOG = "[AssetHealthGauge]";
 
-    /**
-     * Empty constructor.
-     */
-    constructor() {
-        // Empty
-    }
+   interface IGaugeColours {
+       band: string;
+       track: string;
+       text: string;
+   }
 
-    /**
-     * Used to initialize the control instance. Controls can kick off remote server calls and other initialization actions here.
-     * Data-set values are not initialized here, use updateView.
-     * @param context The entire property bag available to control via Context Object; It contains values as set up by the customizer mapped to property names defined in the manifest, as well as utility functions.
-     * @param notifyOutputChanged A callback method to alert the framework that the control has new outputs ready to be retrieved asynchronously.
-     * @param state A piece of data that persists in one session for a single user. Can be set at any point in a controls life cycle by calling 'setControlState' in the Mode interface.
-     */
-    public init(
-        context: ComponentFramework.Context<IInputs>,
-        notifyOutputChanged: () => void,
-        state: ComponentFramework.Dictionary
-    ): void {
-        this.notifyOutputChanged = notifyOutputChanged;
-    }
+   const FALLBACK_BAND: Record<HealthBand, string> = {
+       good: "#107C10",
+       warning: "#C19C00",
+       critical: "#D13438",
+       unknown: "#8A8886"
+   };
 
-    /**
-     * Called when any value in the property bag has changed. This includes field values, data-sets, global values such as container height and width, offline status, control metadata values such as label, visible, etc.
-     * @param context The entire property bag available to control via Context Object; It contains values as set up by the customizer mapped to names defined in the manifest, as well as utility functions
-     * @returns ReactElement root react element for the control
-     */
-    public updateView(context: ComponentFramework.Context<IInputs>): React.ReactElement {
-        const props: IHelloWorldProps = { name: 'Power Apps' };
-        return React.createElement(
-            HelloWorld, props
-        );
-    }
+   const TOKEN_FOR_BAND: Record<HealthBand, string> = {
+       good: "colorPaletteGreenForeground1",
+       warning: "colorPaletteMarigoldForeground1",
+       critical: "colorPaletteRedForeground1",
+       unknown: "colorNeutralForeground3"
+   };
 
-    /**
-     * It is called by the framework prior to a control receiving new data.
-     * @returns an object based on nomenclature defined in manifest, expecting object[s] for property marked as "bound" or "output"
-     */
-    public getOutputs(): IOutputs {
-        return { };
-    }
+   export class AssetHealthGauge implements ComponentFramework.ReactControl<IInputs, IOutputs> {
+       private notifyOutputChanged: () => void;
+       private currentValue: number | null = null;
+       private updateCount = 0;
 
-    /**
-     * Called when the control is to be removed from the DOM tree. Controls should use this call for cleanup.
-     * i.e. cancelling any pending remote calls, removing listeners, etc.
-     */
-    public destroy(): void {
-        // Add code to cleanup control if necessary
-    }
-}
+       constructor() {
+           console.log(`${LOG} constructor`);
+       }
+
+       public init(
+           context: ComponentFramework.Context<IInputs>,
+           notifyOutputChanged: () => void,
+           state: ComponentFramework.Dictionary
+       ): void {
+           this.notifyOutputChanged = notifyOutputChanged;
+           context.mode.trackContainerResize(true);
+
+           console.log(`${LOG} init`, {
+               userName: context.userSettings.userName,
+               languageId: context.userSettings.languageId,
+               formFactor: context.client.getFormFactor(),
+               allocatedWidth: context.mode.allocatedWidth,
+               fluentTheme: context.fluentDesignLanguage ? "provided" : "not provided",
+               isDarkTheme: context.fluentDesignLanguage?.isDarkTheme ?? false,
+               restoredState: state
+           });
+       }
+
+       public updateView(context: ComponentFramework.Context<IInputs>): React.ReactElement {
+           this.updateCount += 1;
+           const p = context.parameters;
+           this.currentValue = p.healthIndex.raw;
+
+           console.log(`${LOG} updateView #${this.updateCount}`, {
+               updatedProperties: context.updatedProperties,
+               raw: p.healthIndex.raw,
+               formatted: p.healthIndex.formatted,
+               allocatedWidth: context.mode.allocatedWidth,
+               allocatedHeight: context.mode.allocatedHeight,
+               disabled: context.mode.isControlDisabled
+           });
+
+           const warning = p.warningThreshold.raw ?? 60;
+           const critical = p.criticalThreshold.raw ?? 40;
+           const band = this.getBand(this.currentValue, warning, critical);
+           const colours = this.getColours(band, this.readTheme(context));
+           const formatted = this.currentValue === null ? "" : context.formatting.formatDecimal(this.currentValue, 1);
+
+           const props: IHealthGaugeProps = {
+               value: this.currentValue,
+               formattedValue: formatted,
+               warningThreshold: warning,
+               criticalThreshold: critical,
+               band: band,
+               bandColor: colours.band,
+               trackColor: colours.track,
+               textColor: colours.text,
+               label: context.mode.label || "Health Index",
+               userName: context.userSettings.userName,
+               disabled: context.mode.isControlDisabled,
+               allocatedWidth: context.mode.allocatedWidth,
+               onValueChange: this.onValueChange
+           };
+           return React.createElement(HealthGauge, props);
+       }
+
+       public getOutputs(): IOutputs {
+           console.log(`${LOG} getOutputs`, { healthIndex: this.currentValue });
+           return { healthIndex: this.currentValue ?? undefined };
+       }
+
+       public destroy(): void {
+           console.log(`${LOG} destroy`);
+       }
+
+       private onValueChange = (newValue: number): void => {
+           console.log(`${LOG} user changed value`, { from: this.currentValue, to: newValue });
+           this.currentValue = newValue;
+           this.notifyOutputChanged();
+       };
+
+       private getBand(value: number | null, warning: number, critical: number): HealthBand {
+           if (value === null) {
+               return "unknown";
+           }
+           if (value < critical) {
+               return "critical";
+           }
+           if (value < warning) {
+               return "warning";
+           }
+           return "good";
+       }
+
+       // The platform theme is typed loosely, so it is read as a dictionary of unknown values
+       // and each token is checked to be a string before use.
+       private readTheme(context: ComponentFramework.Context<IInputs>): Record<string, unknown> | undefined {
+           const design = context.fluentDesignLanguage;
+           if (!design) {
+               return undefined;
+           }
+           return design.tokenTheme as Record<string, unknown>;
+       }
+
+       private getColours(band: HealthBand, theme: Record<string, unknown> | undefined): IGaugeColours {
+           if (!theme) {
+               return { band: FALLBACK_BAND[band], track: "#E1DFDD", text: "#242424" };
+           }
+           return {
+               band: this.token(theme, TOKEN_FOR_BAND[band], FALLBACK_BAND[band]),
+               track: this.token(theme, "colorNeutralStroke2", "#E1DFDD"),
+               text: this.token(theme, "colorNeutralForeground1", "#242424")
+           };
+       }
+
+       private token(theme: Record<string, unknown>, name: string, fallback: string): string {
+           const value = theme[name];
+           return typeof value === "string" ? value : fallback;
+       }
+   }
+   
