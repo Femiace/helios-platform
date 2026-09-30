@@ -30,6 +30,12 @@
      <data name="SerialNumber_Desc" xml:space="preserve">
        <value>The serial number column compared against a scanned barcode.</value>
      </data>
+     <data name="AssetId_Name" xml:space="preserve">
+       <value>Asset Id</value>
+     </data>
+     <data name="AssetId_Desc" xml:space="preserve">
+       <value>Bind to the Grid Asset ID column so the control can load this asset's inspections.</value>
+     </data>
      <data name="WarningThreshold_Name" xml:space="preserve">
        <value>Warning Threshold</value>
      </data>

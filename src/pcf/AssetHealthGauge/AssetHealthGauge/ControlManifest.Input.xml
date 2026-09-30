@@ -12,6 +12,7 @@
 
        <property name="healthIndex" display-name-key="HealthIndex_Name" description-key="HealthIndex_Desc" of-type-group="numbers" usage="bound" required="true" />
        <property name="serialNumber" display-name-key="SerialNumber_Name" description-key="SerialNumber_Desc" of-type="SingleLine.Text" usage="bound" required="false" />
+       <property name="assetId" display-name-key="AssetId_Name" description-key="AssetId_Desc" of-type="SingleLine.Text" usage="input" required="false" />
        <property name="warningThreshold" display-name-key="WarningThreshold_Name" description-key="WarningThreshold_Desc" of-type="Whole.None" usage="input" required="false" default-value="60" />
        <property name="criticalThreshold" display-name-key="CriticalThreshold_Name" description-key="CriticalThreshold_Desc" of-type="Whole.None" usage="input" required="false" default-value="40" />
        <property name="lastScanResult" display-name-key="LastScanResult_Name" description-key="LastScanResult_Desc" of-type="SingleLine.Text" usage="output" required="false" />

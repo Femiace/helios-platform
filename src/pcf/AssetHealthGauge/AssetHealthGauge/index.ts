@@ -1,5 +1,6 @@
    import { IInputs, IOutputs } from "./generated/ManifestTypes";
    import { HealthGauge, IHealthGaugeProps, HealthBand } from "./HealthGauge";
+   import { IHostCapabilities, PlatformServices } from "./PlatformServices";
    import * as React from "react";
 
    const LOG = "[AssetHealthGauge]";
@@ -26,7 +27,10 @@
 
    export class AssetHealthGauge implements ComponentFramework.ReactControl<IInputs, IOutputs> {
        private notifyOutputChanged: () => void;
+       private services: PlatformServices;
+       private capabilities: IHostCapabilities;
        private currentValue: number | null = null;
+       private lastScanResult: string | undefined = undefined;
        private updateCount = 0;
 
        constructor() {
@@ -41,6 +45,10 @@
            this.notifyOutputChanged = notifyOutputChanged;
            context.mode.trackContainerResize(true);
 
+           // Platform services and capability checks are one-time setup, so they live in init.
+           this.services = new PlatformServices(context);
+           this.capabilities = this.services.getCapabilities();
+
            console.log(`${LOG} init`, {
                userName: context.userSettings.userName,
                languageId: context.userSettings.languageId,
@@ -48,12 +56,14 @@
                allocatedWidth: context.mode.allocatedWidth,
                fluentTheme: context.fluentDesignLanguage ? "provided" : "not provided",
                isDarkTheme: context.fluentDesignLanguage?.isDarkTheme ?? false,
+               capabilities: this.capabilities,
                restoredState: state
            });
        }
 
        public updateView(context: ComponentFramework.Context<IInputs>): React.ReactElement {
            this.updateCount += 1;
+           this.services.update(context);
            const p = context.parameters;
            this.currentValue = p.healthIndex.raw;
 
@@ -61,6 +71,8 @@
                updatedProperties: context.updatedProperties,
                raw: p.healthIndex.raw,
                formatted: p.healthIndex.formatted,
+               assetId: p.assetId.raw,
+               serialNumber: p.serialNumber.raw,
                allocatedWidth: context.mode.allocatedWidth,
                allocatedHeight: context.mode.allocatedHeight,
                disabled: context.mode.isControlDisabled
@@ -85,14 +97,22 @@
                userName: context.userSettings.userName,
                disabled: context.mode.isControlDisabled,
                allocatedWidth: context.mode.allocatedWidth,
-               onValueChange: this.onValueChange
+               assetId: p.assetId.raw ?? "",
+               serialNumber: p.serialNumber.raw ?? "",
+               capabilities: this.capabilities,
+               services: this.services,
+               onValueChange: this.onValueChange,
+               onScanResult: this.onScanResult
            };
            return React.createElement(HealthGauge, props);
        }
 
        public getOutputs(): IOutputs {
-           console.log(`${LOG} getOutputs`, { healthIndex: this.currentValue });
-           return { healthIndex: this.currentValue ?? undefined };
+           console.log(`${LOG} getOutputs`, { healthIndex: this.currentValue, lastScanResult: this.lastScanResult });
+           return {
+               healthIndex: this.currentValue ?? undefined,
+               lastScanResult: this.lastScanResult
+           };
        }
 
        public destroy(): void {
@@ -102,6 +122,12 @@
        private onValueChange = (newValue: number): void => {
            console.log(`${LOG} user changed value`, { from: this.currentValue, to: newValue });
            this.currentValue = newValue;
+           this.notifyOutputChanged();
+       };
+
+       private onScanResult = (result: string): void => {
+           console.log(`${LOG} scan result`, { result });
+           this.lastScanResult = result;
            this.notifyOutputChanged();
        };
 
