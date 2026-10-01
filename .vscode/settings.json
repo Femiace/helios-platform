@@ -1,3 +1,11 @@
-   {
-    "js/ts.tsdk.path": "src/pcf/AssetHealthGauge/node_modules/typescript/lib"
-   }
+{
+  "js/ts.tsdk.path": "src/pcf/AssetHealthGauge/node_modules/typescript/lib",
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/**": true,
+    "**/bin/**": true,
+    "**/obj/**": true,
+    "**/out/**": true
+  }
+}

@@ -1,0 +1,1 @@
+{"@odata.context":"https://helios-dev.crm11.dynamics.com/api/data/v9.2/$metadata#customcontrols(name,version,customcontrolid)","value":[{"@odata.etag":"W/\"3393556\"","version":"1.0.0","customcontrolid":"71f4de38-0802-4190-858c-8eaf8d3233b5","name":"hel_Helios.AssetHealthGauge"}]}

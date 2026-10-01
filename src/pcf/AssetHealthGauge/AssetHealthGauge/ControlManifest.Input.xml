@@ -1,34 +1,33 @@
-   <?xml version="1.0" encoding="utf-8" ?>
-   <manifest>
-     <control namespace="Helios" constructor="AssetHealthGauge" version="1.0.0" display-name-key="AssetHealthGauge_Name" description-key="AssetHealthGauge_Desc" control-type="virtual">
-       <external-service-usage enabled="false">
-       </external-service-usage>
+<?xml version="1.0" encoding="utf-8" ?>
+<manifest>
+  <control namespace="Helios" constructor="AssetHealthGauge" version="1.0.1" display-name-key="AssetHealthGauge_Name" description-key="AssetHealthGauge_Desc" control-type="virtual">
+    <external-service-usage enabled="false">
+    </external-service-usage>
 
-       <type-group name="numbers">
-         <type>Decimal</type>
-         <type>FP</type>
-         <type>Whole.None</type>
-       </type-group>
+    <type-group name="numbers">
+      <type>Decimal</type>
+      <type>FP</type>
+      <type>Whole.None</type>
+    </type-group>
 
-       <property name="healthIndex" display-name-key="HealthIndex_Name" description-key="HealthIndex_Desc" of-type-group="numbers" usage="bound" required="true" />
-       <property name="serialNumber" display-name-key="SerialNumber_Name" description-key="SerialNumber_Desc" of-type="SingleLine.Text" usage="bound" required="false" />
-       <property name="assetId" display-name-key="AssetId_Name" description-key="AssetId_Desc" of-type="SingleLine.Text" usage="input" required="false" />
-       <property name="warningThreshold" display-name-key="WarningThreshold_Name" description-key="WarningThreshold_Desc" of-type="Whole.None" usage="input" required="false" default-value="60" />
-       <property name="criticalThreshold" display-name-key="CriticalThreshold_Name" description-key="CriticalThreshold_Desc" of-type="Whole.None" usage="input" required="false" default-value="40" />
-       <property name="lastScanResult" display-name-key="LastScanResult_Name" description-key="LastScanResult_Desc" of-type="SingleLine.Text" usage="output" required="false" />
+    <property name="healthIndex" display-name-key="HealthIndex_Name" description-key="HealthIndex_Desc" of-type-group="numbers" usage="bound" required="true" />
+    <property name="serialNumber" display-name-key="SerialNumber_Name" description-key="SerialNumber_Desc" of-type="SingleLine.Text" usage="bound" required="false" />
+    <property name="assetId" display-name-key="AssetId_Name" description-key="AssetId_Desc" of-type="SingleLine.Text" usage="input" required="false" />
+    <property name="warningThreshold" display-name-key="WarningThreshold_Name" description-key="WarningThreshold_Desc" of-type="Whole.None" usage="input" required="false" default-value="60" />
+    <property name="criticalThreshold" display-name-key="CriticalThreshold_Name" description-key="CriticalThreshold_Desc" of-type="Whole.None" usage="input" required="false" default-value="40" />
+    <property name="lastScanResult" display-name-key="LastScanResult_Name" description-key="LastScanResult_Desc" of-type="SingleLine.Text" usage="output" required="false" />
 
-       <resources>
-         <code path="index.ts" order="1" />
-         <resx path="strings/AssetHealthGauge.1033.resx" version="1.0.0" />
-         <platform-library name="React" version="16.14.0" />
-         <platform-library name="Fluent" version="9.68.0" />
-       </resources>
+    <resources>
+      <code path="index.ts" order="1" />
+      <resx path="strings/AssetHealthGauge.1033.resx" version="1.0.0" />
+      <platform-library name="React" version="16.14.0" />
+      <platform-library name="Fluent" version="9.46.2" />
+    </resources>
 
-       <feature-usage>
-         <uses-feature name="Device.getBarcodeValue" required="false" />
-         <uses-feature name="Utility" required="false" />
-         <uses-feature name="WebAPI" required="false" />
-       </feature-usage>
-     </control>
-   </manifest>
-   
+    <feature-usage>
+      <uses-feature name="Device.getBarcodeValue" required="false" />
+      <uses-feature name="Utility" required="false" />
+      <uses-feature name="WebAPI" required="false" />
+    </feature-usage>
+  </control>
+</manifest>
