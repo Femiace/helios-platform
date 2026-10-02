@@ -1,0 +1,11 @@
+﻿src\pcf\HeliosNetworkHeatmap\.gitignore
+src\pcf\HeliosNetworkHeatmap\eslint.config.mjs
+src\pcf\HeliosNetworkHeatmap\HeliosNetworkHeatmap.pcfproj
+src\pcf\HeliosNetworkHeatmap\package-lock.json
+src\pcf\HeliosNetworkHeatmap\package.json
+src\pcf\HeliosNetworkHeatmap\pcfconfig.json
+src\pcf\HeliosNetworkHeatmap\tsconfig.json
+src\pcf\HeliosNetworkHeatmap\HeliosNetworkHeatmap\ControlManifest.Input.xml
+src\pcf\HeliosNetworkHeatmap\HeliosNetworkHeatmap\HelloWorld.tsx
+src\pcf\HeliosNetworkHeatmap\HeliosNetworkHeatmap\index.ts
+src\pcf\HeliosNetworkHeatmap\HeliosNetworkHeatmap\generated\ManifestTypes.d.ts
