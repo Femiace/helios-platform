@@ -1,0 +1,62 @@
+PS C:\dev\helios-platform>    Set-Location C:\dev\helios-platform
+>>    .\scripts\seed-heatmap-substations.ps1 2>&1 | Tee-Object -FilePath .\evidence\screenshots\M4\21-heatmap-seed.txt
+
+Substations in DEV before this run: 3
+HM- substations already present:    0
+Substation   HM-01 Macclesfield Local                 North     customers    972
+Substation   HM-02 Wilmslow Primary                   North     customers   8080
+Substation   HM-03 Knutsford Local                    North     customers   3053
+Substation   HM-04 Congleton Primary                  North     customers   6156
+Substation   HM-05 Stockport Grid                     North     customers  41882
+Substation   HM-06 Buxton Local                       North     customers   3875
+Substation   HM-07 Glossop Primary                    North     customers   7084
+Substation   HM-08 Altrincham Local                   North     customers   1163
+Substation   HM-09 Sale Grid                          North     customers  51527
+Substation   HM-10 Northwich Primary                  North     customers   9444
+Substation   HM-11 Warrington Local                   North     customers   2684
+Substation   HM-12 Widnes BSP                         North     customers  73790
+Substation   HM-13 Runcorn Primary                    North     customers   5552
+Substation   HM-14 Chester Local                      North     customers   1475
+Substation   HM-15 Nantwich Grid                      North     customers  59394
+Substation   HM-16 Crewe Primary                      North     customers  17936
+Substation   HM-17 Sandbach Local                     North     customers   2873
+Substation   HM-18 Leek Primary                       North     customers  10278
+Substation   HM-19 Hyde BSP                           North     customers  65621
+Substation   HM-20 Warwick Local                      Midlands  customers   1994
+Substation   HM-21 Leamington Spa Primary             Midlands  customers  12255
+Substation   HM-22 Stratford-upon-Avon Local          Midlands  customers   2637
+Substation   HM-23 Rugby Primary                      Midlands  customers  15077
+Substation   HM-24 Coventry Grid                      Midlands  customers  42286
+Substation   HM-25 Nuneaton Local                     Midlands  customers   3042
+Substation   HM-26 Solihull Primary                   Midlands  customers  14642
+Substation   HM-27 Redditch Local                     Midlands  customers   1481
+Substation   HM-28 Bromsgrove Grid                    Midlands  customers  31590
+Substation   HM-29 Kidderminster Primary              Midlands  customers  10376
+Substation   HM-30 Worcester Local                    Midlands  customers   2369
+Substation   HM-31 Evesham BSP                        Midlands  customers  74312
+Substation   HM-32 Banbury Primary                    Midlands  customers   6300
+Substation   HM-33 Daventry Local                     Midlands  customers   3403
+Substation   HM-34 Northampton Grid                   Midlands  customers  28290
+Substation   HM-35 Lichfield Primary                  Midlands  customers   4896
+Substation   HM-36 Tamworth Local                     Midlands  customers   2978
+Substation   HM-37 Burton upon Trent Primary          Midlands  customers  19836
+Substation   HM-38 Hinckley BSP                       Midlands  customers  61719
+Substation   HM-39 Petworth Local                     South     customers   3029
+Substation   HM-40 Midhurst Primary                   South     customers  14109
+Substation   HM-41 Haslemere Local                    South     customers   1522
+Substation   HM-42 Liphook Primary                    South     customers  17035
+Substation   HM-43 Alton Grid                         South     customers  20369
+Substation   HM-44 Farnham Local                      South     customers   2044
+Substation   HM-45 Godalming Primary                  South     customers   6217
+Substation   HM-46 Guildford Local                    South     customers   3645
+Substation   HM-47 Horsham Grid                       South     customers  41460
+Substation   HM-48 Billingshurst Primary              South     customers   5864
+Substation   HM-49 Pulborough Local                   South     customers    819
+Substation   HM-50 Chichester BSP                     South     customers  68098
+Substation   HM-51 Bognor Regis Primary               South     customers  17289
+Substation   HM-52 Havant Local                       South     customers   2598
+Substation   HM-53 Waterlooville Grid                 South     customers  24434
+Substation   HM-54 Portsmouth Primary                 South     customers  18047
+Substation   HM-55 Fareham Local                      South     customers    873
+Substation   HM-56 Winchester Primary                 South     customers  14254
+Substation   HM-57 Alresford BSP                      South     customers  84209

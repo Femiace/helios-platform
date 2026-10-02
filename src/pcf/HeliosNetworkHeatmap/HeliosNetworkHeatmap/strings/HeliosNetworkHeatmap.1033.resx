@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="HeliosNetworkHeatmap_Name" xml:space="preserve">
+    <value>HELIOS Network Heatmap</value>
+  </data>
+  <data name="HeliosNetworkHeatmap_Desc" xml:space="preserve">
+    <value>Shows the records of a view as tiles coloured by a numeric column, with paging, sorting and click-through.</value>
+  </data>
+  <data name="Substations_Name" xml:space="preserve">
+    <value>Substations</value>
+  </data>
+  <data name="Substations_Desc" xml:space="preserve">
+    <value>The view or subgrid whose records become tiles.</value>
+  </data>
+  <data name="HeatValue_Name" xml:space="preserve">
+    <value>Heat Value</value>
+  </data>
+  <data name="HeatValue_Desc" xml:space="preserve">
+    <value>The numeric column that sets each tile's colour, such as Customers Count.</value>
+  </data>
+  <data name="TileLabel_Name" xml:space="preserve">
+    <value>Tile Label</value>
+  </data>
+  <data name="TileLabel_Desc" xml:space="preserve">
+    <value>Optional text column shown on each tile. The record's primary name is used when not mapped.</value>
+  </data>
+  <data name="PageSize_Name" xml:space="preserve">
+    <value>Page Size</value>
+  </data>
+  <data name="PageSize_Desc" xml:space="preserve">
+    <value>How many tiles to load per page.</value>
+  </data>
+  <data name="SelectedSubstationSchema_Name" xml:space="preserve">
+    <value>Selected Substation Schema</value>
+  </data>
+  <data name="SelectedSubstationSchema_Desc" xml:space="preserve">
+    <value>Hidden. Carries the output object schema for canvas apps.</value>
+  </data>
+  <data name="SelectedSubstation_Name" xml:space="preserve">
+    <value>Selected Substation</value>
+  </data>
+  <data name="SelectedSubstation_Desc" xml:space="preserve">
+    <value>The tile the user last selected, as an object with id, name and heat value.</value>
+  </data>
+</root>
