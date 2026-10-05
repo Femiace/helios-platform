@@ -1,0 +1,59 @@
+react-dom.development.js:25129 Download the React DevTools for a better development experience: https://fb.me/react-devtools
+Tracking Prevention blocked access to storage for <URL>.
+Tracking Prevention blocked access to storage for <URL>.
+Tracking Prevention blocked access to storage for <URL>.
+Tracking Prevention blocked access to storage for <URL>.
+Tracking Prevention blocked access to storage for <URL>.
+Tracking Prevention blocked access to storage for <URL>.
+Tracking Prevention blocked access to storage for <URL>.
+Tracking Prevention blocked access to storage for <URL>.
+harness.js:2 Detected preferred language: en-US
+harness.js:2 Resource file './lib/fluent_9_4_0.js' loaded.
+harness.js:2 Resource file 'strings/HeliosNetworkHeatmap.1033.resx' loaded.
+harness.js:2 Resource file 'bundle.js' loaded.
+react-dom.development.js:82 Warning: `NaN` is an invalid value for the `width` css style property.
+    in div (created by Mp)
+    in div (created by Mp)
+    in Mp (created by rh)
+    in div (created by rh)
+    in div (created by rh)
+    in rh
+printWarning @ react-dom.development.js:82
+index.ts:40 [HeliosNetworkHeatmap] constructor
+index.ts:48 [HeliosNetworkHeatmap] init Object
+index.ts:113 [HeliosNetworkHeatmap] applying page size Object
+index.ts:133 [HeliosNetworkHeatmap] dataset call Object
+harness.js:2 Invoked method loadNextPage on Paging interface. Parameters: 12.
+index.ts:133 [HeliosNetworkHeatmap] dataset call Object
+harness.js:2 Invoked method refresh on DataSet interface.
+index.ts:63 [HeliosNetworkHeatmap] updateView #1 ObjectallocatedHeight: -1allocatedWidth: -1columns: Array(2)0: {name: 'heatValue', alias: 'heatValue', displayName: 'heatValue', dataType: 'Whole.None', order: 0, …}1: {name: 'tileLabel', alias: 'tileLabel', displayName: 'tileLabel', dataType: 'SingleLine.Text', order: 1, …}length: 2[[Prototype]]: Array(0)error: falseerrorMessage: ""firstThreeTiles: (3) [{…}, {…}, {…}]heatColumn: {name: 'heatValue', match: 'alias'}heatRange: {min: 0, max: 0}labelColumn: {name: 'tileLabel', match: 'alias'}match: "alias"name: "tileLabel"[[Prototype]]: Objectloading: falsepaging: {totalResultCount: 3, pageSize: null, firstPageNumber: null, lastPageNumber: null, hasNextPage: false, …}firstPageNumber: nullhasNextPage: falsehasPreviousPage: falselastPageNumber: nullloadedCount: 3pageSize: nulltotalResultCount: 3[[Prototype]]: ObjectrecordCount: 3targetEntity: "account"updatedProperties: Array(0)length: 0[[Prototype]]: Array(0)viewId: "account_view"viewTitle: "All Accounts"[[Prototype]]: Object
+index.ts:133 [HeliosNetworkHeatmap] dataset call Object
+harness.js:2 Invoked method reset on Paging interface.
+(index):1 WebSocket connection to 'ws://localhost:8181/browser-sync/socket.io/?EIO=4&transport=websocket&sid=9Dg6dw6fgJtdKgAaAAAA' failed: Page entered Back-Forward Cache.
+index.ts:63 [HeliosNetworkHeatmap] updateView #2 {updatedProperties: Array(0), loading: false, error: false, errorMessage: '', targetEntity: 'account', …}allocatedHeight: -1allocatedWidth: -1columns: (2) [{…}, {…}]error: falseerrorMessage: ""firstThreeTiles: Array(3)0: {id: 'id0', label: 'Alderley Edge Primary', heat: 42000, heatText: '42,000'}1: {id: 'id1', label: 'HM-01 Macclesfield Local', heat: 972, heatText: '972'}2: {id: 'id2', label: 'HM-02 Wilmslow Primary', heat: 8080, heatText: '8,080'}length: 3[[Prototype]]: Array(0)heatColumn: {name: 'heatValue', match: 'alias'}match: "alias"name: "heatValue"[[Prototype]]: ObjectheatRange: {min: 819, max: 84209}labelColumn: {name: 'tileLabel', match: 'alias'}match: "alias"name: "tileLabel"[[Prototype]]: Objectloading: falsepaging: {totalResultCount: 60, pageSize: null, firstPageNumber: null, lastPageNumber: null, hasNextPage: false, …}firstPageNumber: nullhasNextPage: falsehasPreviousPage: falselastPageNumber: nullloadedCount: 60pageSize: nulltotalResultCount: 60[[Prototype]]: ObjectrecordCount: 60targetEntity: "account"updatedProperties: []length: 0[[Prototype]]: Array(0)viewId: "account_view"viewTitle: "All Accounts"[[Prototype]]: Object
+index.ts:133 [HeliosNetworkHeatmap] dataset call {label: 'paging.reset()', firstPageNumber: undefined, lastPageNumber: undefined, hasNextPage: false, hasPreviousPage: false, …}
+harness.js:2 Invoked method reset on Paging interface.
+index.ts:113 [HeliosNetworkHeatmap] applying page size {requested: 13, pageSizeBefore: undefined}
+index.ts:133 [HeliosNetworkHeatmap] dataset call {label: 'paging.setPageSize', firstPageNumber: undefined, lastPageNumber: undefined, hasNextPage: false, hasPreviousPage: false, …}
+harness.js:2 Invoked method loadNextPage on Paging interface. Parameters: 13.
+index.ts:133 [HeliosNetworkHeatmap] dataset call {label: 'refresh', firstPageNumber: undefined, lastPageNumber: undefined, hasNextPage: false, hasPreviousPage: false, …}
+harness.js:2 Invoked method refresh on DataSet interface.
+index.ts:63 [HeliosNetworkHeatmap] updateView #3 {updatedProperties: Array(0), loading: false, error: false, errorMessage: '', targetEntity: 'account', …}
+index.ts:113 [HeliosNetworkHeatmap] applying page size {requested: 12, pageSizeBefore: undefined}
+index.ts:133 [HeliosNetworkHeatmap] dataset call {label: 'paging.setPageSize', firstPageNumber: undefined, lastPageNumber: undefined, hasNextPage: false, hasPreviousPage: false, …}
+harness.js:2 Invoked method loadNextPage on Paging interface. Parameters: 12.
+index.ts:133 [HeliosNetworkHeatmap] dataset call {label: 'refresh', firstPageNumber: undefined, lastPageNumber: undefined, hasNextPage: false, hasPreviousPage: false, …}
+harness.js:2 Invoked method refresh on DataSet interface.
+index.ts:63 [HeliosNetworkHeatmap] updateView #4 {updatedProperties: Array(0), loading: false, error: false, errorMessage: '', targetEntity: 'account', …}
+index.ts:113 [HeliosNetworkHeatmap] applying page size {requested: 2, pageSizeBefore: undefined}
+index.ts:133 [HeliosNetworkHeatmap] dataset call {label: 'paging.setPageSize', firstPageNumber: undefined, lastPageNumber: undefined, hasNextPage: false, hasPreviousPage: false, …}
+harness.js:2 Invoked method loadNextPage on Paging interface. Parameters: 2.
+index.ts:133 [HeliosNetworkHeatmap] dataset call {label: 'refresh', firstPageNumber: undefined, lastPageNumber: undefined, hasNextPage: false, hasPreviousPage: false, …}
+harness.js:2 Invoked method refresh on DataSet interface.
+index.ts:63 [HeliosNetworkHeatmap] updateView #5 {updatedProperties: Array(0), loading: false, error: false, errorMessage: '', targetEntity: 'account', …}
+index.ts:113 [HeliosNetworkHeatmap] applying page size {requested: 20, pageSizeBefore: undefined}
+index.ts:133 [HeliosNetworkHeatmap] dataset call {label: 'paging.setPageSize', firstPageNumber: undefined, lastPageNumber: undefined, hasNextPage: false, hasPreviousPage: false, …}
+harness.js:2 Invoked method loadNextPage on Paging interface. Parameters: 20.
+index.ts:133 [HeliosNetworkHeatmap] dataset call {label: 'refresh', firstPageNumber: undefined, lastPageNumber: undefined, hasNextPage: false, hasPreviousPage: false, …}
+harness.js:2 Invoked method refresh on DataSet interface.
+index.ts:63 [HeliosNetworkHeatmap] updateView #6 {updatedProperties: Array(0), loading: false, error: false, errorMessage: '', targetEntity: 'account', …}

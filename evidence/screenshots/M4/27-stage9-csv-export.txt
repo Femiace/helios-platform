@@ -1,0 +1,10 @@
+﻿Substations read from DEV: 60
+Rows written (excluding header): 60
+File: C:\dev\helios-platform\src\pcf\HeliosNetworkHeatmap\harness-data\substations.csv
+Bytes: 4550
+
+First four lines:
+  hel_name,hel_customerscount,hel_voltagelevel,hel_region,hel_latitude,hel_longitude
+  "Alderley Edge Primary",42000,"132kV","North",53.3000000000,-2.2400000000
+  "HM-01 Macclesfield Local",972,"400V","North",53.1775000000,-2.2271000000
+  "HM-02 Wilmslow Primary",8080,"11kV","North",53.1427000000,-2.3153000000
