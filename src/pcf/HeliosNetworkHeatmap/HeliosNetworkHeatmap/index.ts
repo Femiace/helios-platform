@@ -1,8 +1,9 @@
 import { IInputs, IOutputs } from "./generated/ManifestTypes";
-import { Heatmap, IHeatmapProps } from "./Heatmap";
-import { readSnapshot } from "./DatasetReader";
+import { Heatmap, IHeatmapProps, ThemeSource } from "./Heatmap";
+import { IDatasetSnapshot, readSnapshot } from "./DatasetReader";
+import { ISelectedSubstation, SELECTED_SUBSTATION_SCHEMA } from "./SelectedSubstation";
 import * as React from "react";
-import { webLightTheme } from "@fluentui/react-components";
+import { PartialTheme, webLightTheme } from "@fluentui/react-components";
 
 type DataSet = ComponentFramework.PropertyTypes.DataSet;
 
@@ -12,8 +13,11 @@ const DEFAULT_PAGE_SIZE = 12;
 export class HeliosNetworkHeatmap implements ComponentFramework.ReactControl<IInputs, IOutputs> {
     private notifyOutputChanged: () => void;
     private dataset: DataSet;
+    private snapshot: IDatasetSnapshot;
     private appliedPageSize: number | null = null;
     private updateCount = 0;
+    private selectedId: string | null = null;
+    private selected: ISelectedSubstation | null = null;
 
     constructor() {
         console.log(`${LOG} constructor`);
@@ -36,6 +40,8 @@ export class HeliosNetworkHeatmap implements ComponentFramework.ReactControl<IIn
             allocatedHeight: context.mode.allocatedHeight,
             pageSizeInput: context.parameters.pageSize.raw,
             datasetRecordsAtInit: typeof recordsAtInit === "object" && recordsAtInit !== null ? Object.keys(recordsAtInit).length : -1,
+            fluentTheme: context.fluentDesignLanguage ? "provided" : "not provided",
+            isDarkTheme: context.fluentDesignLanguage?.isDarkTheme ?? false,
             restoredState: state
         });
     }
@@ -48,6 +54,17 @@ export class HeliosNetworkHeatmap implements ComponentFramework.ReactControl<IIn
         this.applyPageSize(context);
 
         const snapshot = readSnapshot(ds);
+        this.snapshot = snapshot;
+
+        // A selection only survives while its record is still on the page.
+        if (this.selectedId !== null && !snapshot.tiles.some((tile) => tile.id === this.selectedId)) {
+            console.log(`${LOG} selection dropped, record no longer loaded`, { id: this.selectedId });
+            this.selectedId = null;
+            this.selected = null;
+            this.notifyOutputChanged();
+        }
+
+        const themeSource: ThemeSource = context.fluentDesignLanguage ? "host" : "fallback";
         console.log(`${LOG} updateView #${this.updateCount}`, {
             updatedProperties: context.updatedProperties,
             loading: snapshot.loading,
@@ -63,14 +80,26 @@ export class HeliosNetworkHeatmap implements ComponentFramework.ReactControl<IIn
             firstThreeTiles: snapshot.tiles.slice(0, 3),
             heatRange: { min: snapshot.heatMin, max: snapshot.heatMax },
             paging: snapshot.paging,
+            sort: snapshot.sort,
+            selectedIds: snapshot.selectedIds,
+            themeSource,
+            isDarkTheme: context.fluentDesignLanguage?.isDarkTheme ?? false,
             allocatedWidth: context.mode.allocatedWidth,
             allocatedHeight: context.mode.allocatedHeight
         });
 
         const props: IHeatmapProps = {
             snapshot: snapshot,
-            theme: webLightTheme,
+            theme: this.resolveFluentTheme(context),
+            themeSource: themeSource,
+            isDarkTheme: context.fluentDesignLanguage?.isDarkTheme ?? false,
             allocatedWidth: Number(context.mode.allocatedWidth),
+            allocatedHeight: Number(context.mode.allocatedHeight),
+            selectedId: this.selectedId,
+            onSelectTile: this.onSelectTile,
+            onOpenSelected: this.onOpenSelected,
+            onSortHeat: this.onSortHeat,
+            onSortLabel: this.onSortLabel,
             onFirstPage: this.onFirstPage,
             onPreviousPage: this.onPreviousPage,
             onNextPage: this.onNextPage,
@@ -80,12 +109,35 @@ export class HeliosNetworkHeatmap implements ComponentFramework.ReactControl<IIn
         return React.createElement(Heatmap, props);
     }
 
+    // Called by the platform before init, and only by hosts that need a schema
+    // for Object outputs (canvas). The key must match the manifest property name.
+    public getOutputSchema(context: ComponentFramework.Context<IInputs>): Promise<Record<string, unknown>> {
+        console.log(`${LOG} getOutputSchema`, { formFactor: context.client.getFormFactor() });
+        return Promise.resolve({
+            SelectedSubstation: SELECTED_SUBSTATION_SCHEMA
+        });
+    }
+
     public getOutputs(): IOutputs {
-        return {};
+        console.log(`${LOG} getOutputs`, { selected: this.selected });
+        return {
+            SelectedSubstation: this.selected ?? undefined
+        };
     }
 
     public destroy(): void {
         console.log(`${LOG} destroy`);
+    }
+
+    // Hosts with modern theming pass their Fluent theme in. Hosts without it
+    // (the harness, mobile today) pass nothing, so the control brings its own.
+    // Resolved on every updateView because Learn says not to retain the first theme.
+    private resolveFluentTheme(context: ComponentFramework.Context<IInputs>): PartialTheme {
+        const design = context.fluentDesignLanguage;
+        if (!design) {
+            return webLightTheme;
+        }
+        return design.tokenTheme as PartialTheme;
     }
 
     // setPageSize only takes effect on the next fetch, so it is followed by a
@@ -101,6 +153,66 @@ export class HeliosNetworkHeatmap implements ComponentFramework.ReactControl<IIn
         console.log(`${LOG} applying page size`, { requested, pageSizeBefore: ds.paging.pageSize });
         this.callDataset("paging.setPageSize", () => ds.paging.setPageSize(requested));
         this.callDataset("refresh", () => ds.refresh());
+    }
+
+    // Selection: tell the host (so command bars and canvas SelectedItems follow),
+    // then publish the Object output. Clicking the selected tile again clears it.
+    private onSelectTile = (id: string): void => {
+        if (this.selectedId === id) {
+            this.selectedId = null;
+            this.selected = null;
+            this.callDataset("clearSelectedRecordIds", () => this.dataset.clearSelectedRecordIds());
+        } else {
+            const tile = this.snapshot.tiles.find((t) => t.id === id);
+            if (tile === undefined) {
+                return;
+            }
+            this.selectedId = id;
+            this.selected = {
+                id: tile.id,
+                name: tile.label,
+                heat: tile.heat ?? 0,
+                hasHeat: tile.heat !== null,
+                heatText: tile.heatText,
+                entityType: this.snapshot.targetEntity
+            };
+            this.callDataset(`setSelectedRecordIds([${id}])`, () => this.dataset.setSelectedRecordIds([id]));
+        }
+        console.log(`${LOG} selection changed`, { selected: this.selected });
+        this.notifyOutputChanged();
+    };
+
+    // openDatasetItem takes the record's own EntityReference. The host decides
+    // what "open" means: the Mscrm.OpenRecordItem command if one exists, else
+    // the record's main form. Canvas raises OnSelect instead.
+    private onOpenSelected = (): void => {
+        if (this.selectedId === null) {
+            return;
+        }
+        const id = this.selectedId;
+        const record: ComponentFramework.PropertyHelper.DataSetApi.EntityRecord | undefined = this.dataset.records[id];
+        if (record === undefined) {
+            console.warn(`${LOG} open skipped, record not loaded`, { id });
+            return;
+        }
+        this.callDataset(`openDatasetItem(${id})`, () => this.dataset.openDatasetItem(record.getNamedReference()));
+    };
+
+    // Sorting: replace ds.sorting with one SortStatus and ask for a refresh.
+    // Learn: 0 ascending, 1 descending. The sorted rows arrive in a later updateView.
+    private onSortHeat = (descending: boolean): void => {
+        this.sortBy(this.snapshot.heatColumn.name, descending);
+    };
+
+    private onSortLabel = (): void => {
+        this.sortBy(this.snapshot.labelColumn.name, false);
+    };
+
+    private sortBy(columnName: string, descending: boolean): void {
+        this.callDataset(`sorting = [${columnName} ${descending ? "descending" : "ascending"}]`, () => {
+            this.dataset.sorting = [{ name: columnName, sortDirection: descending ? 1 : 0 }];
+        });
+        this.callDataset("refresh", () => this.dataset.refresh());
     }
 
     private currentFirstPage(): number {

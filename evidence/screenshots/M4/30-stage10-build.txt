@@ -1,0 +1,36 @@
+﻿
+> pcf-project@1.0.0 build
+> pcf-scripts build
+
+[7:49:37 AM] [build] Initializing...
+[7:49:37 AM] [build] Validating manifest...
+[7:49:37 AM] [build] Validating control...
+[7:49:38 AM] [build] Generating manifest types...
+[7:49:38 AM] [build] Generating design types...
+[7:49:38 AM] [build] Running ESLint...
+[7:49:46 AM] [build] Compiling and bundling control...
+[Webpack stats]:
+asset [1m[32mbundle.js[39m[22m 35.3 KiB [1m[32m[emitted][39m[22m (name: main)
+runtime modules 883 bytes 4 modules
+built modules 24.2 KiB [1m[33m[built][39m[22m
+  cacheable modules 24.2 KiB
+    [1m./HeliosNetworkHeatmap/index.ts[39m[22m 10.3 KiB [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+    [1m./HeliosNetworkHeatmap/Heatmap.tsx[39m[22m 6.8 KiB [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+    [1m./HeliosNetworkHeatmap/DatasetReader.ts[39m[22m 6.26 KiB [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+    [1m./HeliosNetworkHeatmap/SelectedSubstation.ts[39m[22m 859 bytes [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+  [1mexternal "Reactv16"[39m[22m 42 bytes [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+  [1mexternal "FluentUIReactv940"[39m[22m 42 bytes [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+webpack 5.111.1 compiled [1m[32msuccessfully[39m[22m in 7758 ms
+[7:49:55 AM] [build] Generating build outputs...
+[7:49:55 AM] [build] Succeeded
+node.exe : npm notice
+At line:1 char:1
++ & "C:\Program Files\nodejs/node.exe" "C:\Program Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (npm notice:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+npm notice New major version of npm available! 11.17.0 -> 12.2.2
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.2
+npm notice To update run: npm install -g npm@12.2.2
+npm notice

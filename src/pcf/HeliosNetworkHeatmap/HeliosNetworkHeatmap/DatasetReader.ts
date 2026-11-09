@@ -46,6 +46,14 @@ export interface IBoundColumn {
     match: ColumnMatch;
 }
 
+// The sort the host says is in force. Learn: -1 none, 0 ascending, 1 descending.
+export type SortWord = "none" | "ascending" | "descending";
+
+export interface ISortSummary {
+    name: string;
+    direction: SortWord;
+}
+
 export interface IDatasetSnapshot {
     loading: boolean;
     error: boolean;
@@ -60,6 +68,18 @@ export interface IDatasetSnapshot {
     heatMin: number;
     heatMax: number;
     paging: IPagingSummary;
+    sort: ISortSummary | null;
+    selectedIds: string[];
+}
+
+export function sortWord(direction: number): SortWord {
+    if (direction === 0) {
+        return "ascending";
+    }
+    if (direction === 1) {
+        return "descending";
+    }
+    return "none";
 }
 
 // Finds the column a maker bound to a property-set. In model-driven apps the
@@ -205,6 +225,29 @@ export function readSnapshot(ds: DataSet): IDatasetSnapshot {
         loadedCount: tiles.length
     };
 
+    // ds.sorting is an array in Dataverse hosts and undefined in the harness.
+    const sorting: unknown = ds.sorting;
+    let sort: ISortSummary | null = null;
+    if (Array.isArray(sorting) && sorting.length > 0) {
+        const first: Partial<ComponentFramework.PropertyHelper.DataSetApi.SortStatus> = sorting[0] as Partial<
+            ComponentFramework.PropertyHelper.DataSetApi.SortStatus
+        >;
+        if (typeof first.name === "string") {
+            sort = { name: first.name, direction: sortWord(typeof first.sortDirection === "number" ? first.sortDirection : -1) };
+        }
+    }
+
+    // getSelectedRecordIds can return undefined in the harness before any selection.
+    let selectedIds: string[] = [];
+    try {
+        const selection: unknown = ds.getSelectedRecordIds();
+        if (Array.isArray(selection)) {
+            selectedIds = selection.filter((item): item is string => typeof item === "string");
+        }
+    } catch {
+        selectedIds = [];
+    }
+
     return {
         loading: ds.loading === true,
         error: ds.error === true,
@@ -218,6 +261,8 @@ export function readSnapshot(ds: DataSet): IDatasetSnapshot {
         tiles,
         heatMin,
         heatMax,
-        paging
+        paging,
+        sort,
+        selectedIds
     };
 }

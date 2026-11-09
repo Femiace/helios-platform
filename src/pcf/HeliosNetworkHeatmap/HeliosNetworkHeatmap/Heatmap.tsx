@@ -2,10 +2,20 @@ import * as React from "react";
 import { Button, FluentProvider, Label, PartialTheme, Text } from "@fluentui/react-components";
 import { IDatasetSnapshot, ITile } from "./DatasetReader";
 
+export type ThemeSource = "host" | "fallback";
+
 export interface IHeatmapProps {
     snapshot: IDatasetSnapshot;
     theme: PartialTheme;
+    themeSource: ThemeSource;
+    isDarkTheme: boolean;
     allocatedWidth: number;
+    allocatedHeight: number;
+    selectedId: string | null;
+    onSelectTile: (id: string) => void;
+    onOpenSelected: () => void;
+    onSortHeat: (descending: boolean) => void;
+    onSortLabel: () => void;
     onFirstPage: () => void;
     onPreviousPage: () => void;
     onNextPage: () => void;
@@ -40,7 +50,17 @@ const tileStyle: React.CSSProperties = {
     display: "flex",
     flexDirection: "column",
     justifyContent: "space-between",
-    overflow: "hidden"
+    overflow: "hidden",
+    cursor: "pointer",
+    border: "none",
+    textAlign: "left",
+    width: "100%"
+};
+
+const selectedTileStyle: React.CSSProperties = {
+    outline: "3px solid #FFFFFF",
+    outlineOffset: -3,
+    boxShadow: "0 0 0 2px #242424"
 };
 
 const rowStyle: React.CSSProperties = {
@@ -51,17 +71,22 @@ const rowStyle: React.CSSProperties = {
     marginTop: 10
 };
 
-const Tile = (props: { tile: ITile; min: number; max: number }): React.ReactElement => {
-    const { tile, min, max } = props;
+const Tile = (props: { tile: ITile; min: number; max: number; selected: boolean; onSelect: (id: string) => void }): React.ReactElement => {
+    const { tile, min, max, selected, onSelect } = props;
+    const style: React.CSSProperties = {
+        ...tileStyle,
+        ...(selected ? selectedTileStyle : {}),
+        backgroundColor: heatColour(tile.heat, min, max)
+    };
     return (
-        <div style={{ ...tileStyle, backgroundColor: heatColour(tile.heat, min, max) }} title={tile.id}>
+        <button type="button" style={style} title={tile.id} aria-pressed={selected} onClick={() => onSelect(tile.id)}>
             <Text size={200} weight="semibold" style={{ color: "#FFFFFF" }}>
                 {tile.label}
             </Text>
             <Text size={400} style={{ color: "#FFFFFF" }}>
                 {tile.heatText === "" ? "no value" : tile.heatText}
             </Text>
-        </div>
+        </button>
     );
 };
 
@@ -78,9 +103,34 @@ const describePages = (snapshot: IDatasetSnapshot): string => {
     return `${p.loadedCount} loaded of ${total} rows, page size ${size}, ${range}.`;
 };
 
+const describeSort = (snapshot: IDatasetSnapshot): string => {
+    if (snapshot.sort === null) {
+        return "Sort: not reported by this host.";
+    }
+    const column = snapshot.columns.find((c) => c.name === snapshot.sort?.name);
+    const label = column === undefined ? snapshot.sort.name : column.displayName;
+    return `Sort: ${label} ${snapshot.sort.direction}.`;
+};
+
 export const Heatmap = (props: IHeatmapProps): React.ReactElement => {
     const s = props.snapshot;
     const width = props.allocatedWidth > 0 ? props.allocatedWidth : undefined;
+
+    // Learn: -1 means no height limit, so the control grows with its rows.
+    // A positive height (canvas, or a subgrid with a height set by the maker)
+    // is a box to stay inside: the header and buttons keep their place and
+    // only the tile area scrolls.
+    const boxed = props.allocatedHeight > 0;
+    const rootStyle: React.CSSProperties = {
+        backgroundColor: "transparent",
+        width: "100%",
+        maxWidth: width,
+        height: boxed ? props.allocatedHeight : undefined,
+        display: "flex",
+        flexDirection: "column",
+        boxSizing: "border-box"
+    };
+    const tileAreaStyle: React.CSSProperties = boxed ? { flex: "1 1 auto", minHeight: 0, overflowY: "auto" } : {};
 
     const renderBody = (): React.ReactElement => {
         if (s.error) {
@@ -95,22 +145,51 @@ export const Heatmap = (props: IHeatmapProps): React.ReactElement => {
         return (
             <div style={gridStyle}>
                 {s.tiles.map((tile) => (
-                    <Tile key={tile.id} tile={tile} min={s.heatMin} max={s.heatMax} />
+                    <Tile
+                        key={tile.id}
+                        tile={tile}
+                        min={s.heatMin}
+                        max={s.heatMax}
+                        selected={tile.id === props.selectedId}
+                        onSelect={props.onSelectTile}
+                    />
                 ))}
             </div>
         );
     };
 
     return (
-        <FluentProvider theme={props.theme} style={{ backgroundColor: "transparent", width: "100%", maxWidth: width }}>
+        <FluentProvider theme={props.theme} style={rootStyle}>
             <Label weight="semibold">{s.viewTitle === "" ? "Network heatmap" : s.viewTitle}</Label>
             <div>
                 <Text size={200}>
-                    Table {s.targetEntity === "" ? "unknown" : s.targetEntity}. {describePages(s)}
+                    Table {s.targetEntity === "" ? "unknown" : s.targetEntity}. {describePages(s)} {describeSort(s)} Theme from{" "}
+                    {props.themeSource === "host" ? (props.isDarkTheme ? "host (dark)" : "host (light)") : "control fallback"}.
                     {s.loading ? " Refreshing..." : ""}
                 </Text>
             </div>
-            {renderBody()}
+            <div style={tileAreaStyle}>{renderBody()}</div>
+            <div style={rowStyle}>
+                <Button size="small" disabled={props.selectedId === null} onClick={props.onOpenSelected}>
+                    Open selected record
+                </Button>
+                <Text size={200}>
+                    {props.selectedId === null
+                        ? "No tile selected."
+                        : `Selected ${props.selectedId}. Host reports ${s.selectedIds.length} selected.`}
+                </Text>
+            </div>
+            <div style={rowStyle}>
+                <Button size="small" onClick={() => props.onSortHeat(true)}>
+                    Hottest first
+                </Button>
+                <Button size="small" onClick={() => props.onSortHeat(false)}>
+                    Coolest first
+                </Button>
+                <Button size="small" onClick={props.onSortLabel}>
+                    By name
+                </Button>
+            </div>
             <div style={rowStyle}>
                 <Button size="small" disabled={!s.paging.hasPreviousPage} onClick={props.onFirstPage}>
                     First page

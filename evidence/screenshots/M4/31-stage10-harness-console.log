@@ -1,0 +1,189 @@
+react-dom.development.js:25129 Download the React DevTools for a better development experience: https://fb.me/react-devtools
+harness.js:2 Detected preferred language: en-US
+Tracking Prevention blocked access to storage for <URL>.
+Tracking Prevention blocked access to storage for <URL>.
+Tracking Prevention blocked access to storage for <URL>.
+Tracking Prevention blocked access to storage for <URL>.
+Tracking Prevention blocked access to storage for <URL>.
+Tracking Prevention blocked access to storage for <URL>.
+Tracking Prevention blocked access to storage for <URL>.
+Tracking Prevention blocked access to storage for <URL>.
+:8181/favicon.ico:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+harness.js:2 Resource file './lib/fluent_9_4_0.js' loaded.
+harness.js:2 Resource file 'strings/HeliosNetworkHeatmap.1033.resx' loaded.
+harness.js:2 Resource file 'bundle.js' loaded.
+react-dom.development.js:82 Warning: `NaN` is an invalid value for the `width` css style property.
+    in div (created by Mp)
+    in div (created by Mp)
+    in Mp (created by rh)
+    in div (created by rh)
+    in div (created by rh)
+    in rh
+printWarning @ react-dom.development.js:82
+index.ts:98 [HeliosNetworkHeatmap] constructor
+index.ts:107 [HeliosNetworkHeatmap] init ObjectallocatedHeight: -1allocatedWidth: -1datasetRecordsAtInit: 3fluentTheme: "not provided"formFactor: 1isDarkTheme: falsepageSizeInput: 20restoredState: undefined[[Prototype]]: Object
+index.ts:224 [HeliosNetworkHeatmap] applying page size Object
+index.ts:253 [HeliosNetworkHeatmap] dataset call Object
+harness.js:2 Invoked method loadNextPage on Paging interface. Parameters: 20.
+index.ts:253 [HeliosNetworkHeatmap] dataset call Object
+harness.js:2 Invoked method refresh on DataSet interface.
+index.ts:136 [HeliosNetworkHeatmap] updateView #1 Object
+index.ts:136 [HeliosNetworkHeatmap] updateView #2 {updatedProperties: Array(0), loading: false, error: false, errorMessage: '', targetEntity: 'account', …}
+index.ts:253 [HeliosNetworkHeatmap] dataset call {label: 'setSelectedRecordIds([id0])', firstPageNumber: undefined, lastPageNumber: undefined, hasNextPage: false, hasPreviousPage: false, …}firstPageNumber: undefinedhasNextPage: falsehasPreviousPage: falselabel: "setSelectedRecordIds([id0])"lastPageNumber: undefinedloading: false[[Prototype]]: Object
+index.ts:49 [HeliosNetworkHeatmap] selection changed {selected: {…}}
+index.ts:193 [HeliosNetworkHeatmap] getOutputs {selected: {…}}selected: {id: 'id0', name: 'Alderley Edge Primary', heat: 42000, hasHeat: true, heatText: '42,000', …}[[Prototype]]: Object
+index.ts:136 [HeliosNetworkHeatmap] updateView #3 {updatedProperties: Array(0), loading: false, error: false, errorMessage: '', targetEntity: 'account', …}
+index.ts:136 [HeliosNetworkHeatmap] updateView #4 {updatedProperties: Array(0), loading: false, error: false, errorMessage: '', targetEntity: 'account', …}
+index.ts:253 [HeliosNetworkHeatmap] dataset call {label: 'openDatasetItem(id0)', firstPageNumber: undefined, lastPageNumber: undefined, hasNextPage: false, hasPreviousPage: false, …}
+harness.js:2 Invoked method openDatasetItem on DataSet interface. Parameters: {"id":"id0","entityType":"account","name":"account"}.
+index.ts:253 [HeliosNetworkHeatmap] dataset call {label: 'sorting = [heatValue descending]', firstPageNumber: undefined, lastPageNumber: undefined, hasNextPage: false, hasPreviousPage: false, …}
+index.ts:253 [HeliosNetworkHeatmap] dataset call {label: 'refresh', firstPageNumber: undefined, lastPageNumber: undefined, hasNextPage: false, hasPreviousPage: false, …}
+harness.js:2 Invoked method refresh on DataSet interface.
+index.ts:253 [HeliosNetworkHeatmap] dataset call {label: 'clearSelectedRecordIds', firstPageNumber: undefined, lastPageNumber: undefined, hasNextPage: false, hasPreviousPage: false, …}
+index.ts:49 [HeliosNetworkHeatmap] selection changed {selected: null}
+index.ts:193 [HeliosNetworkHeatmap] getOutputs {selected: null}
+index.ts:136 [HeliosNetworkHeatmap] updateView #5 {updatedProperties: Array(0), loading: false, error: false, errorMessage: '', targetEntity: 'account', …}
+index.ts:136 [HeliosNetworkHeatmap] updateView #6 {updatedProperties: Array(0), loading: false, error: false, errorMessage: '', targetEntity: 'account', …}
+react-dom.development.js:82 Warning: A component is changing a controlled input of type text to be uncontrolled. Input elements should not switch from controlled to uncontrolled (or vice versa). Decide between using a controlled or uncontrolled input element for the lifetime of the component. More info: https://fb.me/react-controlled-components
+    in input (created by $p)
+    in div (created by $p)
+    in div (created by $p)
+    in label (created by $p)
+    in div (created by $p)
+    in div (created by $p)
+    in div (created by $p)
+    in $p (created by rh)
+    in div (created by Context.Consumer)
+    in O (created by B)
+    in B (created by rh)
+    in div (created by Context.Consumer)
+    in O (created by AccordionItem)
+    in o (created by x)
+    in x (created by Context.Consumer)
+    in o (created by A)
+    in A (created by AccordionItem)
+    in AccordionItem (created by rh)
+    in div (created by E)
+    in o (created by E)
+    in E (created by rh)
+    in div (created by rh)
+    in div (created by rh)
+    in div (created by rh)
+    in rh
+printWarning @ react-dom.development.js:82
+error @ react-dom.development.js:54
+updateWrapper @ react-dom.development.js:1999
+updateProperties @ react-dom.development.js:6383
+commitUpdate @ react-dom.development.js:7676
+commitWork @ react-dom.development.js:20681
+commitMutationEffects @ react-dom.development.js:22911
+callCallback @ react-dom.development.js:182
+invokeGuardedCallbackDev @ react-dom.development.js:231
+invokeGuardedCallback @ react-dom.development.js:286
+commitRootImpl @ react-dom.development.js:22644
+unstable_runWithPriority @ react.development.js:2685
+runWithPriority$1 @ react-dom.development.js:11174
+commitRoot @ react-dom.development.js:22516
+finishSyncRender @ react-dom.development.js:21942
+performSyncWorkOnRoot @ react-dom.development.js:21928
+(anonymous) @ react-dom.development.js:11224
+unstable_runWithPriority @ react.development.js:2685
+runWithPriority$1 @ react-dom.development.js:11174
+flushSyncCallbackQueueImpl @ react-dom.development.js:11219
+flushSyncCallbackQueue @ react-dom.development.js:11207
+scheduleUpdateOnFiber @ react-dom.development.js:21334
+enqueueSetState @ react-dom.development.js:12774
+Component.setState @ react.development.js:557
+onFieldInputValueChange @ harness.js:2
+(anonymous) @ harness.js:2
+updateOutputs @ harness.js:2
+_onOutputChangedInternal @ harness.js:2
+(anonymous) @ harness.js:2
+setTimeout
+_onOutputChanged @ harness.js:2
+(anonymous) @ harness.js:2
+HeliosNetworkHeatmap.onSelectTile @ index.ts:52
+onClick @ Heatmap.tsx:69
+callCallback @ react-dom.development.js:182
+invokeGuardedCallbackDev @ react-dom.development.js:231
+invokeGuardedCallback @ react-dom.development.js:286
+invokeGuardedCallbackAndCatchFirstError @ react-dom.development.js:300
+executeDispatch @ react-dom.development.js:383
+executeDispatchesInOrder @ react-dom.development.js:408
+executeDispatchesAndRelease @ react-dom.development.js:3401
+executeDispatchesAndReleaseTopLevel @ react-dom.development.js:3410
+forEachAccumulated @ react-dom.development.js:3382
+runEventsInBatch @ react-dom.development.js:3427
+runExtractedPluginEventsInBatch @ react-dom.development.js:3637
+handleTopLevel @ react-dom.development.js:3681
+batchedEventUpdates$1 @ react-dom.development.js:22006
+batchedEventUpdates @ react-dom.development.js:792
+dispatchEventForLegacyPluginEventSystem @ react-dom.development.js:3691
+attemptToDispatchEvent @ react-dom.development.js:4390
+dispatchEvent @ react-dom.development.js:4312
+unstable_runWithPriority @ react.development.js:2685
+runWithPriority$1 @ react-dom.development.js:11174
+discreteUpdates$1 @ react-dom.development.js:22022
+discreteUpdates @ react-dom.development.js:803
+dispatchDiscreteEvent @ react-dom.development.js:4291
+index.ts:136 [HeliosNetworkHeatmap] updateView #7 {updatedProperties: Array(0), loading: false, error: false, errorMessage: '', targetEntity: 'account', …}
+react-dom.development.js:82 Warning: A component is changing an uncontrolled input of type number to be controlled. Input elements should not switch from uncontrolled to controlled (or vice versa). Decide between using a controlled or uncontrolled input element for the lifetime of the component. More info: https://fb.me/react-controlled-components
+    in input (created by se)
+    in div (created by se)
+    in div (created by se)
+    in label (created by se)
+    in div (created by se)
+    in div (created by se)
+    in div (created by Context.Consumer)
+    in O (created by B)
+    in B (created by se)
+    in div (created by Context.Consumer)
+    in O (created by AccordionItem)
+    in o (created by x)
+    in x (created by Context.Consumer)
+    in o (created by A)
+    in A (created by AccordionItem)
+    in AccordionItem (created by se)
+    in div (created by E)
+    in o (created by E)
+    in E (created by se)
+    in se (created by rh)
+    in div (created by rh)
+    in div (created by rh)
+    in div (created by rh)
+    in rh
+printWarning @ react-dom.development.js:82
+error @ react-dom.development.js:54
+updateWrapper @ react-dom.development.js:1993
+updateProperties @ react-dom.development.js:6383
+commitUpdate @ react-dom.development.js:7676
+commitWork @ react-dom.development.js:20681
+commitMutationEffects @ react-dom.development.js:22911
+callCallback @ react-dom.development.js:182
+invokeGuardedCallbackDev @ react-dom.development.js:231
+invokeGuardedCallback @ react-dom.development.js:286
+commitRootImpl @ react-dom.development.js:22644
+unstable_runWithPriority @ react.development.js:2685
+runWithPriority$1 @ react-dom.development.js:11174
+commitRoot @ react-dom.development.js:22516
+finishSyncRender @ react-dom.development.js:21942
+performSyncWorkOnRoot @ react-dom.development.js:21928
+(anonymous) @ react-dom.development.js:11224
+unstable_runWithPriority @ react.development.js:2685
+runWithPriority$1 @ react-dom.development.js:11174
+flushSyncCallbackQueueImpl @ react-dom.development.js:11219
+flushSyncCallbackQueue @ react-dom.development.js:11207
+flushPendingDiscreteUpdates @ react-dom.development.js:21982
+flushDiscreteUpdates @ react-dom.development.js:21962
+finishEventHandler @ react-dom.development.js:761
+batchedEventUpdates @ react-dom.development.js:795
+dispatchEventForLegacyPluginEventSystem @ react-dom.development.js:3691
+attemptToDispatchEvent @ react-dom.development.js:4390
+dispatchEvent @ react-dom.development.js:4312
+unstable_runWithPriority @ react.development.js:2685
+runWithPriority$1 @ react-dom.development.js:11174
+discreteUpdates$1 @ react-dom.development.js:22022
+discreteUpdates @ react-dom.development.js:803
+dispatchDiscreteEvent @ react-dom.development.js:4291
+index.ts:136 [HeliosNetworkHeatmap] updateView #8 {updatedProperties: Array(0), loading: false, error: false, errorMessage: '', targetEntity: 'account', …}
+index.ts:136 [HeliosNetworkHeatmap] updateView #9 {updatedProperties: Array(0), loading: false, error: false, errorMessage: '', targetEntity: 'account', …}
