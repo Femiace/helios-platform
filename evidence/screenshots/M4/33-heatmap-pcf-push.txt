@@ -1,0 +1,87 @@
+﻿Connected as helios@Femiaceoutlook.onmicrosoft.com
+Connected to... HELIOS DEV
+Using publisher prefix 'hel'.
+Checking if the control 'hel_Helios.HeliosNetworkHeatmap' already exists in the current org.
+Using full update.
+Creating a temporary solution wrapper to push the component.
+Building the temporary solution wrapper.
+  Determining projects to restore...
+  Restored C:\dev\helios-platform\src\pcf\HeliosNetworkHeatmap\obj\PowerAppsToolsTemp_hel\PowerAppsToolsTemp_hel.cdsproj (in 1.1 sec).
+  Restored C:\dev\helios-platform\src\pcf\HeliosNetworkHeatmap\HeliosNetworkHeatmap.pcfproj (in 1.1 sec).
+  
+  > pcf-project@1.0.0 clean
+  > pcf-scripts clean --noColor --buildMode development --outDir C:\dev\helios-platform\src\pcf\HeliosNetworkHeatmap\out\controls --buildSource MSBuild
+  
+  [10:28:13 AM] [clean] Initializing...
+  [10:28:13 AM] [clean] Cleaning build outputs...
+  [10:28:13 AM] [clean] Succeeded
+  Cleaning output directory: bin\Debug\, Intermediate directory: obj\Debug\ and Solution Packager working directory: obj\Debug\
+  Removing log file: obj\Debug\SolutionPackager.log and generated solution package: bin\Debug\PowerAppsToolsTemp_hel.zip
+  
+  > pcf-project@1.0.0 build
+  > pcf-scripts build --noColor --buildMode development --outDir C:\dev\helios-platform\src\pcf\HeliosNetworkHeatmap\out\controls --buildSource MSBuild
+  
+  [10:28:17 AM] [build] Initializing...
+  [10:28:17 AM] [build] Validating manifest...
+  [10:28:17 AM] [build] Validating control...
+  [10:28:18 AM] [build] Generating manifest types...
+  [10:28:18 AM] [build] Generating design types...
+  [10:28:18 AM] [build] Running ESLint...
+  [10:28:21 AM] [build] Compiling and bundling control...
+  [Webpack stats]:
+  asset [1m[32mbundle.js[39m[22m 37.4 KiB [1m[32m[emitted][39m[22m (name: main)
+  runtime modules 883 bytes 4 modules
+  built modules 26.3 KiB [1m[33m[built][39m[22m
+    cacheable modules 26.2 KiB
+      [1m./HeliosNetworkHeatmap/index.ts[39m[22m 10.3 KiB [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+      [1m./HeliosNetworkHeatmap/Heatmap.tsx[39m[22m 8.88 KiB [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+      [1m./HeliosNetworkHeatmap/DatasetReader.ts[39m[22m 6.26 KiB [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+      [1m./HeliosNetworkHeatmap/SelectedSubstation.ts[39m[22m 859 bytes [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+    [1mexternal "Reactv16"[39m[22m 42 bytes [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+    [1mexternal "FluentUIReactv940"[39m[22m 42 bytes [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+  webpack 5.111.1 compiled [1m[32msuccessfully[39m[22m in 2144 ms
+  [10:28:23 AM] [build] Generating build outputs...
+  [10:28:23 AM] [build] Succeeded
+  Running Solution Packager to build package type: Unmanaged bin\Debug\PowerAppsToolsTemp_hel.zip
+
+Packing C:\dev\helios-platform\src\pcf\HeliosNetworkHeatmap\obj\PowerAppsToolsTemp_hel\obj\Debug\Metadata to bin\Debug\PowerAppsToolsTemp_hel.zip
+
+Processing Component: Entities
+Processing Component: Roles
+Processing Component: Workflows
+Processing Component: FieldSecurityProfiles
+Processing Component: Templates
+Processing Component: EntityMaps
+Processing Component: EntityRelationships
+Processing Component: OrganizationSettings
+Processing Component: optionsets
+Processing Component: CustomControls
+ - Helios.HeliosNetworkHeatmap
+Processing Component: SolutionPluginAssemblies
+Processing Component: EntityDataProviders
+Processing Sharded Component Files
+
+Unmanaged Pack complete.
+
+  Solution: bin\Debug\PowerAppsToolsTemp_hel.zip generated.
+  Solution Package Type: Unmanaged generated.
+  Completed intermediate files clean up.
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:25.33
+Building temporary solution wrapper: done.
+Importing the temporary solution wrapper into the current org.
+
+Solution Importing...
+
+Solution Imported successfully.
+Importing the temporary solution wrapper into the current org: done.
+Adding control to solution 'HELIOSExperience'.
+
+Publishing All Customizations...
+
+Published All Customizations.
+Updating the control in the current org: done.

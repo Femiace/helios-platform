@@ -1,0 +1,1 @@
+{"@odata.context":"https://helios-dev.crm11.dynamics.com/api/data/v9.2/$metadata#customcontrols(name,version,customcontrolid)","value":[{"@odata.etag":"W/\"3698087\"","version":"1.0.0","customcontrolid":"9a14f084-400d-4cc8-8130-9f6612ff7ca3","name":"hel_Helios.HeliosNetworkHeatmap"}]}

@@ -116,6 +116,20 @@ export const Heatmap = (props: IHeatmapProps): React.ReactElement => {
     const s = props.snapshot;
     const width = props.allocatedWidth > 0 ? props.allocatedWidth : undefined;
 
+    // The selection is kept here as well as in index.ts. A click redraws this
+    // picture at once; index.ts only gets to redraw when the host calls
+    // updateView, and a host is not obliged to do that after an output change.
+    // Whenever the host does call updateView, the prop wins.
+    const [selectedId, setSelectedId] = React.useState<string | null>(props.selectedId);
+    React.useEffect(() => {
+        setSelectedId(props.selectedId);
+    }, [props.selectedId]);
+
+    const handleSelect = (id: string): void => {
+        setSelectedId((current) => (current === id ? null : id));
+        props.onSelectTile(id);
+    };
+
     // Learn: -1 means no height limit, so the control grows with its rows.
     // A positive height (canvas, or a subgrid with a height set by the maker)
     // is a box to stay inside: the header and buttons keep their place and
@@ -150,8 +164,8 @@ export const Heatmap = (props: IHeatmapProps): React.ReactElement => {
                         tile={tile}
                         min={s.heatMin}
                         max={s.heatMax}
-                        selected={tile.id === props.selectedId}
-                        onSelect={props.onSelectTile}
+                        selected={tile.id === selectedId}
+                        onSelect={handleSelect}
                     />
                 ))}
             </div>
@@ -170,13 +184,13 @@ export const Heatmap = (props: IHeatmapProps): React.ReactElement => {
             </div>
             <div style={tileAreaStyle}>{renderBody()}</div>
             <div style={rowStyle}>
-                <Button size="small" disabled={props.selectedId === null} onClick={props.onOpenSelected}>
+                <Button size="small" disabled={selectedId === null} onClick={props.onOpenSelected}>
                     Open selected record
                 </Button>
                 <Text size={200}>
-                    {props.selectedId === null
+                    {selectedId === null
                         ? "No tile selected."
-                        : `Selected ${props.selectedId}. Host reports ${s.selectedIds.length} selected.`}
+                        : `Selected ${selectedId}. Host reports ${s.selectedIds.length} selected.`}
                 </Text>
             </div>
             <div style={rowStyle}>
